@@ -1,0 +1,47 @@
+.slider-container {
+    position: relative;
+}
+
+.item-slider-container {
+    position: absolute;
+    width: 250px;
+    height: 450px;
+    border-radius: 10px;
+    z-index: 111;
+    transition: .4s;   
+}
+
+.slider-item_0 {
+
+    z-index: 11;
+    background: yellow;
+    transform: translateX(20px) translateY(-10px) rotate(5deg);
+    &:hover {
+
+        opacity: 1;
+     }
+}
+
+
+.slider-two {
+
+    z-index: 11;
+    background: darkcyan;
+    transform: translateX(20px) translateY(-10px) rotate(5deg);
+    &:hover {
+
+        opacity: 1;
+     }
+}
+
+.slider-three {
+
+    z-index: 1;
+    background: darkgoldenrod;
+    transform: translateX(40px) translateY(-20px) rotate(10deg);
+    &:hover {
+
+        opacity: 1;
+     }
+
+}

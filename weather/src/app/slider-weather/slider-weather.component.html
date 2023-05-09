@@ -1,0 +1,15 @@
+<div class="slider-container">
+
+
+
+    <div *ngFor="let item of styleArr; index as i"
+    class="item-slider-container"
+    [style.transform]="item.transform"
+    [style.background]="item.background"
+    [style.z-index] ="item.zindex"
+    (click)="clickItem(item.id)"
+    >{{item.id}}</div>
+    <!-- <div class="item-slider-container slider-two"></div>
+<div class="item-slider-container slider-three"></div> -->
+
+</div>

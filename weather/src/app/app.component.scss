@@ -1,0 +1,16 @@
+@import "./../scss/reset.scss";
+
+.canvas-container{
+    border: 2px solid black;
+  
+}
+
+.test{
+    width: 350px;
+    height: 350px;
+    position: absolute;
+}
+
+.container{
+    position: relative;
+}
