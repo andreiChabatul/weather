@@ -1,15 +1,15 @@
 <div class="slider-container">
 
 
+    <div class="slider-context">
+        <div *ngFor="let item of styleArr; index as i" class="item-slider-container" [style.transform]="item.transform"
+            [style.background]="item.background" [style.z-index]="item.zindex" (click)="clickItem(i)">
+            <app-item-slider-info [item]="item.info"></app-item-slider-info>
+        </div>
+    </div>
 
-    <div *ngFor="let item of styleArr; index as i"
-    class="item-slider-container"
-    [style.transform]="item.transform"
-    [style.background]="item.background"
-    [style.z-index] ="item.zindex"
-    (click)="clickItem(item.id)"
-    >{{item.id}}</div>
-    <!-- <div class="item-slider-container slider-two"></div>
-<div class="item-slider-container slider-three"></div> -->
-
+    <div class="slider-point-container">
+        <div class="slider-point" *ngFor="let item of styleArr; index as i" [style.background]="item.background"
+            (click)="clickItem(i)"></div>
+    </div>
 </div>

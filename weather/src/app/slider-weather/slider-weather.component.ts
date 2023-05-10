@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-slider-weather',
@@ -7,28 +7,36 @@ import { Component } from '@angular/core';
 })
 export class SliderWeatherComponent {
 
-  tempArr = ['Moscow', 'Minsk', 'Mogilev', 'kol'];
+  tempArr = ['Moscow', 'Minsk', 'Mogilev', 'kol', 'lok'];
 
   str = ''
   styleArr = this.tempArr.map((item, index) => {
     return {
       id: index,
       transform: `translateX(${20 * index}px) translateY(${-10 * index}px) rotate(${5 * index}deg)`,
-      background: '#' + Math.floor(Math.random() * 16777215).toString(16),
+      background: `rgb(${Math.random() * 200}, ${Math.random() * 200}, 147)`,
       zindex: 10 - index,
-      info: item
+      info: {
+        nameCity: 'Minsk',
+        temp: 25,
+        chanceRain: 90,
+        type: 'sun',
+        extraInfo: [
+          { type: 'sun', temp: 30, time: 2 },
+          { type: 'sun', temp: 30, time: 8 },
+          { type: 'sun', temp: 30, time: 12 }]
+      }
     }
   })
 
-  clickItem(index: number) {
-    console.log(index);
-    console.log(this.styleArr);
-    console.log(this.styleArr[0]);
-    console.log(this.styleArr[index]);
-    [this.styleArr[0].id, this.styleArr[index].id] = [this.styleArr[index].id, this.styleArr[0].id];
-    [this.styleArr[0].transform, this.styleArr[index].transform] = [this.styleArr[index].transform, this.styleArr[0].transform];
-    
 
+
+
+  clickItem(index: number) {
+    const indexInit = this.styleArr.findIndex(el => el.id === 0);
+    [this.styleArr[indexInit].transform, this.styleArr[index].transform] = [this.styleArr[index].transform, this.styleArr[indexInit].transform];
+    [this.styleArr[indexInit].id, this.styleArr[index].id] = [this.styleArr[index].id, this.styleArr[indexInit].id];
+    [this.styleArr[indexInit].zindex, this.styleArr[index].zindex] = [this.styleArr[index].zindex, this.styleArr[indexInit].zindex];
   }
 
 

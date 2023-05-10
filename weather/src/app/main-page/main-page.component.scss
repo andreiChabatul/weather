@@ -1,14 +1,14 @@
 @import "./../../scss/color-styles";
 @import "./../../scss/reset";
 
-.main-container{
+.main-container {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-.main-content{
+.main-content {
     width: 45%;
     background: darkblue;
     height: 150px;
@@ -16,6 +16,7 @@
 
 .main-background_grey {
     width: 40%;
-    height: 80vh;
+    height: 500px;
+
     background: $color-grey;
 }
