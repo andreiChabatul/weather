@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EWeatherType } from 'src/core/models/weatherType';
 
 @Component({
   selector: 'app-slider-weather',
@@ -20,11 +21,11 @@ export class SliderWeatherComponent {
         nameCity: 'Minsk',
         temp: 25,
         chanceRain: 90,
-        type: 'sun',
+        type: EWeatherType.SNOW,
         extraInfo: [
-          { type: 'sun', temp: 30, time: 2 },
-          { type: 'sun', temp: 30, time: 8 },
-          { type: 'sun', temp: 30, time: 12 }]
+          { type: EWeatherType.SUN, temp: 30, time: 2 },
+          { type: EWeatherType.SNOW, temp: 30, time: 8 },
+          { type: EWeatherType.THUNDERSTORM, temp: 30, time: 12 }]
       }
     }
   })
