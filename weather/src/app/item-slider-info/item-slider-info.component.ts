@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { typeWeather } from 'src/core/models/weatherType';
+import { typeWeather } from '../core/models/weatherType';
+
 
 interface IItemSlider {
   nameCity: string;

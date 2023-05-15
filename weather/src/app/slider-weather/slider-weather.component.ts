@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { EWeatherType } from 'src/core/models/weatherType';
+import { EWeatherType } from '../core/models/weatherType';
+
 
 @Component({
   selector: 'app-slider-weather',
