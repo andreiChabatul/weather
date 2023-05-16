@@ -11,6 +11,7 @@ import { CoreModule } from './core/core.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
 import { appReducers } from './store';
+import { TranslocoRootModule } from './transloco-root.module';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { appReducers } from './store';
     CoreModule,
     HttpClientModule,
     StoreModule.forRoot(appReducers),
+    TranslocoRootModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
