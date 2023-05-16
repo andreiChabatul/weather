@@ -8,6 +8,8 @@ import { ItemSliderInfoComponent } from './item-slider-info/item-slider-info.com
 import { ItemSliderExtraInfoComponent } from './item-slider-extra-info/item-slider-extra-info.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { StoreModule } from '@ngrx/store';
 
 
 @NgModule({
@@ -23,6 +25,8 @@ import { CoreModule } from './core/core.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     CoreModule,
+    HttpClientModule,
+    StoreModule.forRoot({}, {}),
   ],
   providers: [],
   bootstrap: [AppComponent]

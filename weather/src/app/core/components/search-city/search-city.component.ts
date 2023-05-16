@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { GeohelperApiService } from '../../services/geohelper-api.service';
 
 @Component({
   selector: 'app-search-city',
@@ -13,8 +14,10 @@ export class SearchCityComponent {
 
   options = ['fd', 'fdf', 'fd', 'fd', 'fd']
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private geohelperApiService: GeohelperApiService) {
     this.createForm();
+    this.geohelperApiService.getAllCity('Ми');
+
   }
 
   private createForm() {
