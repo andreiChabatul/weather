@@ -1,23 +1,43 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { GeohelperApiService } from '../../services/geohelper-api.service';
+import { IAppStore } from 'src/app/store/models/stateModel';
+import { Store } from '@ngrx/store';
+import { selectAllCity } from 'src/app/store/selectors/selectors';
+import { map, filter, startWith, Subscription, debounceTime, distinctUntilChanged, switchMap } from 'rxjs';
+import { AddMainCity } from 'src/app/store/actions/actions';
+
 
 @Component({
   selector: 'app-search-city',
   templateUrl: './search-city.component.html',
   styleUrls: ['./search-city.component.scss']
 })
-export class SearchCityComponent {
+export class SearchCityComponent implements OnInit, OnDestroy {
 
   cityForm: FormGroup;
+  searchCity$ = this.store.select(selectAllCity);
+  subscription$: Subscription;
 
-
-  options = ['fd', 'fdf', 'fd', 'fd', 'fd']
-
-  constructor(private fb: FormBuilder, private geohelperApiService: GeohelperApiService) {
+  constructor(
+    private fb: FormBuilder,
+    private geohelperApiService: GeohelperApiService,
+    private store: Store<IAppStore>
+  ) {
     this.createForm();
-    this.geohelperApiService.getAllCity('Ми');
+  }
 
+  ngOnInit(): void {
+    const input$ = this.cityForm.valueChanges.pipe(
+      filter(value => value.location.length > 1),
+      startWith(''),
+      debounceTime(1000),
+      distinctUntilChanged(),
+    )
+
+    this.subscription$ = input$.subscribe(
+      value => value.location ? this.geohelperApiService.getAllCity(value.location) : ''
+    )
   }
 
   private createForm() {
@@ -26,8 +46,21 @@ export class SearchCityComponent {
     });
   }
 
+  onSubmit() {
+    if (this.cityForm.invalid) {
+      this.cityForm.markAllAsTouched()
+      return;
+    }
+
+    this.store.dispatch(new AddMainCity(this.cityForm.value.location))
+  }
+
   get _location() {
     return this.cityForm.get('location');
+  }
+
+  ngOnDestroy() {
+    this.subscription$.unsubscribe();
   }
 
 }

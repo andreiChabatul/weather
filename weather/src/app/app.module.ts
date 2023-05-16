@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
+import { appReducers } from './store';
 
 
 @NgModule({
@@ -26,7 +27,7 @@ import { StoreModule } from '@ngrx/store';
     BrowserAnimationsModule,
     CoreModule,
     HttpClientModule,
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot(appReducers),
   ],
   providers: [],
   bootstrap: [AppComponent]

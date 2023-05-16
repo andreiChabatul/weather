@@ -1,8 +1,10 @@
 import { ActionReducerMap } from "@ngrx/store";
 import { IAppStore, IState } from "./models/stateModel";
+import { Reducers } from "./reducers/reducers";
 
 export const stateApp: IState = {
     searchCity: [],
+    mainCity: '',
 }
 
 export const initalState: IAppStore = {
@@ -13,6 +15,6 @@ export function getInitalState(): IAppStore {
     return initalState;
 }
 
-// export const appReducers: ActionReducerMap<IAppStore, any> = {
-//     state: Reducers,
-// };
+export const appReducers: ActionReducerMap<IAppStore, any> = {
+    state: Reducers,
+};

@@ -3,24 +3,24 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, of, expand, EMPTY } from 'rxjs';
 import { IApiGeohelper } from '../models/apiGeohelper';
 import { URL_GEOHELPER, URL_GEOHELPER_API } from './../const/const';
+import { IAppStore } from 'src/app/store/models/stateModel';
+import { Store } from '@ngrx/store';
+import { AddSearchCity, CleanSearchCity } from 'src/app/store/actions/actions';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GeohelperApiService {
 
-  constructor(private http: HttpClient) { }
-  resultCity: string[];
+  constructor(private http: HttpClient, private store: Store<IAppStore>) { }
   page: number;
 
-  getAllCity(value: string): string[] {
+  getAllCity(value: string): void {
     this.page = 1;
-    this.resultCity = [];
+    this.store.dispatch(new CleanSearchCity());
+
     this.getCity(value, this.page).pipe(
       expand(resp => {
-        for (const city of resp.result) {
-          this.resultCity.push(city.name);
-        }
         if (resp.pagination.totalPageCount > this.page) {
           this.page += 1;
           return this.getCity(value, this.page);
@@ -30,15 +30,8 @@ export class GeohelperApiService {
         }
       })).subscribe(v => v.result.filter(city =>
         city.localityType && (city.localityType.name === 'город' || city.localityType.name === 'city')).map(
-          city => console.log(city.name)
+          city => this.store.dispatch(new AddSearchCity(city.name))
         ));
-
-
-
-
-
-    return ['fd', 'fd']
-
   }
 
   getCity(value: string, pagination: number): Observable<IApiGeohelper> {
@@ -53,8 +46,6 @@ export class GeohelperApiService {
       }
     }
     )
-
-
   }
 }
 

@@ -16,7 +16,13 @@ export const Reducers = (
         case EAppActionTypes.AddSearchCity: {
             return {
                 ...state,
-                searchCity: [...action.payload],
+                searchCity: [...new Set([...state.searchCity, action.payload])],
+            };
+        }
+        case EAppActionTypes.AddMainCity: {
+            return {
+                ...state,
+                mainCity: action.payload,
             };
         }
         default:
