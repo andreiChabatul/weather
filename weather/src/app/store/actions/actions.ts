@@ -1,10 +1,12 @@
 import { Action } from "@ngrx/store";
+import { languageType } from "../models/languageModel";
 
 
 export enum EAppActionTypes {
     AddSearchCity = '[SEARCH CITY ADD] AddSearchCity',
     CleanSearchCity = '[SEARCH CITY CLEAN] CleanSearchCity',
     AddMainCity = '[MAIN CITY ADD] AddMainCity',
+    ChangeLanguage = '[CHANGE LANGUAGE] ChangeLanguage',
 }
 
 
@@ -22,5 +24,10 @@ export class AddMainCity implements Action {
     constructor(public payload: string) { }
 }
 
+export class ChangeLanguage implements Action {
+    readonly type = EAppActionTypes.ChangeLanguage;
+    constructor(public payload: languageType) { }
+}
 
-export type ActionUnion = CleanSearchCity | AddSearchCity | AddMainCity;
+
+export type ActionUnion = CleanSearchCity | AddSearchCity | AddMainCity | ChangeLanguage;

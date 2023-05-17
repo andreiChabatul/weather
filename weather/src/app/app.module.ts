@@ -11,8 +11,8 @@ import { CoreModule } from './core/core.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
 import { appReducers } from './store';
-import { TranslocoRootModule } from './transloco-root.module';
-
+import { LangChangeEffects } from './store/effects/langEffect';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,7 @@ import { TranslocoRootModule } from './transloco-root.module';
     CoreModule,
     HttpClientModule,
     StoreModule.forRoot(appReducers),
-    TranslocoRootModule,
+    EffectsModule.forRoot([LangChangeEffects]),
   ],
   providers: [],
   bootstrap: [AppComponent]

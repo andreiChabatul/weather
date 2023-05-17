@@ -25,6 +25,12 @@ export const Reducers = (
                 mainCity: action.payload,
             };
         }
+        case EAppActionTypes.ChangeLanguage: {
+            return {
+                ...state,
+                language: action.payload,
+            };
+        }
         default:
             return state;
     }

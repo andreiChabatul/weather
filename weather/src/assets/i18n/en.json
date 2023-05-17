@@ -1,1 +1,10 @@
-{}
+{
+    "titleLang": {
+        "label": "Choice language"
+    },
+    "searchCity": {
+        "placeholder": "Enter city name",
+        "buttonMain": "View",
+        "error": "Field From is required"
+    }
+}

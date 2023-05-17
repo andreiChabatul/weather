@@ -1,0 +1,4 @@
+<div class="lang-container">
+    <img *ngFor="let item of lang" class="lang-item" src={{item.img}} (click)="selectLanguage(item.value)"
+        alt={{item.value}}lang [ngClass]="{'lang-item__active': (selectedLang$ | async) === item.value}">
+</div>

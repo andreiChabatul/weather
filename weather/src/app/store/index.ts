@@ -5,6 +5,7 @@ import { Reducers } from "./reducers/reducers";
 export const stateApp: IState = {
     searchCity: [],
     mainCity: '',
+    language: 'en',
 }
 
 export const initalState: IAppStore = {
