@@ -1,4 +1,12 @@
-<div class="lang-container">
-    <img *ngFor="let item of lang" class="lang-item" src={{item.img}} (click)="selectLanguage(item.value)"
-        alt={{item.value}}lang [ngClass]="{'lang-item__active': (selectedLang$ | async) === item.value}">
+<div class="lang-container" *transloco="let t; read: 'lang'">
+    <p class="lang-container_text">{{ t('title') }}</p>
+    <div class="lang-container_select">
+        <img *ngFor="let item of lang" class="lang-item" src={{item.img}} (click)="selectLanguage(item.value)"
+            alt={{item.value}}lang [ngClass]="{'lang-item__active': (selectedLang$ | async) === item.value}">
+    </div>
 </div>
+
+
+
+<!-- // convenient weather forecast in your device find out what can be waiting for you street with a few taps
+// cvtybnmz psr -->

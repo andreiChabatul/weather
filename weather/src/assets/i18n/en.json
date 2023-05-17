@@ -2,9 +2,13 @@
     "header": {
         "logo": "Weather"
     },
+    "lang": {
+        "title": "Change language"
+    },
     "searchCity": {
         "placeholder": "Enter city name",
         "buttonMain": "View",
         "error": "Field From is required"
     }
 }
+

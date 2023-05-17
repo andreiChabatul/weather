@@ -1,5 +1,5 @@
 @mixin font-default {
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
 }
@@ -9,10 +9,10 @@
     font-size: 22px;
     line-height: 28px;
     font-weight: 700;
-    transition: .4s;
-    opacity: .8;
+}
 
-    &:hover {
-        opacity: 1;
-    }
+@mixin title-Xsmall {
+    @include font-default;
+    font-size: 12px;
+    line-height: 12px;
 }

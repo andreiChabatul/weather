@@ -1,14 +1,42 @@
 @import "./../../../../scss/color-styles";
+@import "./../../../../scss/default-styles";
+@import "./../../../../scss/typography-styles";
 
 
 .lang-container {
-    display: flex;
-    gap: 10px;
+    border: solid 1px $color-font-blue-dark;
+    padding: 2px 4px;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+        background: linear-gradient(60deg, rgba(253, 235, 187, 1) 0%, rgba(149, 189, 207, 1) 100%);
+    }
+
+    &:hover .lang-container_text {
+        transform: translateY(-25px);
+        opacity: 1;
+    }
+}
+
+.lang-container_select {
+    @include flex-c_c;
+    gap: 4px;
+}
+
+.lang-container_text {
+    position: absolute;
+    right: -10px;
+    @include title-Xsmall;
+    color: $color-font-blue-dark;
+    transition: .4s;
+    opacity: 0;
+    white-space: nowrap;
 }
 
 .lang-item {
-    width: 30px;
-    cursor: pointer;
+    width: 25px;
     filter: grayscale(100%);
     transition: .3s;
     border: 1px solid $color-font-blue-dark;

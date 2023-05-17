@@ -17,4 +17,10 @@
     color: $color-font-blue-dark;
     cursor: pointer;
     gap: 5px;
+    transition: .4s;
+    opacity: .8;
+
+    &:hover {
+        opacity: 1;
+    }
 }

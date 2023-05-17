@@ -2,6 +2,9 @@
     "header": {
         "logo": "Погода"
     },
+    "lang": {
+        "title": "Сменить язык"
+    },
     "searchCity": {
         "placeholder": "Введите название города",
         "buttonMain": "Посмотреть",
