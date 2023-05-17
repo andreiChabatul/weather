@@ -1,1 +1,10 @@
-<p>header works!</p>
+<header class="header-container" *transloco="let t; read: 'header'">
+    <div class="logo-container">
+        <img class="logo-img" src="./../../../../assets/logoIco.png" alt="logo">
+        <p class="logo-text">{{ t('logo') }}</p>
+    </div>
+    <div></div>
+    <div>
+        <app-change-language></app-change-language>
+    </div>
+</header>

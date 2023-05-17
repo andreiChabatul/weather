@@ -1,6 +1,6 @@
 {
-    "titleLang": {
-        "label": "Выберите язык"
+    "header": {
+        "logo": "Погода"
     },
     "searchCity": {
         "placeholder": "Введите название города",

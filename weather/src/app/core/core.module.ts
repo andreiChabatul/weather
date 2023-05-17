@@ -20,7 +20,7 @@ import { HeaderComponent } from './components/header/header.component';
 
     ],
     exports: [
-        SearchCityComponent, ChangeLanguageComponent
+        SearchCityComponent, ChangeLanguageComponent, HeaderComponent
     ]
 })
 export class CoreModule { }

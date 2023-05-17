@@ -10,9 +10,10 @@
     width: 30px;
     cursor: pointer;
     filter: grayscale(100%);
-    transition: .2s;
-    border: 1px solid $color-primary-blue;
+    transition: .3s;
+    border: 1px solid $color-font-blue-dark;
     border-radius: 50%;
+    opacity: .8;
 
     &:hover {
         filter: grayscale(0);
@@ -22,4 +23,5 @@
 
 .lang-item__active {
     filter: grayscale(0);
+    opacity: 1;
 }

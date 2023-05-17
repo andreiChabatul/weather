@@ -1,6 +1,6 @@
 {
-    "titleLang": {
-        "label": "Choice language"
+    "header": {
+        "logo": "Weather"
     },
     "searchCity": {
         "placeholder": "Enter city name",

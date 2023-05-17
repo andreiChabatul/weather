@@ -1,0 +1,20 @@
+@import "./../../../../scss/default-styles";
+@import "./../../../../scss/typography-styles";
+@import "./../../../../scss/color-styles";
+
+.header-container {
+    padding: 5px 10px;
+    @include flex-c_s;
+}
+
+.logo-img {
+    width: 35px;
+}
+
+.logo-container {
+    @include flex-c_c;
+    @include title-large;
+    color: $color-font-blue-dark;
+    cursor: pointer;
+    gap: 5px;
+}

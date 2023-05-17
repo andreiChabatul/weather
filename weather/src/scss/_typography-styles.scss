@@ -1,0 +1,18 @@
+@mixin font-default {
+    font-family: 'Titillium Web', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@mixin title-large {
+    @include font-default;
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 700;
+    transition: .4s;
+    opacity: .8;
+
+    &:hover {
+        opacity: 1;
+    }
+}
