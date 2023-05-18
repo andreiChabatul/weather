@@ -2,12 +2,20 @@
     font-family: 'Fira Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
+    line-height: 20px;
 }
 
 @mixin title-large {
     @include font-default;
     font-size: 22px;
     line-height: 28px;
+    font-weight: 700;
+}
+
+@mixin title-Xlarge {
+    @include font-default;
+    font-size: 48px;
+    line-height: 65px;
     font-weight: 700;
 }
 

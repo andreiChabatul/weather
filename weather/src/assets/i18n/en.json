@@ -9,6 +9,10 @@
         "placeholder": "Enter city name",
         "buttonMain": "Search",
         "error": "Field From is required"
+    },
+    "main": {
+        "mainTitle": "Convenient weather",
+        "mainTitleTwo": "forecast in your device",
+        "desc": "Find out what can be waiting for you on the street with a few taps"
     }
 }
-

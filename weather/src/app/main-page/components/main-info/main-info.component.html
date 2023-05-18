@@ -1,4 +1,7 @@
-<div class="main-info-container">
-    <p>convenient weather forecast in your device find out what can be waiting for you street with a few taps</p>
+<div class="main-info-container" *transloco="let t; read: 'main'">
+    <p class="main-title-text">{{ t('mainTitle') }}
+        <span class="main-title-text_back">{{ t('mainTitleTwo') }}</span>
+    </p>
+    <p class="main-text-desc">{{ t('desc') }}</p>
     <app-search-city></app-search-city>
 </div>

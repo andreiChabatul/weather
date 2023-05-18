@@ -1,4 +1,28 @@
-.main-info-container{
+@import "./../../../../scss/color-styles";
+@import "./../../../../scss/typography-styles";
+@import "./../../../../scss/default-styles";
+
+.main-info-container {
     width: 50%;
     padding-left: 45px;
+}
+
+.main-title-text {
+    @include title-Xlarge;
+    color: $color-primary-blue;
+    margin-bottom: 5%;
+}
+
+.main-title-text_back {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-right: 10px;
+    background: linear-gradient(90deg, #EFEFEE 54%, rgba(255, 216, 118, 1) 100%);
+}
+
+.main-text-desc {
+    width: 50%;
+    @include font-default;
+    color: $grey-text;
+    margin-bottom: 5%;
 }

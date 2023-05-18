@@ -53,4 +53,8 @@
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
     }
+
+    .mdc-text-field--filled .mdc-line-ripple::after {
+        border-bottom-color: $color-primary-blue;
+    }
 }
