@@ -1,4 +1,4 @@
-<form [formGroup]="cityForm" (ngSubmit)="onSubmit()" *transloco="let t; read: 'searchCity'">
+<form [formGroup]="cityForm" (ngSubmit)="onSubmit()" *transloco="let t; read: 'searchCity'" class="search-container">
     <mat-form-field appearance="fill" class="">
         <mat-label>{{ t('placeholder') }}</mat-label>
         <input type="text" formControlName="location" matInput [matAutocomplete]="auto">
@@ -8,8 +8,14 @@
             </mat-option>
         </mat-autocomplete>
     </mat-form-field>
-    <div *ngIf="_location?.invalid && (_location?.touched || _location?.dirty)">
+    <div class="error-container" *ngIf="_location?.invalid && (_location?.touched || _location?.dirty)">
         <span class="error-text" *ngIf="_location?.errors?.required">{{ t('error') }}</span>
     </div>
-    <button>{{ t('buttonMain') }}</button>
+    <div class="control-search">
+        <app-add-location></app-add-location>
+        <app-control-history></app-control-history>
+        <button class="button-search" [ngClass]="{'button-search_active': _location?.value.length > 1}">
+            {{ t('buttonMain')}}
+        </button>
+    </div>
 </form>

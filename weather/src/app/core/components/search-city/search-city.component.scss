@@ -1,0 +1,56 @@
+@import "./../../../../scss/color-styles";
+@import "./../../../../scss/typography-styles";
+@import "./../../../../scss/default-styles";
+
+.search-container {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+.error-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.control-search {
+    @include flex-c_c;
+    height: 56px;
+    background: $color-primary-blue;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.button-search {
+    background: none;
+    width: 85px;
+    height: 56px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: .3s;
+
+    &:hover {
+        background: $button-hover;
+
+    }
+}
+
+.button-search_active {
+    border: 3px solid red;
+}
+
+.search-container {
+    .mat-mdc-text-field-wrapper {
+        width: 270px;
+        background: none;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+}

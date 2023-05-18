@@ -6,6 +6,9 @@ import { SearchCityComponent } from './components/search-city/search-city.compon
 import { ChangeLanguageComponent } from './components/change-language/change-language.component';
 import { TranslocoRootModule } from '../transloco-root.module';
 import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ControlHistoryComponent } from './components/control-history/control-history.component';
+import { AddLocationComponent } from './components/add-location/add-location.component';
 
 
 @NgModule({
@@ -13,6 +16,9 @@ import { HeaderComponent } from './components/header/header.component';
         SearchCityComponent,
         ChangeLanguageComponent,
         HeaderComponent,
+        FooterComponent,
+        ControlHistoryComponent,
+        AddLocationComponent
 
     ],
     imports: [CommonModule, MaterialModule, ReactiveFormsModule, FormsModule, TranslocoRootModule],
@@ -20,7 +26,7 @@ import { HeaderComponent } from './components/header/header.component';
 
     ],
     exports: [
-        SearchCityComponent, ChangeLanguageComponent, HeaderComponent
+        SearchCityComponent, ChangeLanguageComponent, HeaderComponent, FooterComponent
     ]
 })
 export class CoreModule { }

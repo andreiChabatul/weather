@@ -1,22 +1,29 @@
 @import "./../../../scss/color-styles";
 
 .main-container {
-    height: 550px;
+    position: relative;
+    height: 630px;
     max-width: 1400px;
     width: 90vw;
     border-radius: 20px;
     background: rgba($color: #EFEFEE, $alpha: 0.75);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
 }
 
-.main-content {
-    width: 45%;
-    background: darkblue;
-    height: 150px;
+
+.slider-container {
+    overflow: hidden;
+    top: 70px;
+    right: 90px;
+    height: 560px;
+    position: absolute;
+
 }
 
-.main-background_grey {
-    width: 40%;
-    height: 500px;
 
-    background: $color-grey;
+.img-main {
+    width: 450px;
 }

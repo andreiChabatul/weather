@@ -1,17 +1,18 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { GeohelperApiService } from '../../services/geohelper-api.service';
 import { IAppStore } from 'src/app/store/models/stateModel';
 import { Store } from '@ngrx/store';
 import { selectAllCity } from 'src/app/store/selectors/selectors';
-import { map, filter, startWith, Subscription, debounceTime, distinctUntilChanged, switchMap } from 'rxjs';
+import { filter, startWith, Subscription, debounceTime, distinctUntilChanged } from 'rxjs';
 import { AddMainCity } from 'src/app/store/actions/actions';
 
 
 @Component({
   selector: 'app-search-city',
   templateUrl: './search-city.component.html',
-  styleUrls: ['./search-city.component.scss']
+  styleUrls: ['./search-city.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class SearchCityComponent implements OnInit, OnDestroy {
 
@@ -56,6 +57,7 @@ export class SearchCityComponent implements OnInit, OnDestroy {
   }
 
   get _location() {
+    console.log(this.cityForm.get('location')?.value)
     return this.cityForm.get('location');
   }
 

@@ -7,7 +7,7 @@
     },
     "searchCity": {
         "placeholder": "Enter city name",
-        "buttonMain": "View",
+        "buttonMain": "Search",
         "error": "Field From is required"
     }
 }

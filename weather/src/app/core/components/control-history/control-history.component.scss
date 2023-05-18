@@ -1,0 +1,21 @@
+@import "./../../../../scss/color-styles";
+@import "./../../../../scss/typography-styles";
+@import "./../../../../scss/default-styles";
+
+
+.control-history-container {
+    height: 56px;
+    @include flex-c_c;
+    transition: .3s;
+    cursor: pointer;
+    width: 35px;
+    &:hover {
+        background: $button-hover;
+    }
+}
+
+.contol-icon {
+   
+    color: $color-white;
+    text-align: center;
+}
