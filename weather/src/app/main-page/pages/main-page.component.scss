@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+
 }
 
 .slider-container {
@@ -27,15 +27,22 @@
     width: 450px;
 }
 
-.main-decoration{
+.main-decoration {
     position: absolute;
     top: 55%;
     right: 45%;
 }
 
-.main-decoration_two{
+.main-decoration_two {
     position: absolute;
     width: 150px;
     top: 60px;
     right: 45%;
+}
+
+.main-decoration_three {
+    position: absolute;
+    width: 80px;
+    right: 25px;
+    transform: rotate(-22deg);
 }

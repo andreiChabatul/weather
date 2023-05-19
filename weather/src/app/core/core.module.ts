@@ -9,6 +9,10 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ControlHistoryComponent } from './components/control-history/control-history.component';
 import { AddLocationComponent } from './components/add-location/add-location.component';
+import { ItemInfoSliderComponent } from './components/item-info-slider/item-info-slider.component';
+import { PhoneMainComponent } from './components/phone-main/phone-main.component';
+import { ItemInfoAddComponent } from './components/item-info-add/item-info-add.component';
+import { PopUpAddHistoryComponent } from './components/pop-up-add-history/pop-up-add-history.component';
 
 
 @NgModule({
@@ -18,7 +22,11 @@ import { AddLocationComponent } from './components/add-location/add-location.com
         HeaderComponent,
         FooterComponent,
         ControlHistoryComponent,
-        AddLocationComponent
+        AddLocationComponent,
+        ItemInfoSliderComponent,
+        PhoneMainComponent,
+        ItemInfoAddComponent,
+        PopUpAddHistoryComponent,
 
     ],
     imports: [CommonModule, MaterialModule, ReactiveFormsModule, FormsModule, TranslocoRootModule],
@@ -26,7 +34,10 @@ import { AddLocationComponent } from './components/add-location/add-location.com
 
     ],
     exports: [
-        SearchCityComponent, ChangeLanguageComponent, HeaderComponent, FooterComponent
+        SearchCityComponent,
+        HeaderComponent,
+        FooterComponent,
+        PhoneMainComponent
     ]
 })
 export class CoreModule { }

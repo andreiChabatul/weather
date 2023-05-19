@@ -1,0 +1,9 @@
+<div *ngIf="statePopUp$ | async" class="popUp-container" (click)="closePopUp($event)">
+    <div class="popUp-search-container" *transloco="let t; read: 'popUp'" (click)="$event.stopPropagation()">
+        <p class="popUp-search-text">{{ t('title')}}</p>
+        <app-search-city [type]="false"></app-search-city>
+        <span class="material-symbols-outlined close-popUp" (click)="closePopUp($event)">
+            close
+        </span>
+    </div>
+</div>

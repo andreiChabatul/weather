@@ -6,6 +6,7 @@ export const stateApp: IState = {
     searchCity: [],
     mainCity: '',
     language: 'en',
+    popUpAdd: false,
 }
 
 export const initalState: IAppStore = {

@@ -1,0 +1,48 @@
+@import "./../../../../scss/typography-styles";
+@import "./../../../../scss/color-styles";
+
+.item-info-container {
+    position: relative;
+    background: #FFFFFF;
+    width: 100px;
+    height: 130px;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    transition: .4s;
+    opacity: .9;
+    transform: translateY(-25px);
+    border: 1px solid $grey-text;
+    
+    &:hover {
+        transform: translateY(-50px);
+        opacity: 1;
+        z-index: 11111;
+        border: 1px solid $grey-text;
+    }
+}
+
+.title-item-info {
+    color: $color-font-blue-dark;
+    @include font-default;
+    text-align: center;
+    font-weight: 700;
+    background: linear-gradient(90deg, #FFFFFF 54%, rgba(255, 216, 118, .7) 100%);
+    border-radius: 5px;
+}
+
+.item-info-img {
+    width: 70px;
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+}
+
+
+.item-info-text {
+    text-align: center;
+    @include title-Xmedium;
+    background: linear-gradient(180deg, $color-font-blue-dark 40%, rgba(233, 241, 242, 0.2) 65%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

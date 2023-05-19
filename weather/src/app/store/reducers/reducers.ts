@@ -31,6 +31,18 @@ export const Reducers = (
                 language: action.payload,
             };
         }
+        case EAppActionTypes.OpenPopUpAdd: {
+            return {
+                ...state,
+                popUpAdd: true,
+            };
+        }
+        case EAppActionTypes.ClosePopUpAdd: {
+            return {
+                ...state,
+                popUpAdd: false,
+            };
+        }
         default:
             return state;
     }

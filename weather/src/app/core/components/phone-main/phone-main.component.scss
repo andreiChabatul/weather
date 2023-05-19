@@ -1,0 +1,19 @@
+.phone-main-container {
+    top: 75px;
+    right: 284px;
+    position: absolute;
+}
+
+.phone-container {
+    border-radius: 25px;
+    border: 2px solid red;
+    width: 210px;
+    height: 420px;
+}
+
+.item-info{
+    position: absolute;
+    top: 25px;
+    right: -200px;
+    transform: rotate(20deg);
+}

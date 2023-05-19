@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-control-history',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./control-history.component.scss']
 })
 export class ControlHistoryComponent {
-
+  @Input() type: boolean;
 }

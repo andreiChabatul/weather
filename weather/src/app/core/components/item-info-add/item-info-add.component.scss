@@ -1,0 +1,33 @@
+@import "./../../../../scss/color-styles";
+@import "./../../../../scss/default-styles";
+
+.item-add-container {
+    @include flex-c_c;
+    z-index: 11;
+    position: absolute;
+    background: #FFFFFF;
+    width: 100px;
+    height: 130px;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    transition: .4s;
+    opacity: .9;
+    border: 1px solid $grey-text;
+
+    &:hover {
+        transform: translateY(-25px);
+        opacity: 1;
+
+        .item-control {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.item-control {
+    font-size: 64px;
+    font-weight: 900;
+    color: $color-font-blue-dark;
+    transition: .4s;
+}

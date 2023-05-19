@@ -7,6 +7,8 @@ export enum EAppActionTypes {
     CleanSearchCity = '[SEARCH CITY CLEAN] CleanSearchCity',
     AddMainCity = '[MAIN CITY ADD] AddMainCity',
     ChangeLanguage = '[CHANGE LANGUAGE] ChangeLanguage',
+    OpenPopUpAdd = '[OPEN POPUP ADD] OpenPopUpAdd',
+    ClosePopUpAdd = '[Close POPUP ADD] ClosePopUpAdd'
 }
 
 
@@ -29,5 +31,12 @@ export class ChangeLanguage implements Action {
     constructor(public payload: languageType) { }
 }
 
+export class OpenPopUpAdd implements Action {
+    readonly type = EAppActionTypes.OpenPopUpAdd;
+}
 
-export type ActionUnion = CleanSearchCity | AddSearchCity | AddMainCity | ChangeLanguage;
+export class ClosePopUpAdd implements Action {
+    readonly type = EAppActionTypes.ClosePopUpAdd;
+}
+
+export type ActionUnion = CleanSearchCity | AddSearchCity | AddMainCity | ChangeLanguage | OpenPopUpAdd | ClosePopUpAdd;
