@@ -1,18 +1,5 @@
 @import "./../../../scss/color-styles";
 
-.main-container {
-    position: relative;
-    height: 630px;
-    max-width: 1400px;
-    width: 90vw;
-    border-radius: 20px;
-    background: rgba($color: #EFEFEE, $alpha: 0.75);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-}
-
 .slider-container {
     overflow: hidden;
     top: 70px;

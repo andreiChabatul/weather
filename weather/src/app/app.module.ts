@@ -11,16 +11,19 @@ import { LangChangeEffects } from './store/effects/langEffect';
 import { EffectsModule } from '@ngrx/effects';
 import { MainPageModule } from './main-page/main.page.module';
 import { CoordinateSetEffects } from './store/effects/coorEffects';
-
+import { PageInfoModule } from './page-info/page.info.module';
+import { Page404Module } from './page404/page.404.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    PageInfoModule,
+    Page404Module,
     CoreModule,
     MainPageModule,
     HttpClientModule,

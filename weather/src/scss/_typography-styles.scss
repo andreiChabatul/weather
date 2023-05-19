@@ -1,8 +1,11 @@
+@import "./color-styles";
+
 @mixin font-default {
     font-family: 'Fira Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
+    color: $color-font-blue-dark;
 }
 
 @mixin title-large {

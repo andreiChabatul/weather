@@ -15,7 +15,11 @@
         "mainTitleTwo": "forecast in your device",
         "desc": "Find out what can be waiting for you on the street with a few taps"
     },
-    "popUp":{
+    "popUp": {
         "title": "Add to favorites"
+    },
+    "404": {
+        "desc": "Sorry, the page you are looking for could not be found",
+        "button": "Back to main page"
     }
 }
