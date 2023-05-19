@@ -1,4 +1,5 @@
 import { languageType } from "./languageModel";
+import { ICoordinate } from "./openweathermap";
 
 
 export interface IState {
@@ -6,6 +7,7 @@ export interface IState {
     mainCity: string,
     language: languageType,
     popUpAdd: boolean,
+    coorinateCity: ICoordinate,
 }
 
 export interface IAppStore {

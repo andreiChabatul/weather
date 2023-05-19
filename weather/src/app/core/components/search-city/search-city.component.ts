@@ -52,7 +52,7 @@ export class SearchCityComponent implements OnInit, OnDestroy {
       return;
     }
 
-    this.store.dispatch(new AddMainCity(this.cityForm.value.location))
+    this.store.dispatch(new AddMainCity(this.cityForm.value.location));
   }
 
   get _location() {

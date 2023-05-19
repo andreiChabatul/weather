@@ -7,6 +7,10 @@ export const stateApp: IState = {
     mainCity: '',
     language: 'en',
     popUpAdd: false,
+    coorinateCity: {
+        lat: 0,
+        lon: 0
+    }
 }
 
 export const initalState: IAppStore = {

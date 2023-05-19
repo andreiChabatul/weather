@@ -10,6 +10,7 @@ import { appReducers } from './store';
 import { LangChangeEffects } from './store/effects/langEffect';
 import { EffectsModule } from '@ngrx/effects';
 import { MainPageModule } from './main-page/main.page.module';
+import { CoordinateSetEffects } from './store/effects/coorEffects';
 
 
 @NgModule({
@@ -24,7 +25,7 @@ import { MainPageModule } from './main-page/main.page.module';
     MainPageModule,
     HttpClientModule,
     StoreModule.forRoot(appReducers),
-    EffectsModule.forRoot([LangChangeEffects]),
+    EffectsModule.forRoot([LangChangeEffects, CoordinateSetEffects]),
   ],
   providers: [],
   bootstrap: [AppComponent]

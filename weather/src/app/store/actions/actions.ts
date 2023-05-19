@@ -1,5 +1,6 @@
 import { Action } from "@ngrx/store";
 import { languageType } from "../models/languageModel";
+import { ICoordinate } from "../models/openweathermap";
 
 
 export enum EAppActionTypes {
@@ -8,7 +9,8 @@ export enum EAppActionTypes {
     AddMainCity = '[MAIN CITY ADD] AddMainCity',
     ChangeLanguage = '[CHANGE LANGUAGE] ChangeLanguage',
     OpenPopUpAdd = '[OPEN POPUP ADD] OpenPopUpAdd',
-    ClosePopUpAdd = '[Close POPUP ADD] ClosePopUpAdd'
+    ClosePopUpAdd = '[Close POPUP ADD] ClosePopUpAdd',
+    AddCoordinateCity = '[ADD COORDINATE CITY] AddCoordinateCity'
 }
 
 
@@ -39,4 +41,9 @@ export class ClosePopUpAdd implements Action {
     readonly type = EAppActionTypes.ClosePopUpAdd;
 }
 
-export type ActionUnion = CleanSearchCity | AddSearchCity | AddMainCity | ChangeLanguage | OpenPopUpAdd | ClosePopUpAdd;
+export class AddCoordinateCity implements Action {
+    readonly type = EAppActionTypes.AddCoordinateCity;
+    constructor(public payload: ICoordinate) { }
+}
+
+export type ActionUnion = CleanSearchCity | AddSearchCity | AddMainCity | ChangeLanguage | OpenPopUpAdd | ClosePopUpAdd | AddCoordinateCity;

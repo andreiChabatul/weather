@@ -43,6 +43,13 @@ export const Reducers = (
                 popUpAdd: false,
             };
         }
+        case EAppActionTypes.AddCoordinateCity: {
+            console.log(action.payload)
+            return {
+                ...state,
+                coorinateCity: action.payload,
+            };
+        }
         default:
             return state;
     }
