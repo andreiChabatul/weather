@@ -1,0 +1,21 @@
+@import "./../../../scss/typography-styles";
+
+.pageInfo-container {
+
+
+}
+
+.notFound-city {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-left: 25px;
+}
+
+.notFound-city_text {
+    @include title-large;
+}
+
+.spinner-info {
+    margin: 0 auto;
+}

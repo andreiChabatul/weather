@@ -1,0 +1,12 @@
+<mat-spinner class="spinner-info" *ngIf="loading ; else elseLoading"></mat-spinner>
+<ng-template #elseLoading>
+    <div class="pageInfo-container" *transloco="let t; read: 'pageInfo'">
+        <div *ngIf="weatherCity; else elseBlock">{{weatherCity.name}}</div>
+        <ng-template #elseBlock>
+            <div class="notFound-city">
+                <span class="notFound-city_text">{{ t('city')}} "{{city}}" {{ t('notFound')}}</span>
+                <app-return-main></app-return-main>
+            </div>
+        </ng-template>
+    </div>
+</ng-template>

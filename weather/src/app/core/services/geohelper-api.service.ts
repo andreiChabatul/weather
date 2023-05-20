@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, of, expand, EMPTY } from 'rxjs';
+import { Observable, expand, EMPTY } from 'rxjs';
 import { IApiGeohelper } from '../models/apiGeohelper';
 import { URL_GEOHELPER, URL_GEOHELPER_API } from './../const/const';
 import { IAppStore } from 'src/app/store/models/stateModel';

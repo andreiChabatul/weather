@@ -16,7 +16,7 @@ import { Page404Module } from './page404/page.404.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

@@ -9,7 +9,7 @@ const routes: Routes = [
     component: MainPageComponent,
   },
   {
-    path: 'info/:city',
+    path: 'info',
     loadChildren: () => import('./page-info/page.info.module').then((m) => m.PageInfoModule),
   },
   {

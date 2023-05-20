@@ -13,6 +13,7 @@ import { ItemInfoSliderComponent } from './components/item-info-slider/item-info
 import { PhoneMainComponent } from './components/phone-main/phone-main.component';
 import { ItemInfoAddComponent } from './components/item-info-add/item-info-add.component';
 import { PopUpAddHistoryComponent } from './components/pop-up-add-history/pop-up-add-history.component';
+import { ReturnMainComponent } from './components/return-main/return-main.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { PopUpAddHistoryComponent } from './components/pop-up-add-history/pop-up
         PhoneMainComponent,
         ItemInfoAddComponent,
         PopUpAddHistoryComponent,
+        ReturnMainComponent,
 
     ],
     imports: [CommonModule, MaterialModule, ReactiveFormsModule, FormsModule, TranslocoRootModule],
@@ -37,7 +39,8 @@ import { PopUpAddHistoryComponent } from './components/pop-up-add-history/pop-up
         SearchCityComponent,
         HeaderComponent,
         FooterComponent,
-        PhoneMainComponent
+        PhoneMainComponent,
+        ReturnMainComponent
     ]
 })
 export class CoreModule { }

@@ -19,7 +19,13 @@
         "title": "Add to favorites"
     },
     "404": {
-        "desc": "Sorry, the page you are looking for could not be found",
+        "desc": "Sorry, the page you are looking for could not be found"
+    },
+    "returnMain": {
         "button": "Back to main page"
+    },
+    "pageInfo": {
+        "city": "City",
+        "notFound": "not found. Go back to the main page and try again"
     }
 }

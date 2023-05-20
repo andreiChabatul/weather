@@ -1,0 +1,20 @@
+@import "./../../../../scss/typography-styles";
+@import "./../../../../scss/color-styles";
+@import "./../../../../scss/default-styles";
+
+.button-return {
+    padding: 15px;
+    background: $color-font-blue-dark;
+    border-radius: 10px;
+    border: none;
+    @include font-default;
+    font-size: 16px;
+    color: $color-grey;
+    cursor: pointer;
+    transition: .4s;
+    text-decoration: none;
+
+    &:hover {
+        background: $button-hover;
+    }
+}
