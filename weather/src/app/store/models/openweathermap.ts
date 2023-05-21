@@ -37,15 +37,17 @@ export interface IOpenweathermap {
         all: number
     },
     dt: number,
-    sys: {
-        type: number,
-        id: number,
-        country: string,
-        sunrise: number,
-        sunset: number
-    },
+    sys: ISunrise,
     timezone: number,
     id: number,
     name: string,
     cod: number
+}
+
+export interface ISunrise {
+    type: number,
+    id: number,
+    country: string,
+    sunrise: number,
+    sunset: number
 }

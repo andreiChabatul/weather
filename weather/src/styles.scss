@@ -158,7 +158,20 @@ body {
     background: linear-gradient(45deg, rgba(218, 178, 147, 1) 0%, rgba(227, 212, 163, 1) 16%, rgba(233, 234, 232, 1) 35%, rgba(217, 232, 232, 1) 55%, rgba(149, 189, 207, 1) 100%);
 }
 
-.error-text{
+.error-text {
     font-size: 12px;
     color: red;
+}
+
+
+.infoPage-item-container {
+    width: 170px;
+    height: 150px;
+    border-radius: 15px;
+    border: 1px solid $grey-text;
+    padding: 10px;
+}
+
+.infoPage-item-title {
+    @include title-medium;
 }

@@ -1,0 +1,18 @@
+<div class="infoPage-item-container" *transloco="let t; read: 'pageInfo'">
+    <p class="infoPage-item-title">{{ t('sunriseTitle')}}</p>
+    <div *ngFor="let item of sunArr" class="img-sun-container">
+        <img class="img-sun" src={{item.img}} alt="sunimage">
+        <p class="text-sun">{{item.text | timeFormat | async}}</p>
+    </div>
+
+
+    <div class="sun-progress">
+        <img class="img-sun_grey" src="./../../../../assets/infoPage/progressBar.png" alt="">
+        <div class="img-sun_color" [style]='widthBar'>
+            <img src="./../../../../assets/infoPage/progressBar.png" alt="">
+        </div>
+        <div >Прошло дня: 34%</div>
+    </div>
+
+
+</div>

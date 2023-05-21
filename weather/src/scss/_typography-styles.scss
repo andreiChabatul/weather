@@ -34,3 +34,10 @@
     line-height: 65px;
     font-weight: 900;
 }
+
+@mixin title-medium {
+    @include font-default;
+    font-size: 14px;
+    line-height: 12px;
+    font-weight: 500;
+}

@@ -31,7 +31,7 @@ export class SearchCityComponent implements OnInit, OnDestroy {
     const input$ = this.cityForm.valueChanges.pipe(
       filter(value => value.location.length > 1),
       startWith(''),
-      debounceTime(1000),
+      debounceTime(700),
       distinctUntilChanged(),
     )
 

@@ -26,6 +26,7 @@
     },
     "pageInfo": {
         "city": "City",
-        "notFound": "not found. Go back to the main page and try again"
+        "notFound": "not found. Go back to the main page and try again",
+        "sunriseTitle": "Sunrise & Sunset"
     }
 }

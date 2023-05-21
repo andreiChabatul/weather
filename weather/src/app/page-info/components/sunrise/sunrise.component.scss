@@ -1,0 +1,32 @@
+@import "./../../../../scss/color-styles";
+@import "./../../../../scss/typography-styles";
+@import "./../../../../scss/default-styles";
+
+.img-sun-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.text-sun {
+    @include title-Xsmall;
+}
+
+.img-sun {
+    width: 33px;
+}
+
+.sun-progress {
+    position: relative;
+}
+
+.img-sun_grey {
+    filter: grayscale(100%)
+}
+
+.img-sun_color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
