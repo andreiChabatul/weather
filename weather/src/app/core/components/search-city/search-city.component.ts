@@ -5,7 +5,6 @@ import { IAppStore } from 'src/app/store/models/stateModel';
 import { Store } from '@ngrx/store';
 import { selectAllCity } from 'src/app/store/selectors/selectors';
 import { filter, startWith, Subscription, debounceTime, distinctUntilChanged } from 'rxjs';
-import { AddMainCity } from 'src/app/store/actions/actions';
 
 @Component({
   selector: 'app-search-city',
@@ -52,7 +51,7 @@ export class SearchCityComponent implements OnInit, OnDestroy {
       return;
     }
 
-    this.store.dispatch(new AddMainCity(this.cityForm.value.location));
+
   }
 
   get _location() {

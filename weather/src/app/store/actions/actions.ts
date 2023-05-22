@@ -6,11 +6,9 @@ import { ICoordinate } from "../models/openweathermap";
 export enum EAppActionTypes {
     AddSearchCity = '[SEARCH CITY ADD] AddSearchCity',
     CleanSearchCity = '[SEARCH CITY CLEAN] CleanSearchCity',
-    AddMainCity = '[MAIN CITY ADD] AddMainCity',
     ChangeLanguage = '[CHANGE LANGUAGE] ChangeLanguage',
     OpenPopUpAdd = '[OPEN POPUP ADD] OpenPopUpAdd',
     ClosePopUpAdd = '[Close POPUP ADD] ClosePopUpAdd',
-    AddCoordinateCity = '[ADD COORDINATE CITY] AddCoordinateCity'
 }
 
 
@@ -20,11 +18,6 @@ export class CleanSearchCity implements Action {
 
 export class AddSearchCity implements Action {
     readonly type = EAppActionTypes.AddSearchCity;
-    constructor(public payload: string) { }
-}
-
-export class AddMainCity implements Action {
-    readonly type = EAppActionTypes.AddMainCity;
     constructor(public payload: string) { }
 }
 
@@ -41,9 +34,4 @@ export class ClosePopUpAdd implements Action {
     readonly type = EAppActionTypes.ClosePopUpAdd;
 }
 
-export class AddCoordinateCity implements Action {
-    readonly type = EAppActionTypes.AddCoordinateCity;
-    constructor(public payload: ICoordinate) { }
-}
-
-export type ActionUnion = CleanSearchCity | AddSearchCity | AddMainCity | ChangeLanguage | OpenPopUpAdd | ClosePopUpAdd | AddCoordinateCity;
+export type ActionUnion = CleanSearchCity | AddSearchCity | ChangeLanguage | OpenPopUpAdd | ClosePopUpAdd;

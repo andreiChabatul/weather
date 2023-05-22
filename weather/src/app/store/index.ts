@@ -4,13 +4,8 @@ import { Reducers } from "./reducers/reducers";
 
 export const stateApp: IState = {
     searchCity: [],
-    mainCity: '',
     language: 'en',
     popUpAdd: false,
-    coorinateCity: {
-        lat: 0,
-        lon: 0
-    }
 }
 
 export const initalState: IAppStore = {

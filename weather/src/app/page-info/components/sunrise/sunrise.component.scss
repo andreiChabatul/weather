@@ -21,7 +21,8 @@
 }
 
 .img-sun_grey {
-    filter: grayscale(100%)
+    filter: grayscale(100%);
+    opacity: .4;
 }
 
 .img-sun_color {
@@ -29,4 +30,8 @@
     top: 0;
     left: 0;
     overflow: hidden;
+}
+
+.rest-progress-text {
+    @include title-Xsmall;
 }

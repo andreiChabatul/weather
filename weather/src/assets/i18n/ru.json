@@ -27,6 +27,13 @@
     "pageInfo": {
         "city": "Город",
         "notFound": "не найден. Вернитесь на главную страницу и повторите попытку",
-        "sunriseTitle": "Восход и закат"
+        "sunriseTitle": "Восход и закат",
+        "humidityTitle": "Влажность",
+        "restDate": "До заката",
+        "humudityOne": "Очень сухой воздух",
+        "humudityTwo": "Cухой воздух",
+        "humudityThree": "Умеренно сухой воздух",
+        "humudityFour": "Умеренно влажный воздух",
+        "humudityFive": "Очень влажный воздух"
     }
 }

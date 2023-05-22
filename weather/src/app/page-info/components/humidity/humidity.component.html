@@ -1,0 +1,17 @@
+<div class="infoPage-item-container" *transloco="let t; read: 'pageInfo'">
+    <p class="infoPage-item-title">{{ t('humidityTitle')}}</p>
+
+    <div class="humidity-value-container">
+        <p class="humidity-value-text">{{value}}%</p>
+        <div class="humidity-progress">
+            <div class="humidity-progress_circle" [style]='heightValue'></div>
+        </div>
+    </div>
+    <p class="humudity-text" appHumidityColor [humidity]="value">
+        <span *ngIf="value<31">{{ t('humudityOne')}}</span>
+        <span *ngIf="value > 29 && value<55">{{ t('humudityTwo')}}</span>
+        <span *ngIf="value > 54 && value<71">{{ t('humudityThree')}}</span>
+        <span *ngIf="value > 69 && value<85">{{ t('humudityFour')}}</span>
+        <span *ngIf="value > 84">{{ t('humudityFive')}}</span>
+    </p>
+</div>

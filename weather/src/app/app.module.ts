@@ -13,7 +13,6 @@ import { MainPageModule } from './main-page/main.page.module';
 import { PageInfoModule } from './page-info/page.info.module';
 import { Page404Module } from './page404/page.404.module';
 
-
 @NgModule({
   declarations: [
     AppComponent

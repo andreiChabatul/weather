@@ -1,11 +1,12 @@
 <mat-spinner class="spinner-info" *ngIf="loading ; else elseLoading"></mat-spinner>
 <ng-template #elseLoading>
-    <div class="pageInfo-container" *transloco="let t; read: 'pageInfo'">
-        <div *ngIf="weatherCity; else elseBlock">
-
+    <div *transloco="let t; read: 'pageInfo'">
+        <div *ngIf="weatherCity; else elseBlock" class="pageInfo-container">
+            <app-info-general [info]="weatherCity"></app-info-general>
 
             <div>
                 <app-sunrise [info]="weatherCity.sys"></app-sunrise>
+                <app-humidity [value]="weatherCity.main.humidity"></app-humidity>
             </div>
         </div>
         <ng-template #elseBlock>

@@ -19,12 +19,6 @@ export const Reducers = (
                 searchCity: [...new Set([...state.searchCity, action.payload])],
             };
         }
-        case EAppActionTypes.AddMainCity: {
-            return {
-                ...state,
-                mainCity: action.payload,
-            };
-        }
         case EAppActionTypes.ChangeLanguage: {
             return {
                 ...state,
@@ -41,13 +35,6 @@ export const Reducers = (
             return {
                 ...state,
                 popUpAdd: false,
-            };
-        }
-        case EAppActionTypes.AddCoordinateCity: {
-            console.log(action.payload)
-            return {
-                ...state,
-                coorinateCity: action.payload,
             };
         }
         default:

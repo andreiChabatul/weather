@@ -27,6 +27,13 @@
     "pageInfo": {
         "city": "City",
         "notFound": "not found. Go back to the main page and try again",
-        "sunriseTitle": "Sunrise & Sunset"
+        "sunriseTitle": "Sunrise & Sunset",
+        "humidityTitle": "Humidity",
+        "restDate": "Until sunset",
+        "humudityOne": "Very dry air",
+        "humudityTwo": "Dry air",
+        "humudityThree": "Moderately dry air",
+        "humudityFour": "Moderately humid air",
+        "humudityFive": "Very humid air"
     }
 }

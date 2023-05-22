@@ -37,7 +37,8 @@ export class PageInfoComponent implements OnInit, OnDestroy {
       })
     ).subscribe(value => {
       this.loading = false;
-      this.weatherCity = value
+      this.weatherCity = value;
+      console.log(this.weatherCity)
     });
 
   }

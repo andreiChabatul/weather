@@ -34,4 +34,5 @@ export class SunriseComponent implements OnInit {
   private calcProgress(): string {
     return (100 - ((this.info.sunset * 1000) - +new Date()) / ((this.info.sunset - this.info.sunrise) * 10)).toFixed(2);
   }
+
 }

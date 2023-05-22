@@ -1,0 +1,34 @@
+@import "./../../../../scss/color-styles";
+@import "./../../../../scss/typography-styles";
+@import "./../../../../scss/default-styles";
+
+.humidity-value-container {
+    display: flex;
+    @include flex-c_s;
+}
+
+.humidity-value-text {
+    @include title-Xmedium;
+    font-weight: 500;
+}
+
+.humidity-progress {
+    position: relative;
+    width: 20px;
+    height: 80px;
+    border-radius: 15px;
+    border: 1px solid $grey-text;
+}
+
+.humidity-progress_circle {
+    position: absolute;
+    right: 1px;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: $color-primary-blue;
+}
+
+.humudity-text {
+    @include title-Xsmall;
+}
