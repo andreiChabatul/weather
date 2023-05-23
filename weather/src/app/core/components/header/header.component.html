@@ -3,9 +3,9 @@
         <img class="logo-img" src="./../../../../assets/logoIco.png" alt="logo">
         <p class="logo-text">{{ t('logo') }}</p>
     </div>
-    <div class="setting-header">
+    <div class="setting-header" (click)="openPopUp()">
         <span class="header-setting-text">{{ t('titleSetting') }}</span>
-        <span class="material-symbols-outlined setting-icon" (click)="openPopUp()">
+        <span class="material-symbols-outlined setting-icon">
             settings
         </span>
     </div>

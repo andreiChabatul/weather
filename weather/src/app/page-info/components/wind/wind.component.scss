@@ -1,0 +1,36 @@
+@import "./../../../../scss/color-styles";
+@import "./../../../../scss/typography-styles";
+@import "./../../../../scss/default-styles";
+
+.compas-container {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid $color-font-blue-dark;
+    background: url(./../../../../assets/infoPage/compasOne.png);
+    background-size: cover;
+    position: relative;
+    @include flex-c_c;
+    
+}
+
+.compas-array {
+    top: 7px;
+    left: 7px;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url(./../../../../assets/infoPage/compasTwo.png);
+    background-size: cover;
+}
+
+.compas-direction-text {
+    text-align: center;
+    @include title-Xsmall;
+    font-weight: 500;
+}
+
+.text-gust {
+    @include title-Xsmall;
+}

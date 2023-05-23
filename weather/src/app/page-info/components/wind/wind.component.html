@@ -1,0 +1,11 @@
+<div class="infoPage-item-container" *transloco="let t; read: 'pageInfo'">
+    <p class="infoPage-item-title">{{ t('windTitle')}}</p>
+
+    <div class="compas-container">
+        <div [style]='rotate' class="compas-array"></div>
+        <p class="compas-direction-text">{{value.speed}}<br>м\с</p>
+    </div>
+
+    <p class="text-gust">{{ t('windGust')}}{{value.gust}}м\с</p>
+
+</div>

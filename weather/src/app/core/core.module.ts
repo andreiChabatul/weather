@@ -13,7 +13,6 @@ import { ItemInfoSliderComponent } from './components/item-info-slider/item-info
 import { PhoneMainComponent } from './components/phone-main/phone-main.component';
 import { ItemInfoAddComponent } from './components/item-info-add/item-info-add.component';
 import { ReturnMainComponent } from './components/return-main/return-main.component';
-import { SettingMenuComponent } from './components/setting-menu/setting-menu.component';
 import { ChangeUnitsComponent } from './components/change-units/change-units.component';
 import { PopUpComponent } from './components/pop-up/pop-up.component';
 
@@ -29,7 +28,6 @@ import { PopUpComponent } from './components/pop-up/pop-up.component';
         PhoneMainComponent,
         ItemInfoAddComponent,
         ReturnMainComponent,
-        SettingMenuComponent,
         ChangeUnitsComponent,
         PopUpComponent
      

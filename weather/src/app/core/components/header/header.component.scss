@@ -27,10 +27,16 @@
 
 .setting-header {
     position: relative;
+    cursor: pointer;
 
     &:hover .header-setting-text {
         opacity: 1;
         transform: translateX(-50px)
+    }
+
+    &:hover .setting-icon {
+        transform: rotate(180deg);
+        color: $button-hover;
     }
 }
 
@@ -43,13 +49,7 @@
 }
 
 .setting-icon {
-    cursor: pointer;
     font-size: 30px;
     transition: .3s;
     color: $color-font-blue-dark;
-
-    &:hover {
-        transform: rotate(180deg);
-        color: $button-hover;
-    }
 }

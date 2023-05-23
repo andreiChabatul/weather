@@ -28,11 +28,7 @@ export interface IOpenweathermap {
         grnd_level: number
     },
     visibility: number,
-    wind: {
-        speed: number,
-        deg: number,
-        gust: number
-    },
+    wind: IWind,
     clouds: {
         all: number
     },
@@ -50,4 +46,10 @@ export interface ISunrise {
     country: string,
     sunrise: number,
     sunset: number
+}
+
+export interface IWind {
+    speed: number,
+    deg: number,
+    gust: number
 }
