@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
-import { ClosePopUpAdd } from 'src/app/store/actions/actions';
+import { ClosePopUp } from 'src/app/store/actions/actions';
 import { popUpType } from 'src/app/store/models/settingModel';
 import { IAppStore } from 'src/app/store/models/stateModel';
 import { selectPopUp } from 'src/app/store/selectors/selectors';
@@ -21,7 +21,7 @@ export class PopUpComponent implements OnInit, OnDestroy {
   constructor(private store: Store<IAppStore>) { }
 
   closePopUp() {
-    this.store.dispatch(new ClosePopUpAdd());
+    this.store.dispatch(new ClosePopUp());
   }
   ngOnInit(): void {
     this.substriction$ = this.statePopUp$.subscribe(

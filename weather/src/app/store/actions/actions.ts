@@ -1,12 +1,13 @@
 import { Action } from "@ngrx/store";
-import { languageType, popUpType } from "../models/settingModel";
+import { languageType, popUpType, unitsType } from "../models/settingModel";
 
 export enum EAppActionTypes {
     AddSearchCity = '[SEARCH CITY ADD] AddSearchCity',
     CleanSearchCity = '[SEARCH CITY CLEAN] CleanSearchCity',
     ChangeLanguage = '[CHANGE LANGUAGE] ChangeLanguage',
-    OpenPopUpAdd = '[OPEN POPUP ADD] OpenPopUpAdd',
-    ClosePopUpAdd = '[Close POPUP ADD] ClosePopUpAdd',
+    ChangeUnits = '[CHANGE UNITS] ChangeUnits',
+    OpenPopUp = '[OPEN POPUP] OpenPopUp',
+    ClosePopUp = '[Close POPUP] ClosePopUp',
 }
 
 
@@ -24,13 +25,18 @@ export class ChangeLanguage implements Action {
     constructor(public payload: languageType) { }
 }
 
-export class OpenPopUpAdd implements Action {
-    readonly type = EAppActionTypes.OpenPopUpAdd;
+export class ChangeUnits implements Action {
+    readonly type = EAppActionTypes.ChangeUnits;
+    constructor(public payload: unitsType) { }
+}
+
+export class OpenPopUp implements Action {
+    readonly type = EAppActionTypes.OpenPopUp;
     constructor(public payload: popUpType) { }
 }
 
-export class ClosePopUpAdd implements Action {
-    readonly type = EAppActionTypes.ClosePopUpAdd;
+export class ClosePopUp implements Action {
+    readonly type = EAppActionTypes.ClosePopUp;
 }
 
-export type ActionUnion = CleanSearchCity | AddSearchCity | ChangeLanguage | OpenPopUpAdd | ClosePopUpAdd;
+export type ActionUnion = CleanSearchCity | AddSearchCity | ChangeLanguage | OpenPopUp | ClosePopUp | ChangeUnits;

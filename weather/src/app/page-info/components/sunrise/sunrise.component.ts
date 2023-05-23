@@ -13,18 +13,18 @@ interface sunInfo {
 })
 export class SunriseComponent implements OnInit {
 
-  @Input() info: ISunrise;
+  @Input() value: ISunrise;
   sunArr: sunInfo[];
   widthBar: string;
 
   ngOnInit(): void {
     this.sunArr = [
       {
-        text: this.info.sunrise,
+        text: this.value.sunrise,
         img: "./../../../../assets/infoPage/sunriseIco.png"
       },
       {
-        text: this.info.sunset,
+        text: this.value.sunset,
         img: "./../../../../assets/infoPage/sunset.png"
       }
     ]
@@ -32,7 +32,7 @@ export class SunriseComponent implements OnInit {
   }
 
   private calcProgress(): string {
-    return (100 - ((this.info.sunset * 1000) - +new Date()) / ((this.info.sunset - this.info.sunrise) * 10)).toFixed(2);
+    return (100 - ((this.value.sunset * 1000) - +new Date()) / ((this.value.sunset - this.value.sunrise) * 10)).toFixed(2);
   }
 
 }

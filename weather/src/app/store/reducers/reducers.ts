@@ -25,7 +25,13 @@ export const Reducers = (
                 language: action.payload,
             };
         }
-        case EAppActionTypes.OpenPopUpAdd: {
+        case EAppActionTypes.ChangeUnits: {
+            return {
+                ...state,
+                units: action.payload,
+            };
+        }
+        case EAppActionTypes.OpenPopUp: {
             return {
                 ...state,
                 popUp: {
@@ -34,7 +40,7 @@ export const Reducers = (
                 },
             };
         }
-        case EAppActionTypes.ClosePopUpAdd: {
+        case EAppActionTypes.ClosePopUp: {
             return {
                 ...state,
                 popUp: {

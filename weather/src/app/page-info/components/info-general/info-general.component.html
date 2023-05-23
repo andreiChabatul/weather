@@ -2,8 +2,8 @@
 
     <img class="weather-ico" src="./../../../../assets/icoWeather/cloudy.png" alt="">
 
-    <p class="genetal-temp-text">{{info.main.temp}}</p>
-    <p class="general-day-text">{{day | dayWeek | async}}, 
+    <p class="genetal-temp-text">{{info.main.temp | tempPipe | async}}</p>
+    <p class="general-day-text">{{day | dayWeek | async}},
         <span class="general-time-text">{{time}}</span>
     </p>
 

@@ -1,8 +1,9 @@
-import { IPopUp, languageType } from "./settingModel";
+import { IPopUp, languageType, unitsType } from "./settingModel";
 
 export interface IState {
     searchCity: string[],
     language: languageType,
+    units: unitsType,
     popUp: IPopUp,
 }
 

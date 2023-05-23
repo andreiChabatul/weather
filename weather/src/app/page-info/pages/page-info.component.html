@@ -5,7 +5,7 @@
             <app-info-general [info]="weatherCity"></app-info-general>
 
             <div>
-                <app-sunrise [info]="weatherCity.sys"></app-sunrise>
+                <app-sunrise [value]="weatherCity.sys"></app-sunrise>
                 <app-humidity [value]="weatherCity.main.humidity"></app-humidity>
                 <app-wind [value]="weatherCity.wind"></app-wind>
             </div>

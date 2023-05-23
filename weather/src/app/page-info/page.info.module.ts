@@ -14,6 +14,7 @@ import { InfoGeneralComponent } from './components/info-general/info-general.com
 import { DayWeek } from '../pipe/setDayWeek';
 import { HumidityPipe } from '../pipe/humidityPipe';
 import { WindComponent } from './components/wind/wind.component';
+import { TempPipe } from '../pipe/tempPipe';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { WindComponent } from './components/wind/wind.component';
         InfoGeneralComponent,
         DayWeek,
         HumidityPipe,
-        WindComponent
+        WindComponent,
+        TempPipe
     ],
     imports: [MaterialModule, TranslocoRootModule, CoreModule, CommonModule],
     providers: [

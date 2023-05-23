@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
-import { IUnits } from 'src/app/store/models/settingModel';
+import { Store } from '@ngrx/store';
+import { ChangeUnits } from 'src/app/store/actions/actions';
+import { IUnits, unitsType } from 'src/app/store/models/settingModel';
+import { IAppStore } from 'src/app/store/models/stateModel';
+import { selectUnits } from 'src/app/store/selectors/selectors';
 
 @Component({
   selector: 'app-change-units',
@@ -12,5 +16,11 @@ export class ChangeUnitsComponent {
     { value: 'metric', text: '℃' },
     { value: 'imperial', text: '℉' }
   ];
+  selectedUnits$ = this.store.select(selectUnits);
 
+  constructor(private store: Store<IAppStore>) { }
+
+  selectUnits(value: unitsType) {
+    this.store.dispatch(new ChangeUnits(value));
+  }
 }

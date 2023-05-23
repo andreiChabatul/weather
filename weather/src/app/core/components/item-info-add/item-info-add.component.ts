@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { OpenPopUpAdd } from 'src/app/store/actions/actions';
+import { OpenPopUp } from 'src/app/store/actions/actions';
 import { IAppStore } from 'src/app/store/models/stateModel';
 
 @Component({
@@ -13,7 +13,7 @@ export class ItemInfoAddComponent {
   constructor(private store: Store<IAppStore>) { }
 
   openPopUp() {
-    this.store.dispatch(new OpenPopUpAdd('add'));
+    this.store.dispatch(new OpenPopUp('add'));
   }
 
 }

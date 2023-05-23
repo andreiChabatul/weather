@@ -37,9 +37,16 @@
     background: $grey-text;
     cursor: pointer;
     color: $color-grey;
+    opacity: 0.7;
 
     &:hover {
         background: #71960A;
         transform: scale(1.05);
+        opacity: 1;
     }
+}
+
+.unit-item__active {
+    background: #71960A;
+    opacity: 1;
 }

@@ -5,6 +5,7 @@ import { Reducers } from "./reducers/reducers";
 export const stateApp: IState = {
     searchCity: [],
     language: 'en',
+    units: 'metric',
     popUp:
     {
         popUpState: false,

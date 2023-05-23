@@ -1,8 +1,8 @@
 <div class="units-container" *transloco="let t; read: 'units'">
     <p class="units-container_text">{{ t('title') }}</p>
     <div class="units-container_select">
-        <p *ngFor="let item of units" class="unit-item">{{item.text}}</p>
-        <!-- <img *ngFor="let item of lang" class="lang-item" src={{item.img}} (click)="selectLanguage(item.value)"
-            alt={{item.value}}lang [ngClass]="{'lang-item__active': (selectedLang$ | async) === item.value}"> -->
+        <p *ngFor="let item of units" class="unit-item" (click)="selectUnits(item.value)"
+            [ngClass]="{'unit-item__active': (selectedUnits$ | async) === item.value}">{{item.text}}
+        </p>
     </div>
 </div>
