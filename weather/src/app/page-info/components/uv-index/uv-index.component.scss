@@ -1,0 +1,86 @@
+@import "./../../../../scss/color-styles";
+@import "./../../../../scss/typography-styles";
+@import "./../../../../scss/default-styles";
+
+.uv-round-container {
+    position: relative;
+    height: 75px;
+    overflow: hidden;
+    @include flex-c_c;
+}
+
+.uv-round {
+    bottom: -65px;
+    left: 19px;
+    position: absolute;
+    height: 110px;
+    width: 110px;
+    border: 4px solid $color-font-blue-dark;
+    border-radius: 50%;
+}
+
+.uv-round-background {
+    position: absolute;
+    height: 146px;
+    width: 146px;
+    border-radius: 50%;
+    border: 17px solid #d6d6dd;
+    bottom: -82px;
+
+}
+
+.uv-round_value__3 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    @include title-medium;
+}
+
+.uv-round_value__12 {
+    position: absolute;
+    bottom: 20px;
+    right: 17px;
+    @include title-medium;
+}
+
+.uv-round_value__6 {
+    position: absolute;
+    bottom: 45px;
+    left: 50px;
+    @include title-medium;
+}
+
+.uv-round_value__9 {
+    position: absolute;
+    bottom: 45px;
+    right: 50px;
+    @include title-medium;
+}
+
+.uv-direction-text {
+    @include title-large;
+    @include flex-s_c;
+    font-weight: 500;
+    border: 2px solid $color-font-blue-dark;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: #d6d6dd;
+    position: relative;
+    bottom: -40px;
+}
+
+.uv-array {
+    position: absolute;
+    top: -19px;
+    background: url(./../../../../assets/infoPage/compasTwo.png);
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+}
+
+
+.text-uv {
+    margin-top: 10px;
+    @include title-Xsmall;
+}

@@ -2,9 +2,9 @@
 
 .pageInfo-container {
 
-display: flex;
-justify-content: space-between;
-padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
 
 }
 
@@ -23,3 +23,9 @@ padding: 0 5%;
     margin: 0 auto;
 }
 
+.highLights-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5%;
+}

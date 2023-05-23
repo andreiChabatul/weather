@@ -15,6 +15,7 @@ import { DayWeek } from '../pipe/setDayWeek';
 import { HumidityPipe } from '../pipe/humidityPipe';
 import { WindComponent } from './components/wind/wind.component';
 import { TempPipe } from '../pipe/tempPipe';
+import { UvIndexComponent } from './components/uv-index/uv-index.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { TempPipe } from '../pipe/tempPipe';
         DayWeek,
         HumidityPipe,
         WindComponent,
-        TempPipe
+        TempPipe,
+        UvIndexComponent
     ],
     imports: [MaterialModule, TranslocoRootModule, CoreModule, CommonModule],
     providers: [

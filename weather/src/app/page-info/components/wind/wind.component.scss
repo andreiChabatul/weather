@@ -12,7 +12,6 @@
     background-size: cover;
     position: relative;
     @include flex-c_c;
-    
 }
 
 .compas-array {
@@ -26,9 +25,14 @@
 }
 
 .compas-direction-text {
-    text-align: center;
     @include title-Xsmall;
+    @include flex-c_c;
     font-weight: 500;
+    border: 2px solid $color-font-blue-dark;
+    border-radius: 50%;
+    width: 47px;
+    height: 47px;
+    background: #b9b9c9;
 }
 
 .text-gust {
