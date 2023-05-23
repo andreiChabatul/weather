@@ -12,6 +12,7 @@ import { HumidityComponent } from './components/humidity/humidity.component';
 import { HumidityColorDirective } from '../directives/humidity-color.directive';
 import { InfoGeneralComponent } from './components/info-general/info-general.component';
 import { DayWeek } from '../pipe/setDayWeek';
+import { HumidityPipe } from '../pipe/humidityPipe';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { DayWeek } from '../pipe/setDayWeek';
         HumidityComponent,
         HumidityColorDirective,
         InfoGeneralComponent,
-        DayWeek
+        DayWeek,
+        HumidityPipe
     ],
     imports: [MaterialModule, TranslocoRootModule, CoreModule, CommonModule],
     providers: [

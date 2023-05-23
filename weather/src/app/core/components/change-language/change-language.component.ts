@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { ChangeLanguage } from 'src/app/store/actions/actions';
-import { ILang, languageType } from 'src/app/store/models/languageModel';
+import { ILang, languageType } from 'src/app/store/models/settingModel';
 import { IAppStore } from 'src/app/store/models/stateModel';
 import { selectLanguage } from 'src/app/store/selectors/selectors';
 

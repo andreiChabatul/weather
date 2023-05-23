@@ -3,44 +3,43 @@
 @import "./../../../../scss/typography-styles";
 
 
-.lang-container {
+.units-container {
     border: solid 1px $color-font-blue-dark;
     padding: 2px 4px;
     border-radius: 20px;
     @include flex-c_s;
-    margin-bottom: 10px;
+    gap: 10px;
 
     &:hover {
         background: linear-gradient(60deg, rgba(253, 235, 187, 1) 0%, rgba(149, 189, 207, 1) 100%);
     }
 }
 
-.lang-container_select {
-    @include flex-c_c;
-    gap: 4px;
-}
-
-.lang-container_text {
+.units-container_text {
     @include title-medium;
     color: $color-font-blue-dark;
 }
 
-.lang-item {
-    cursor: pointer;
+.units-container_select {
+    @include flex-c_c;
+    gap: 4px;
+}
+
+.unit-item {
+    @include flex-c_c;
+    @include title-medium;
     width: 25px;
-    filter: grayscale(100%);
+    height: 25px;
     transition: .3s;
     border: 1px solid $color-font-blue-dark;
     border-radius: 50%;
     opacity: .8;
+    background: $grey-text;
+    cursor: pointer;
+    color: $color-grey;
 
     &:hover {
-        filter: grayscale(0);
+        background: #71960A;
         transform: scale(1.05);
     }
-}
-
-.lang-item__active {
-    filter: grayscale(0);
-    opacity: 1;
 }

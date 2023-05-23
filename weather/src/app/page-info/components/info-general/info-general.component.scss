@@ -1,7 +1,43 @@
+@import "./../../../../scss/color-styles";
+@import "./../../../../scss/typography-styles";
+@import "./../../../../scss/default-styles";
+
+
+
 .info-general-container {
-    height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
 }
 
-.weather-ico{
+.weather-ico {
     width: 200px;
+}
+
+.genetal-temp-text {
+    @include title-Xlarge;
+    font-weight: 400;
+}
+
+.general-day-text {
+    @include title-large;
+    font-weight: 400;
+    border-bottom: 1px solid $grey-text;
+    padding-bottom: 20px;
+}
+
+.general-time-text {
+    color: $grey-text;
+}
+
+.name-city-container {
+    @include title-large;
+    @include flex-c_c;
+    border-radius: 15px;
+    height: 80px;
+    background: url(./../../../../assets/infoPage/cityBackground.png);
+    background-size: cover;
+    color: $color-white;
 }

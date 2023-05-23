@@ -28,13 +28,19 @@ export const Reducers = (
         case EAppActionTypes.OpenPopUpAdd: {
             return {
                 ...state,
-                popUpAdd: true,
+                popUp: {
+                    popUpState: true,
+                    type: action.payload,
+                },
             };
         }
         case EAppActionTypes.ClosePopUpAdd: {
             return {
                 ...state,
-                popUpAdd: false,
+                popUp: {
+                    popUpState: false,
+                    type: 'setting'
+                },
             };
         }
         default:

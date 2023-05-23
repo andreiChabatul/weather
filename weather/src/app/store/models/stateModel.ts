@@ -1,11 +1,9 @@
-import { languageType } from "./languageModel";
-import { ICoordinate } from "./openweathermap";
-
+import { IPopUp, languageType } from "./settingModel";
 
 export interface IState {
     searchCity: string[],
     language: languageType,
-    popUpAdd: boolean,
+    popUp: IPopUp,
 }
 
 export interface IAppStore {

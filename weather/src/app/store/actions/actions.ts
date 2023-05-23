@@ -1,7 +1,5 @@
 import { Action } from "@ngrx/store";
-import { languageType } from "../models/languageModel";
-import { ICoordinate } from "../models/openweathermap";
-
+import { languageType, popUpType } from "../models/settingModel";
 
 export enum EAppActionTypes {
     AddSearchCity = '[SEARCH CITY ADD] AddSearchCity',
@@ -28,6 +26,7 @@ export class ChangeLanguage implements Action {
 
 export class OpenPopUpAdd implements Action {
     readonly type = EAppActionTypes.OpenPopUpAdd;
+    constructor(public payload: popUpType) { }
 }
 
 export class ClosePopUpAdd implements Action {

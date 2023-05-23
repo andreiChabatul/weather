@@ -5,7 +5,11 @@ import { Reducers } from "./reducers/reducers";
 export const stateApp: IState = {
     searchCity: [],
     language: 'en',
-    popUpAdd: false,
+    popUp:
+    {
+        popUpState: false,
+        type: 'setting'
+    },
 }
 
 export const initalState: IAppStore = {

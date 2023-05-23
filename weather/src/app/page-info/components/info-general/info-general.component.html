@@ -2,7 +2,17 @@
 
     <img class="weather-ico" src="./../../../../assets/icoWeather/cloudy.png" alt="">
 
-    <p>{{info.main.temp}}</p>
-    <p>{{day | dayWeek | async}}</p>
+    <p class="genetal-temp-text">{{info.main.temp}}</p>
+    <p class="general-day-text">{{day | dayWeek | async}}, 
+        <span class="general-time-text">{{time}}</span>
+    </p>
+
+    <div>
+        <p>Mostly Cloudy</p>
+        <p>Rain - 0%</p>
+    </div>
+
+    <div class="name-city-container">{{info.name}}</div>
+
 
 </div>

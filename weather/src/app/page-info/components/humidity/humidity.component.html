@@ -7,11 +7,5 @@
             <div class="humidity-progress_circle" [style]='heightValue'></div>
         </div>
     </div>
-    <p class="humudity-text" appHumidityColor [humidity]="value">
-        <span *ngIf="value<31">{{ t('humudityOne')}}</span>
-        <span *ngIf="value > 29 && value<55">{{ t('humudityTwo')}}</span>
-        <span *ngIf="value > 54 && value<71">{{ t('humudityThree')}}</span>
-        <span *ngIf="value > 69 && value<85">{{ t('humudityFour')}}</span>
-        <span *ngIf="value > 84">{{ t('humudityFive')}}</span>
-    </p>
+    <p class="humudity-text" appHumidityColor [humidity]="value">{{value | humidityPipe | async}}</p>
 </div>

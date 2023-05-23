@@ -24,3 +24,32 @@
         opacity: 1;
     }
 }
+
+.setting-header {
+    position: relative;
+
+    &:hover .header-setting-text {
+        opacity: 1;
+        transform: translateX(-50px)
+    }
+}
+
+.header-setting-text {
+    @include title-medium;
+    position: absolute;
+    opacity: 0;
+    bottom: 12px;
+    transition: .3s;
+}
+
+.setting-icon {
+    cursor: pointer;
+    font-size: 30px;
+    transition: .3s;
+    color: $color-font-blue-dark;
+
+    &:hover {
+        transform: rotate(180deg);
+        color: $button-hover;
+    }
+}

@@ -12,9 +12,10 @@ import { AddLocationComponent } from './components/add-location/add-location.com
 import { ItemInfoSliderComponent } from './components/item-info-slider/item-info-slider.component';
 import { PhoneMainComponent } from './components/phone-main/phone-main.component';
 import { ItemInfoAddComponent } from './components/item-info-add/item-info-add.component';
-import { PopUpAddHistoryComponent } from './components/pop-up-add-history/pop-up-add-history.component';
 import { ReturnMainComponent } from './components/return-main/return-main.component';
-
+import { SettingMenuComponent } from './components/setting-menu/setting-menu.component';
+import { ChangeUnitsComponent } from './components/change-units/change-units.component';
+import { PopUpComponent } from './components/pop-up/pop-up.component';
 
 @NgModule({
     declarations: [
@@ -27,9 +28,11 @@ import { ReturnMainComponent } from './components/return-main/return-main.compon
         ItemInfoSliderComponent,
         PhoneMainComponent,
         ItemInfoAddComponent,
-        PopUpAddHistoryComponent,
         ReturnMainComponent,
-
+        SettingMenuComponent,
+        ChangeUnitsComponent,
+        PopUpComponent
+     
     ],
     imports: [CommonModule, MaterialModule, ReactiveFormsModule, FormsModule, TranslocoRootModule],
     providers: [
@@ -40,7 +43,9 @@ import { ReturnMainComponent } from './components/return-main/return-main.compon
         HeaderComponent,
         FooterComponent,
         PhoneMainComponent,
-        ReturnMainComponent
+        ReturnMainComponent,
+        PopUpComponent
+
     ]
 })
 export class CoreModule { }

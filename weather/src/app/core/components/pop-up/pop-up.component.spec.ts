@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PopUpAddHistoryComponent } from './pop-up-add-history.component';
+import { PopUpComponent } from './pop-up.component';
 
 describe('PopUpAddHistoryComponent', () => {
-  let component: PopUpAddHistoryComponent;
-  let fixture: ComponentFixture<PopUpAddHistoryComponent>;
+  let component: PopUpComponent;
+  let fixture: ComponentFixture<PopUpComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PopUpAddHistoryComponent]
+      declarations: [PopUpComponent]
     });
-    fixture = TestBed.createComponent(PopUpAddHistoryComponent);
+    fixture = TestBed.createComponent(PopUpComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

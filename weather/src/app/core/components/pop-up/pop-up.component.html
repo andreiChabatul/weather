@@ -1,0 +1,19 @@
+<div *ngIf="isOpen" class="popUp-background" (click)="closePopUp()">
+    <div class="popUp-container" *transloco="let t; read: 'popUp'" (click)="$event.stopPropagation()">
+
+        <div *ngIf="type === 'add'">
+            <p class="popUp-title-text">{{ t('titleSearch')}}</p>
+            <app-search-city [type]="false"></app-search-city>
+        </div>
+
+        <div *ngIf="type === 'setting'">
+            <p class="popUp-title-text">{{ t('titleSetting')}}</p>
+            <app-setting-menu></app-setting-menu>
+            <app-change-units></app-change-units>
+        </div>
+        
+        <span class="material-symbols-outlined close-popUp" (click)="closePopUp()">
+            close
+        </span>
+    </div>
+</div>

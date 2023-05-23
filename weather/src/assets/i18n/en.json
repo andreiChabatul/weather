@@ -1,9 +1,13 @@
 {
     "header": {
-        "logo": "Weather"
+        "logo": "Weather",
+        "titleSetting": "Setting"
     },
     "lang": {
-        "title": "Change language"
+        "title": "Choose language:"
+    },
+    "units": {
+        "title": "Choose a unit of measure:"
     },
     "searchCity": {
         "placeholder": "Enter city name",
@@ -16,7 +20,8 @@
         "desc": "Find out what can be waiting for you on the street with a few taps"
     },
     "popUp": {
-        "title": "Add to favorites"
+        "titleSearch": "Add to favorites",
+        "titleSetting": "Setting"
     },
     "404": {
         "desc": "Sorry, the page you are looking for could not be found"
@@ -29,11 +34,6 @@
         "notFound": "not found. Go back to the main page and try again",
         "sunriseTitle": "Sunrise & Sunset",
         "humidityTitle": "Humidity",
-        "restDate": "Until sunset",
-        "humudityOne": "Very dry air",
-        "humudityTwo": "Dry air",
-        "humudityThree": "Moderately dry air",
-        "humudityFour": "Moderately humid air",
-        "humudityFive": "Very humid air"
+        "restDate": "Until sunset"
     }
 }
