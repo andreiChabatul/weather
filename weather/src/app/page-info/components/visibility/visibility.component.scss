@@ -1,0 +1,12 @@
+@import "./../../../../scss/color-styles";
+@import "./../../../../scss/typography-styles";
+@import "./../../../../scss/default-styles";
+
+.visibility-text {
+    @include title-Xmedium;
+    font-weight: 500;
+}
+
+.visibility-info {
+    @include title-Xsmall;
+}

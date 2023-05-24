@@ -36,6 +36,8 @@
         "humidityTitle": "Humidity",
         "restDate": "Until sunset",
         "windTitle": "Wind status",
-        "windGust": "Wind gusts up to: "
+        "windGust": "Wind gusts up to: ",
+        "indexUVTitle" : "UV index",
+        "visibilityTitle": "Visibility"
     }
 }

@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class UvIndexComponent {
 
+  value = 5;
+  rotate = `transform: rotate(${-105 + (15 * this.value)}deg)`;
+
 }

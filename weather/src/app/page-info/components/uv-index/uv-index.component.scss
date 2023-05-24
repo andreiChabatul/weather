@@ -11,7 +11,7 @@
 
 .uv-round {
     bottom: -65px;
-    left: 19px;
+    left: 21px;
     position: absolute;
     height: 110px;
     width: 110px;
@@ -21,11 +21,12 @@
 
 .uv-round-background {
     position: absolute;
-    height: 146px;
-    width: 146px;
+    height: 144px;
+    width: 144px;
     border-radius: 50%;
     border: 17px solid #d6d6dd;
     bottom: -82px;
+
 
 }
 
@@ -72,11 +73,12 @@
 
 .uv-array {
     position: absolute;
-    top: -19px;
+    top: -21px;
     background: url(./../../../../assets/infoPage/compasTwo.png);
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     background-size: cover;
+    transform: rotate(-75deg);
 }
 
 

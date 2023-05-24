@@ -2,14 +2,17 @@
 <ng-template #elseLoading>
     <div *transloco="let t; read: 'pageInfo'">
         <div *ngIf="weatherCity; else elseBlock" class="pageInfo-container">
-            <app-info-general [info]="weatherCity"></app-info-general>
-
+            <div class="pageInfo-general">
+                <app-info-general [info]="weatherCity"></app-info-general>
+            </div>
+            <app-five-day-forecast></app-five-day-forecast>
             <div class="highLights-container">
                 <app-uv-index></app-uv-index>
                 <app-sunrise [value]="weatherCity.sys"></app-sunrise>
                 <app-humidity [value]="weatherCity.main.humidity"></app-humidity>
                 <app-wind [value]="weatherCity.wind"></app-wind>
-
+                <app-visibility [value]="weatherCity.visibility"></app-visibility>
+                <app-pressure></app-pressure>
             </div>
         </div>
         <ng-template #elseBlock>

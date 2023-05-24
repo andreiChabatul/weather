@@ -16,6 +16,11 @@ import { HumidityPipe } from '../pipe/humidityPipe';
 import { WindComponent } from './components/wind/wind.component';
 import { TempPipe } from '../pipe/tempPipe';
 import { UvIndexComponent } from './components/uv-index/uv-index.component';
+import { IndexUVPipe } from '../pipe/indexUVPipe';
+import { VisibilityComponent } from './components/visibility/visibility.component';
+import { VisibilityPipe } from '../pipe/visibilityPipe';
+import { PressureComponent } from './components/pressure/pressure.component';
+import { FiveDayForecastComponent } from './components/five-day-forecast/five-day-forecast.component';
 
 
 @NgModule({
@@ -31,7 +36,12 @@ import { UvIndexComponent } from './components/uv-index/uv-index.component';
         HumidityPipe,
         WindComponent,
         TempPipe,
-        UvIndexComponent
+        UvIndexComponent,
+        IndexUVPipe,
+        VisibilityComponent,
+        VisibilityPipe,
+        PressureComponent,
+        FiveDayForecastComponent
     ],
     imports: [MaterialModule, TranslocoRootModule, CoreModule, CommonModule],
     providers: [

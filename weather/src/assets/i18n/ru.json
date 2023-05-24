@@ -36,6 +36,8 @@
         "humidityTitle": "Влажность",
         "restDate": "До заката",
         "windTitle": "Информация о ветре",
-        "windGust": "Порывы ветра до: "
+        "windGust": "Порывы ветра до: ",
+        "indexUVTitle" : "УФ ндекс",
+        "visibilityTitle": "Видимость"
     }
 }
