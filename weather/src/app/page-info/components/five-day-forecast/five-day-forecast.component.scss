@@ -1,7 +1,17 @@
+.fiveDay-container {
+    width: 1000px;
+}
+
+.test-five {
+    display: flex;
+    overflow: auto;
+    gap: 5px;
+}
 
 
-.fiveDay-container{
-    height: 100px;
-    width: 250px;
-    background: darkgreen;
+
+@media (max-width: 1400px) {
+    .fiveDay-container {
+        width: 850px;
+    }
 }

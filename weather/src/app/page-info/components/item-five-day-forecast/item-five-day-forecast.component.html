@@ -1,0 +1,8 @@
+<div class="item-forecast-container">
+    <div>
+        <p class="item-forecast-day">{{day | dayWeek | async }}</p>
+        <p class="item-forecast-time">{{item.dt | timeFormat | async }}</p>
+    </div>
+    <img class="item-forecast-img" src="./../../../../assets/icoWeather/cloudy.png" alt="weatherIco">
+    <span class="item-forecast-day">{{item.main.temp_max | tempPipe | async}}</span>
+</div>

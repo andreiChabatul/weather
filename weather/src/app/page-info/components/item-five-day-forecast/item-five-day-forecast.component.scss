@@ -1,0 +1,28 @@
+@import "./../../../../scss/color-styles";
+@import "./../../../../scss/typography-styles";
+@import "./../../../../scss/default-styles";
+
+
+.item-forecast-container {
+    @include flex-c_s;
+    flex-direction: column;
+    height: 100px;
+    width: 90px;
+    background: rgba(216, 216, 241, .4);
+    border-radius: 15px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.item-forecast-day {
+    @include title-Xsmall;
+    font-weight: 700;
+}
+
+.item-forecast-time {
+    @include title-Xsmall;
+}
+
+.item-forecast-img {
+    width: 55px;
+}

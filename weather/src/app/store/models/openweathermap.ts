@@ -8,25 +8,9 @@ export interface IOpenweathermap {
         lon: number,
         lat: number
     },
-    weather: [
-        {
-            id: number,
-            main: string,
-            description: string,
-            icon: string
-        }
-    ],
+    weather: IWeatherType[],
     base: string,
-    main: {
-        temp: number,
-        feels_like: number,
-        temp_min: number,
-        temp_max: number,
-        pressure: number,
-        humidity: number,
-        sea_level: number,
-        grnd_level: number
-    },
+    main: IMainWeather,
     visibility: number,
     wind: IWind,
     clouds: {
@@ -52,4 +36,37 @@ export interface IWind {
     speed: number,
     deg: number,
     gust: number
+}
+
+export interface IMainWeather {
+    temp: number,
+    feels_like: number,
+    temp_min: number,
+    temp_max: number,
+    pressure: number,
+    humidity: number,
+    sea_level: number,
+    grnd_level: number
+}
+
+
+export interface IWeatherType {
+    id: number,
+    main: string,
+    description: string,
+    icon: string
+}
+
+export interface IOpenweathermapForecastFive {
+    cod: string,
+    message: number,
+    cnt: number,
+    list: IItemForecast[],
+}
+
+export interface IItemForecast {
+    dt: number,
+    main: IMainWeather,
+    weather: IWeatherType[],
+    wind: IWind,
 }

@@ -17,7 +17,7 @@ export class TimePipe implements PipeTransform {
     transform(value: number): Observable<string> {
         const date = new Date(value * 1000);
         const hours = date.getHours();
-        const minutes = ("0" + date.getMinutes()).substring(1);
+        const minutes = ("0" + date.getMinutes()).substring(0);
 
         return this.lang$.pipe(
             map(lang => {

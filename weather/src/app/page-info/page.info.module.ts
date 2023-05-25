@@ -21,6 +21,7 @@ import { VisibilityComponent } from './components/visibility/visibility.componen
 import { VisibilityPipe } from '../pipe/visibilityPipe';
 import { PressureComponent } from './components/pressure/pressure.component';
 import { FiveDayForecastComponent } from './components/five-day-forecast/five-day-forecast.component';
+import { ItemFiveDayForecastComponent } from './components/item-five-day-forecast/item-five-day-forecast.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { FiveDayForecastComponent } from './components/five-day-forecast/five-da
         VisibilityComponent,
         VisibilityPipe,
         PressureComponent,
-        FiveDayForecastComponent
+        FiveDayForecastComponent,
+        ItemFiveDayForecastComponent
     ],
     imports: [MaterialModule, TranslocoRootModule, CoreModule, CommonModule],
     providers: [

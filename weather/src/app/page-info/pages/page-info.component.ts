@@ -1,9 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Subscription, map, mergeMap, switchMap } from 'rxjs';
+import { Subscription, switchMap } from 'rxjs';
 import { GeocodingApiService } from 'src/app/core/services/geocoding-api.service';
 import { OpenweathermapApiService } from 'src/app/core/services/openweathermap-api.service';
-import { IOpenweathermap } from 'src/app/store/models/openweathermap';
+import { ICoordinate, IOpenweathermap } from 'src/app/store/models/openweathermap';
 
 @Component({
   selector: 'app-page-info',
@@ -15,6 +15,7 @@ export class PageInfoComponent implements OnInit, OnDestroy {
   weatherCity: IOpenweathermap;
   city: string;
   loading: boolean = true;
+  coordinate: ICoordinate;
 
   constructor(
     private route: ActivatedRoute,
@@ -29,6 +30,7 @@ export class PageInfoComponent implements OnInit, OnDestroy {
       }),
       switchMap(coor => {
         if (coor.length) {
+          this.coordinate = coor[0];
           return this.openweathermapApiService.getWeatherCity(coor[0])
         } else {
           this.loading = false;
