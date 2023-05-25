@@ -17,7 +17,7 @@
     transition: .3s;
 
     &:hover {
-        transform: scale(1.05);
+        transform: scaleX(1.05);
     }
 
     &:hover .item-more-info {

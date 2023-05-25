@@ -1,6 +1,6 @@
 export type languageType = 'en' | 'ru';
 export type unitsType = 'metric' | 'imperial';
-export type popUpType = 'add' | 'setting';
+export type popUpType = 'add' | 'setting' | 'infoWeather';
 
 export interface ILang {
     value: languageType;
