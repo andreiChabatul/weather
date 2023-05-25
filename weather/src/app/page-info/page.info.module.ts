@@ -4,12 +4,13 @@ import { TranslocoRootModule } from '../transloco-root.module';
 import { CoreModule } from '../core/core.module';
 import { PageInfoComponent } from './pages/page-info.component';
 import { PageInfoRoutingModule } from './page.info.routing.module';
-import { CommonModule, WeekDay } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { SunriseComponent } from './components/sunrise/sunrise.component';
 import { TimePipe } from '../pipe/timePipe';
 import { TimeConvertPipe } from '../pipe/timeConvertPipe';
 import { HumidityComponent } from './components/humidity/humidity.component';
 import { HumidityColorDirective } from '../directives/humidity-color.directive';
+import { WeatherIcoDirective } from '../directives/weather-ico.directive';
 import { InfoGeneralComponent } from './components/info-general/info-general.component';
 import { DayWeek } from '../pipe/setDayWeek';
 import { HumidityPipe } from '../pipe/humidityPipe';
@@ -22,7 +23,6 @@ import { VisibilityPipe } from '../pipe/visibilityPipe';
 import { PressureComponent } from './components/pressure/pressure.component';
 import { FiveDayForecastComponent } from './components/five-day-forecast/five-day-forecast.component';
 import { ItemFiveDayForecastComponent } from './components/item-five-day-forecast/item-five-day-forecast.component';
-
 
 @NgModule({
     declarations: [
@@ -43,7 +43,8 @@ import { ItemFiveDayForecastComponent } from './components/item-five-day-forecas
         VisibilityPipe,
         PressureComponent,
         FiveDayForecastComponent,
-        ItemFiveDayForecastComponent
+        ItemFiveDayForecastComponent,
+        WeatherIcoDirective,
     ],
     imports: [MaterialModule, TranslocoRootModule, CoreModule, CommonModule],
     providers: [

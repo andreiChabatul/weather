@@ -41,3 +41,9 @@
     line-height: 12px;
     font-weight: 500;
 }
+
+@mixin title-XXXsmall {
+    @include font-default;
+    font-size: 10px;
+    line-height: 5px;
+}

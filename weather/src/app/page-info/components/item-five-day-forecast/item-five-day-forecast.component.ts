@@ -14,6 +14,4 @@ export class ItemFiveDayForecastComponent implements OnInit {
   ngOnInit(): void {
     this.day = new Date(this.item.dt * 1000).getDay();
   }
-
-
 }
