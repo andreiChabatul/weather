@@ -36,7 +36,8 @@ export const Reducers = (
                 ...state,
                 popUp: {
                     popUpState: true,
-                    type: action.payload,
+                    type: action.payload.popUpType,
+                    itemInfo: action.payload.item,
                 },
             };
         }

@@ -13,7 +13,7 @@ export class HeaderComponent {
   constructor(private store: Store<IAppStore>) { }
 
   openPopUp() {
-    this.store.dispatch(new OpenPopUp('setting'));
+    this.store.dispatch(new OpenPopUp({ popUpType: 'setting' }));
   }
 
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy, ViewEncapsulation, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { GeohelperApiService } from '../../services/geohelper-api.service';
+import { GeohelperApiService } from '../../../core/services/geohelper-api.service';
 import { IAppStore } from 'src/app/store/models/stateModel';
 import { Store } from '@ngrx/store';
 import { selectAllCity } from 'src/app/store/selectors/selectors';

@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { IAppStore } from '../store/models/stateModel';
-import { selectLanguage } from '../store/selectors/selectors';
+import { IAppStore } from '../../store/models/stateModel';
+import { selectLanguage } from '../../store/selectors/selectors';
 import { Observable, map } from 'rxjs';
 
 @Pipe({

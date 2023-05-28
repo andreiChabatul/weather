@@ -13,7 +13,7 @@ export class ItemInfoAddComponent {
   constructor(private store: Store<IAppStore>) { }
 
   openPopUp() {
-    this.store.dispatch(new OpenPopUp('add'));
+    this.store.dispatch(new OpenPopUp({ popUpType: 'add' }));
   }
 
 }

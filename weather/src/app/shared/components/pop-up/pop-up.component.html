@@ -11,7 +11,11 @@
             <app-change-language></app-change-language>
             <app-change-units></app-change-units>
         </div>
-        
+
+        <div *ngIf="type === 'infoWeather'">
+            <app-extra-info-forecast></app-extra-info-forecast>
+        </div>
+
         <span class="material-symbols-outlined close-popUp" (click)="closePopUp()">
             close
         </span>

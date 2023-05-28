@@ -1,5 +1,5 @@
 import { Action } from "@ngrx/store";
-import { languageType, popUpType, unitsType } from "../models/settingModel";
+import { IOpenPopUp, languageType, unitsType } from "../models/settingModel";
 
 export enum EAppActionTypes {
     AddSearchCity = '[SEARCH CITY ADD] AddSearchCity',
@@ -32,7 +32,7 @@ export class ChangeUnits implements Action {
 
 export class OpenPopUp implements Action {
     readonly type = EAppActionTypes.OpenPopUp;
-    constructor(public payload: popUpType) { }
+    constructor(public payload: IOpenPopUp) { }
 }
 
 export class ClosePopUp implements Action {

@@ -15,9 +15,10 @@
     padding: 5px;
     cursor: pointer;
     transition: .3s;
+    overflow-y: hidden;
 
     &:hover {
-        transform: scaleX(1.05);
+        transform: scale(1.05);
     }
 
     &:hover .item-more-info {

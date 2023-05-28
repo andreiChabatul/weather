@@ -21,6 +21,6 @@ export class ItemFiveDayForecastComponent implements OnInit {
   }
 
   openPopUp(): void {
-    this.store.dispatch(new OpenPopUp('infoWeather'));
+    this.store.dispatch(new OpenPopUp({ popUpType: 'infoWeather', item: this.item }));
   }
 }

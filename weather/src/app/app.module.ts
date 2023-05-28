@@ -12,6 +12,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { MainPageModule } from './main-page/main.page.module';
 import { PageInfoModule } from './page-info/page.info.module';
 import { Page404Module } from './page404/page.404.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { Page404Module } from './page404/page.404.module';
     Page404Module,
     CoreModule,
     MainPageModule,
+    SharedModule,
     HttpClientModule,
     StoreModule.forRoot(appReducers),
     EffectsModule.forRoot([LangChangeEffects]),
