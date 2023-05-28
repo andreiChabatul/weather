@@ -1,5 +1,6 @@
 import { Action } from "@ngrx/store";
 import { IOpenPopUp, languageType, unitsType } from "../models/settingModel";
+import { IOpenweathermapForecastFive } from "../models/openweathermap";
 
 export enum EAppActionTypes {
     AddSearchCity = '[SEARCH CITY ADD] AddSearchCity',
@@ -8,6 +9,7 @@ export enum EAppActionTypes {
     ChangeUnits = '[CHANGE UNITS] ChangeUnits',
     OpenPopUp = '[OPEN POPUP] OpenPopUp',
     ClosePopUp = '[Close POPUP] ClosePopUp',
+    AddItemForecast = '[ADD ITEM FORECAST] AddItemForecast',
 }
 
 
@@ -39,4 +41,9 @@ export class ClosePopUp implements Action {
     readonly type = EAppActionTypes.ClosePopUp;
 }
 
-export type ActionUnion = CleanSearchCity | AddSearchCity | ChangeLanguage | OpenPopUp | ClosePopUp | ChangeUnits;
+export class AddItemForecast implements Action {
+    readonly type = EAppActionTypes.AddItemForecast;
+    constructor(public payload: IOpenweathermapForecastFive) { }
+}
+
+export type ActionUnion = CleanSearchCity | AddSearchCity | ChangeLanguage | OpenPopUp | ClosePopUp | ChangeUnits | AddItemForecast;

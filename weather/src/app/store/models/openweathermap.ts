@@ -62,11 +62,21 @@ export interface IOpenweathermapForecastFive {
     message: number,
     cnt: number,
     list: IItemForecast[],
+    city: {
+        id: number,
+        name: string,
+        coord: ICoordinate,
+        country: string,
+        population: number,
+        timezone: number,
+        sunrise: number,
+        sunset: number
+    }
 }
 
 export interface IItemForecast {
     dt: number,
     main: IMainWeather,
     weather: IWeatherType[],
-    wind: IWind,
+    wind: IWind
 }

@@ -12,6 +12,7 @@ import { IAppStore } from 'src/app/store/models/stateModel';
 export class ItemFiveDayForecastComponent implements OnInit {
 
   @Input() item: IItemForecast;
+  @Input() index: number;
   day: number;
 
   constructor(private store: Store<IAppStore>) { }
@@ -21,6 +22,6 @@ export class ItemFiveDayForecastComponent implements OnInit {
   }
 
   openPopUp(): void {
-    this.store.dispatch(new OpenPopUp({ popUpType: 'infoWeather', item: this.item }));
+    this.store.dispatch(new OpenPopUp({ popUpType: 'infoWeather', item: this.index }));
   }
 }

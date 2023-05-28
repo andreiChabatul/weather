@@ -25,6 +25,12 @@ export const Reducers = (
                 language: action.payload,
             };
         }
+        case EAppActionTypes.AddItemForecast: {
+            return {
+                ...state,
+                forecastWeather: action.payload,
+            };
+        }
         case EAppActionTypes.ChangeUnits: {
             return {
                 ...state,
@@ -37,7 +43,7 @@ export const Reducers = (
                 popUp: {
                     popUpState: true,
                     type: action.payload.popUpType,
-                    itemInfo: action.payload.item,
+                    item: action.payload.item,
                 },
             };
         }

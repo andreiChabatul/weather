@@ -1,14 +1,9 @@
 .fiveDay-container {
     width: 1000px;
-}
-
-.test-five {
     display: flex;
     overflow: auto;
     gap: 5px;
 }
-
-
 
 @media (max-width: 1400px) {
     .fiveDay-container {

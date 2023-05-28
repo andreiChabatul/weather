@@ -1,3 +1,4 @@
+import { IOpenweathermapForecastFive } from "./openweathermap";
 import { IPopUp, languageType, unitsType } from "./settingModel";
 
 export interface IState {
@@ -5,6 +6,7 @@ export interface IState {
     language: languageType,
     units: unitsType,
     popUp: IPopUp,
+    forecastWeather: IOpenweathermapForecastFive,
 }
 
 export interface IAppStore {

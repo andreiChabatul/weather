@@ -1,9 +1,12 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Store } from '@ngrx/store';
 import { Subscription, switchMap } from 'rxjs';
 import { GeocodingApiService } from 'src/app/core/services/geocoding-api.service';
 import { OpenweathermapApiService } from 'src/app/core/services/openweathermap-api.service';
+import { AddItemForecast } from 'src/app/store/actions/actions';
 import { ICoordinate, IOpenweathermap } from 'src/app/store/models/openweathermap';
+import { IAppStore } from 'src/app/store/models/stateModel';
 
 @Component({
   selector: 'app-page-info',
@@ -15,12 +18,13 @@ export class PageInfoComponent implements OnInit, OnDestroy {
   weatherCity: IOpenweathermap;
   city: string;
   loading: boolean = true;
-  coordinate: ICoordinate;
 
   constructor(
     private route: ActivatedRoute,
     private geocodingApiService: GeocodingApiService,
-    private openweathermapApiService: OpenweathermapApiService) { }
+    private openweathermapApiService: OpenweathermapApiService,
+    private store: Store<IAppStore>,
+  ) { }
 
   ngOnInit(): void {
     this.querySubscription = this.route.queryParams.pipe(
@@ -28,10 +32,11 @@ export class PageInfoComponent implements OnInit, OnDestroy {
         this.city = value['city'];
         return this.geocodingApiService.getCoordinate(this.city);
       }),
-      switchMap(coor => {
-        if (coor.length) {
-          this.coordinate = coor[0];
-          return this.openweathermapApiService.getWeatherCity(coor[0])
+      switchMap((coordinate) => {
+        if (coordinate.length) {
+          this.openweathermapApiService.getWeatherForecat(coordinate[0]
+          ).subscribe(value => this.store.dispatch(new AddItemForecast(value)));
+          return this.openweathermapApiService.getWeatherCity(coordinate[0]);
         } else {
           this.loading = false;
           return [];
@@ -40,8 +45,8 @@ export class PageInfoComponent implements OnInit, OnDestroy {
     ).subscribe(value => {
       this.loading = false;
       this.weatherCity = value;
-      console.log(this.weatherCity)
     });
+
 
   }
 

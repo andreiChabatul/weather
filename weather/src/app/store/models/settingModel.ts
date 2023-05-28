@@ -17,10 +17,10 @@ export interface IUnits {
 export interface IPopUp {
     popUpState: boolean;
     type: popUpType;
-    itemInfo?: IItemForecast,
+    item?: number,
 }
 
 export interface IOpenPopUp {
     popUpType: popUpType,
-    item?: IItemForecast
+    item?: number,
 }

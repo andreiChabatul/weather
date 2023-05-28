@@ -1,6 +1,7 @@
 import { ActionReducerMap } from "@ngrx/store";
 import { IAppStore, IState } from "./models/stateModel";
 import { Reducers } from "./reducers/reducers";
+import { IOpenweathermapForecastFive } from "./models/openweathermap";
 
 export const stateApp: IState = {
     searchCity: [],
@@ -11,6 +12,7 @@ export const stateApp: IState = {
         popUpState: false,
         type: 'setting'
     },
+    forecastWeather: {} as IOpenweathermapForecastFive,
 }
 
 export const initalState: IAppStore = {
