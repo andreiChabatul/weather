@@ -11,6 +11,6 @@ export class InfoGeneralComponent {
   @Input() info: IOpenweathermap;
   date = new Date()
   day = this.date.getDay();
-  time = `${this.date.getHours()}:${this.date.getMinutes()}`;
+  time = `${this.date.getHours()}:${('0' + this.date.getMinutes()).slice(-2)}`;
 
 }

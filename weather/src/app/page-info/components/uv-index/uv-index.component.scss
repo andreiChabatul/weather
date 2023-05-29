@@ -7,11 +7,12 @@
     height: 75px;
     overflow: hidden;
     @include flex-c_c;
+
 }
 
 .uv-round {
     bottom: -65px;
-    left: 21px;
+    left: 44px;
     position: absolute;
     height: 110px;
     width: 110px;
@@ -26,35 +27,33 @@
     border-radius: 50%;
     border: 17px solid #d6d6dd;
     bottom: -82px;
-
-
 }
 
 .uv-round_value__3 {
     position: absolute;
     bottom: 20px;
-    left: 20px;
+    left: 42px;
     @include title-medium;
 }
 
 .uv-round_value__12 {
     position: absolute;
     bottom: 20px;
-    right: 17px;
+    right: 39px;
     @include title-medium;
 }
 
 .uv-round_value__6 {
     position: absolute;
     bottom: 45px;
-    left: 50px;
+    left: 72px;
     @include title-medium;
 }
 
 .uv-round_value__9 {
     position: absolute;
     bottom: 45px;
-    right: 50px;
+    right: 72px;
     @include title-medium;
 }
 

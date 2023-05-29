@@ -1,5 +1,3 @@
-import { IItemForecast } from "./openweathermap";
-
 export type languageType = 'en' | 'ru';
 export type unitsType = 'metric' | 'imperial';
 export type popUpType = 'add' | 'setting' | 'infoWeather';
@@ -12,6 +10,11 @@ export interface ILang {
 export interface IUnits {
     value: unitsType;
     text: '℃' | '℉';
+}
+
+export interface ISetting {
+    language: languageType;
+    units: unitsType;
 }
 
 export interface IPopUp {

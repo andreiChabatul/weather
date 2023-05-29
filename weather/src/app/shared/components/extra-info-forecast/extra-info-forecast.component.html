@@ -1,8 +1,39 @@
 <div class="item-extraInfo-container">
-    <p>{{forecastInfo.city.name}}</p>
-    <p>{{forecastInfo.list[index].main.temp}}</p>
-    <div>
-        <!-- <p class="item-forecast-day">{{day | dayWeek | async }}</p>
-        <p class="item-forecast-time">{{item.dt | timeFormat | async }}</p> -->
+    <div class="item-extraInfo-title">
+        <span class="item-extra-day">{{day | dayWeek | async }} </span>
+        <span class="item-extra-time">{{forecastInfo.list[index].dt | timeFormat | async}}</span>
+        <div>
+            <span class="item-extra-nameCity">{{forecastInfo.city.name}},</span>
+            <span class="item-extra-country"> {{forecastInfo.city.country}}</span>
+        </div>
     </div>
+    <p class="item-extra-nameCity">Current conditions</p>
+    <div class="item-extra-info-container">
+        <div class="item-extra-info">
+            <p class="extra-info-temp">{{forecastInfo.list[index].main.temp | tempPipe | async}}</p>
+            <p class="extra-info-desc">Feels like:
+                <span class="extra-info-desc_value">{{forecastInfo.list[index].main.feels_like | tempPipe |
+                    async}}</span>
+            </p>
+            <p class="extra-info-desc">Humidity:
+                <span class="extra-info-desc_value">{{forecastInfo.list[index].main.humidity}}%</span>
+            </p>
+            <p class="extra-info-desc">Wind:
+                <span class="extra-info-desc_value">{{forecastInfo.list[index].wind.speed}} м\с</span>
+            </p>
+            <p class="extra-info-desc">Sunrise:
+                <span class="extra-info-desc_value">{{forecastInfo.city.sunrise | timeFormat | async}}</span>
+            </p>
+            <p class="extra-info-desc">Sunset:
+                <span class="extra-info-desc_value">{{forecastInfo.city.sunset | timeFormat | async}}</span>
+            </p>
+            <p class="extra-info-desc">Pressure: </p>
+        </div>
+        <div class="item-extra-weather-type">
+            <img class="item-extra-weatherIco" appWeatherIco [weatherCode]="forecastInfo.list[index].weather[0].id"
+                src="./../../../../assets/icoWeather/defaultIco.gif" alt="weatherType">
+            <p class="item-extra-text-description">{{forecastInfo.list[index].weather[0].description}}</p>
+        </div>
+    </div>
+
 </div>

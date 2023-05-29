@@ -26,8 +26,7 @@ export class ExtraInfoForecastComponent implements OnInit, OnDestroy {
 
     this.subscription$ = this.cityInfo$.subscribe(value => this.forecastInfo = value);
     this.subscriptionTwo$ = this.popUpInfo$.subscribe(value => value.item ? this.index = value.item : '');
-
-    // this.day = new Date(this.item.dt * 1000).getDay();
+    this.day = new Date(this.forecastInfo.list[this.index].dt * 1000).getDay();
   }
   ngOnDestroy(): void {
     this.subscription$.unsubscribe();

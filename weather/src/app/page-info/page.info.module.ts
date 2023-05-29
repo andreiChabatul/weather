@@ -6,8 +6,6 @@ import { PageInfoRoutingModule } from './page.info.routing.module';
 import { CommonModule } from '@angular/common';
 import { SunriseComponent } from './components/sunrise/sunrise.component';
 import { HumidityComponent } from './components/humidity/humidity.component';
-import { HumidityColorDirective } from '../directives/humidity-color.directive';
-import { WeatherIcoDirective } from '../directives/weather-ico.directive';
 import { InfoGeneralComponent } from './components/info-general/info-general.component';
 import { WindComponent } from './components/wind/wind.component';
 import { UvIndexComponent } from './components/uv-index/uv-index.component';
@@ -22,7 +20,6 @@ import { SharedModule } from '../shared/shared.module';
         PageInfoComponent,
         SunriseComponent,
         HumidityComponent,
-        HumidityColorDirective,
         InfoGeneralComponent,
         WindComponent,
         UvIndexComponent,
@@ -30,7 +27,6 @@ import { SharedModule } from '../shared/shared.module';
         PressureComponent,
         FiveDayForecastComponent,
         ItemFiveDayForecastComponent,
-        WeatherIcoDirective,
     ],
     imports: [MaterialModule, TranslocoRootModule, CommonModule, SharedModule],
     providers: [

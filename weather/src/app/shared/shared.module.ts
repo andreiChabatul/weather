@@ -20,6 +20,8 @@ import { TimeConvertPipe } from './pipe/timeConvertPipe';
 import { TempPipe } from './pipe/tempPipe';
 import { IndexUVPipe } from './pipe/indexUVPipe';
 import { VisibilityPipe } from './pipe/visibilityPipe';
+import { HumidityColorDirective } from './directives/humidity-color.directive';
+import { WeatherIcoDirective } from './directives/weather-ico.directive';
 
 
 @NgModule({
@@ -40,7 +42,9 @@ import { VisibilityPipe } from './pipe/visibilityPipe';
         TimeConvertPipe,
         TempPipe,
         IndexUVPipe,
-        VisibilityPipe
+        VisibilityPipe,
+        HumidityColorDirective,
+        WeatherIcoDirective
     ],
     imports: [
         MaterialModule,
@@ -61,7 +65,9 @@ import { VisibilityPipe } from './pipe/visibilityPipe';
         TimeConvertPipe,
         TempPipe,
         IndexUVPipe,
-        VisibilityPipe
+        VisibilityPipe,
+        HumidityColorDirective,
+        WeatherIcoDirective
     ]
 })
 export class SharedModule { }

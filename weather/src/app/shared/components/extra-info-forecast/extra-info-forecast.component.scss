@@ -4,6 +4,69 @@
 
 
 .item-extraInfo-container {
-    height: 350px;
-    width: 350px;
+    width: 320px;
+    height: 280px;
+}
+
+.item-extra-nameCity {
+    @include title-large;
+}
+
+.item-extra-country {
+    @include title-large;
+    color: $grey-text;
+}
+
+.item-extraInfo-title {
+    padding-bottom: 10px;
+    border-bottom: 2px solid $color-font-blue-dark;
+    margin-bottom: 10px;
+}
+
+.item-extra-time {
+    @include font-default;
+    margin-bottom: 10px;
+    color: $grey-text;
+
+}
+
+.item-extra-day {
+    @include font-default;
+}
+
+.item-extra-weatherIco {
+    width: 120px;
+}
+
+.item-extra-text-description {
+    @include font-default;
+    text-align: center;
+}
+
+.item-extra-info-container {
+    display: flex;
+}
+
+.item-extra-info {
+    width: 50%;
+    height: 50px;
+}
+
+.item-extra-weather-type {
+    @include flex-c_c;
+    flex-direction: column;
+    width: 50%;
+}
+
+.extra-info-temp {
+    @include title-Xmedium;
+}
+
+.extra-info-desc {
+    @include font-default;
+}
+
+.extra-info-desc_value {
+    @include font-default;
+    font-weight: 500;
 }
