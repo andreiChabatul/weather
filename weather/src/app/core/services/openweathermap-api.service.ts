@@ -1,41 +1,39 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ICoordinate, IOpenweathermap, IOpenweathermapForecastFive } from 'src/app/store/models/openweathermap';
+import { ICoordinate } from 'src/app/store/models/openweathermap';
 import { OPENWEATHERMA_API, URL_OPENWEATHERMAP } from '../const/const';
-import { Observable } from 'rxjs';
+import { Observable, mergeMap } from 'rxjs';
+import { Store } from '@ngrx/store';
+import { IAppStore } from 'src/app/store/models/stateModel';
+import { selectLanguage, selectUnits } from 'src/app/store/selectors/selectors';
+
+type typeReguest = 'weather' | 'forecast';
 
 @Injectable({
   providedIn: 'root'
 })
 export class OpenweathermapApiService {
+  units$ = this.store.select(selectUnits);
+  lang$ = this.store.select(selectLanguage);
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private store: Store<IAppStore>) { }
 
-  getWeatherCity(coor: ICoordinate): Observable<IOpenweathermap> {
-    return this.http.get<IOpenweathermap>(
-      `${URL_OPENWEATHERMAP}weather`, {
-      params: {
-        lat: coor.lat,
-        lon: coor.lon,
-        units: 'metric',
-        lang: 'ru',
-        appid: OPENWEATHERMA_API
-      }
-    }
-    )
-  }
-  
-  getWeatherForecat(coor: ICoordinate): Observable<IOpenweathermapForecastFive> {
-    return this.http.get<IOpenweathermapForecastFive>(
-      `${URL_OPENWEATHERMAP}forecast`, {
-      params: {
-        lat: coor.lat,
-        lon: coor.lon,
-        units: 'metric',
-        lang: 'ru',
-        appid: OPENWEATHERMA_API
-      }
-    }
+  getWeather<T>(coor: ICoordinate, reguest: typeReguest): Observable<T> {
+
+    return this.lang$.pipe(
+      mergeMap(lang => this.units$.pipe(
+        mergeMap(units => this.http.get<T>(
+          URL_OPENWEATHERMAP + reguest, {
+          params: {
+            lat: coor.lat,
+            lon: coor.lon,
+            units,
+            lang,
+            appid: OPENWEATHERMA_API
+          }
+        }
+        ))
+      )),
     )
   }
 }

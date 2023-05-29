@@ -5,7 +5,7 @@ import { Subscription, switchMap } from 'rxjs';
 import { GeocodingApiService } from 'src/app/core/services/geocoding-api.service';
 import { OpenweathermapApiService } from 'src/app/core/services/openweathermap-api.service';
 import { AddItemForecast } from 'src/app/store/actions/actions';
-import { ICoordinate, IOpenweathermap } from 'src/app/store/models/openweathermap';
+import { ICoordinate, IOpenweathermap, IOpenweathermapForecastFive } from 'src/app/store/models/openweathermap';
 import { IAppStore } from 'src/app/store/models/stateModel';
 
 @Component({
@@ -34,9 +34,9 @@ export class PageInfoComponent implements OnInit, OnDestroy {
       }),
       switchMap((coordinate) => {
         if (coordinate.length) {
-          this.openweathermapApiService.getWeatherForecat(coordinate[0]
+          this.openweathermapApiService.getWeather<IOpenweathermapForecastFive>(coordinate[0], 'forecast'
           ).subscribe(value => this.store.dispatch(new AddItemForecast(value)));
-          return this.openweathermapApiService.getWeatherCity(coordinate[0]);
+          return this.openweathermapApiService.getWeather<IOpenweathermap>(coordinate[0], 'weather');
         } else {
           this.loading = false;
           return [];
