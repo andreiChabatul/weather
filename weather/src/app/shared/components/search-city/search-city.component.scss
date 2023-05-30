@@ -23,6 +23,8 @@
 }
 
 .button-search {
+    pointer-events: none;
+    opacity: .8;
     background: none;
     width: 85px;
     height: 56px;
@@ -43,7 +45,8 @@
 }
 
 .button-search_active {
-    border: 3px solid red;
+    pointer-events: all;
+    opacity: 1;
 }
 
 .search-container {

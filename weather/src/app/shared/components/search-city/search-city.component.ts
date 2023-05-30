@@ -5,6 +5,7 @@ import { IAppStore } from 'src/app/store/models/stateModel';
 import { Store } from '@ngrx/store';
 import { selectAllCity } from 'src/app/store/selectors/selectors';
 import { filter, startWith, Subscription, debounceTime, distinctUntilChanged } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search-city',
@@ -21,6 +22,7 @@ export class SearchCityComponent implements OnInit, OnDestroy {
   constructor(
     private fb: FormBuilder,
     private geohelperApiService: GeohelperApiService,
+    private router: Router,
     private store: Store<IAppStore>
   ) {
     this.createForm();
@@ -50,8 +52,12 @@ export class SearchCityComponent implements OnInit, OnDestroy {
       this.cityForm.markAllAsTouched()
       return;
     }
-
-
+    
+    this.router.navigate(['/info'], {
+      queryParams: {
+        'city': this.cityForm.value.location,
+      }
+    })
   }
 
   get _location() {
