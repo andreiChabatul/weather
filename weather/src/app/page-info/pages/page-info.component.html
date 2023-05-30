@@ -5,14 +5,20 @@
             <div class="pageInfo-general">
                 <app-info-general [info]="weatherCity"></app-info-general>
             </div>
-            <app-five-day-forecast></app-five-day-forecast>
+            <div>
+                <p class="five-day-forecast-title">{{ t('fiveTitle')}}</p>
+                <app-five-day-forecast></app-five-day-forecast>
+            </div>
             <div class="highLights-container">
-                <app-uv-index></app-uv-index>
-                <app-sunrise [value]="weatherCity.sys"></app-sunrise>
-                <app-humidity [value]="weatherCity.main.humidity"></app-humidity>
-                <app-wind [value]="weatherCity.wind"></app-wind>
-                <app-visibility [value]="weatherCity.visibility"></app-visibility>
-                <app-pressure></app-pressure>
+                <p class="highLights-container_title">{{ t('todayTitle')}}</p>
+                <div class="highLights-container_info">
+                    <app-uv-index></app-uv-index>
+                    <app-sunrise [value]="weatherCity.sys"></app-sunrise>
+                    <app-humidity [value]="weatherCity.main.humidity"></app-humidity>
+                    <app-wind [value]="weatherCity.wind"></app-wind>
+                    <app-visibility [value]="weatherCity.visibility"></app-visibility>
+                    <app-pressure></app-pressure>
+                </div>
             </div>
         </div>
         <ng-template #elseBlock>

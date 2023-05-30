@@ -16,6 +16,7 @@ export interface IOpenweathermap {
     clouds: {
         all: number
     },
+    rain: IRain,
     dt: number,
     sys: ISunrise,
     timezone: number,
@@ -78,5 +79,10 @@ export interface IItemForecast {
     dt: number,
     main: IMainWeather,
     weather: IWeatherType[],
-    wind: IWind
+    wind: IWind,
+    rain: IRain,
+}
+
+export interface IRain {
+    '3h': number;
 }

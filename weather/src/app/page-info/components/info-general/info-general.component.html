@@ -9,8 +9,8 @@
     </p>
 
     <div>
-        <p>Mostly Cloudy</p>
-        <p>Rain - 0%</p>
+        <p class="general-weather-description">{{info.weather[0].description | titlecase}}</p>
+        <p class="general-weather-description">{{info.rain | rainPipe | async}}</p>
     </div>
 
     <div class="name-city-container">{{info.name}}</div>

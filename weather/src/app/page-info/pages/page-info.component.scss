@@ -8,8 +8,6 @@
     width: min-content;
     column-gap: 80px;
     row-gap: 15px;
-
-
 }
 
 .notFound-city {
@@ -27,14 +25,25 @@
     margin: 0 auto;
 }
 
-.highLights-container {
+.highLights-container_info {
     display: grid;
     grid-template-columns: repeat(3, min-content);
     grid-template-rows: repeat(2, min-content);
     gap: 15px;
+    justify-content: center;
 }
 
 .pageInfo-general {
     grid-row-start: 1;
     grid-row-end: 3;
+}
+
+.highLights-container_title {
+    @include title-large;
+    margin-bottom: 10px;
+}
+
+.five-day-forecast-title {
+    @include title-medium18;
+    margin-bottom: 10px;
 }

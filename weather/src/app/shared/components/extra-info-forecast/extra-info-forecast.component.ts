@@ -23,9 +23,8 @@ export class ExtraInfoForecastComponent implements OnInit, OnDestroy {
   constructor(private store: Store<IAppStore>) { }
 
   ngOnInit(): void {
-
     this.subscription$ = this.cityInfo$.subscribe(value => this.forecastInfo = value);
-    this.subscriptionTwo$ = this.popUpInfo$.subscribe(value => value.item ? this.index = value.item : '');
+    this.subscriptionTwo$ = this.popUpInfo$.subscribe(value => value.item !== undefined ? this.index = value.item : '');
     this.day = new Date(this.forecastInfo.list[this.index].dt * 1000).getDay();
   }
   ngOnDestroy(): void {

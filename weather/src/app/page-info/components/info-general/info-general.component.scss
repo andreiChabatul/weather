@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 15px;
+    height: 95%;
 }
 
 .weather-ico {
@@ -39,4 +39,9 @@
     background: url(./../../../../assets/infoPage/cityBackground.png);
     background-size: cover;
     color: $color-white;
+}
+
+.general-weather-description {
+    @include title-medium18;
+    margin-bottom: 7px;
 }

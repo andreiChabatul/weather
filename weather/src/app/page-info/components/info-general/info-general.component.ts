@@ -9,8 +9,14 @@ import { IOpenweathermap } from 'src/app/store/models/openweathermap';
 export class InfoGeneralComponent {
 
   @Input() info: IOpenweathermap;
-  date = new Date()
+  date = new Date();
   day = this.date.getDay();
   time = `${this.date.getHours()}:${('0' + this.date.getMinutes()).slice(-2)}`;
+
+
+
+  ngOnInit() {
+    console.log(this.info)
+  }
 
 }

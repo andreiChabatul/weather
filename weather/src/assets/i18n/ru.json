@@ -38,6 +38,8 @@
         "windTitle": "Информация о ветре",
         "windGust": "Порывы ветра до: ",
         "indexUVTitle" : "УФ ндекс",
-        "visibilityTitle": "Видимость"
+        "visibilityTitle": "Видимость",
+        "fiveTitle": "Прогноз на пять дней",
+        "todayTitle": "Прогноз на сегодня"
     }
 }

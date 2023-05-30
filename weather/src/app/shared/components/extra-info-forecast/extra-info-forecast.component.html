@@ -28,11 +28,14 @@
                 <span class="extra-info-desc_value">{{forecastInfo.city.sunset | timeFormat | async}}</span>
             </p>
             <p class="extra-info-desc">Pressure: </p>
+            <p class="extra-info-desc">Precipitation:
+                <span class="extra-info-desc_value">{{forecastInfo.list[index].rain | rainPipe | async}}</span>
+            </p>
         </div>
         <div class="item-extra-weather-type">
             <img class="item-extra-weatherIco" appWeatherIco [weatherCode]="forecastInfo.list[index].weather[0].id"
                 src="./../../../../assets/icoWeather/defaultIco.gif" alt="weatherType">
-            <p class="item-extra-text-description">{{forecastInfo.list[index].weather[0].description}}</p>
+            <p class="item-extra-text-description">{{forecastInfo.list[index].weather[0].description | titlecase}}</p>
         </div>
     </div>
 

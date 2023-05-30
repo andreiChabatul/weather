@@ -5,7 +5,7 @@
 
 .item-extraInfo-container {
     width: 320px;
-    height: 280px;
+    height: 300px;
 }
 
 .item-extra-nameCity {
@@ -64,9 +64,11 @@
 
 .extra-info-desc {
     @include font-default;
+    width: 250px;
 }
 
 .extra-info-desc_value {
     @include font-default;
     font-weight: 500;
+    white-space: nowrap;
 }

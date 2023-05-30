@@ -1,3 +1,5 @@
+@import "./../../../../scss/typography-styles";
+
 .git-ico {
     width: 40px;
     transition: .4s;
@@ -5,4 +7,16 @@
     &:hover {
         transform: scale(1.05);
     }
+}
+
+.footer-container {
+    padding: 0 5px;
+    display: grid;
+    grid-template-columns: 40px 1fr 40px;
+}
+
+.footer-text {
+    @include font-default;
+    align-self: center;
+    justify-self: center;
 }

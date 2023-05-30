@@ -37,7 +37,9 @@
         "restDate": "Until sunset",
         "windTitle": "Wind status",
         "windGust": "Wind gusts up to: ",
-        "indexUVTitle" : "UV index",
-        "visibilityTitle": "Visibility"
+        "indexUVTitle": "UV index",
+        "visibilityTitle": "Visibility",
+        "fiveTitle": "Five day forecast",
+        "todayTitle": "Today's Highlights"
     }
 }
