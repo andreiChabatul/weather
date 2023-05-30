@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AddLocationComponent {
 
+
+
+  ngOnInit() {
+    if (window.navigator.geolocation) {
+      window.navigator.geolocation.getCurrentPosition(this.setPosition);
+    };
+  }
+
+  setPosition(){
+    console.log(this)
+  }
+
+
+
 }
