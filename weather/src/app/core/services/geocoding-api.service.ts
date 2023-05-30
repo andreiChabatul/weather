@@ -13,10 +13,23 @@ export class GeocodingApiService {
 
   getCoordinate(value: string): Observable<IApiGeocoding[]> {
     return this.http.get<IApiGeocoding[]>(
-      URL_GEOCODING, {
+      `${URL_GEOCODING}direct`, {
       params: {
         'q': value,
         'apiKey': OPENWEATHERMA_API,
+      }
+    }
+    )
+  }
+
+  getCity(coords: GeolocationCoordinates): Observable<IApiGeocoding[]> {
+    console.log('f')
+    return this.http.get<IApiGeocoding[]>(
+      `${URL_GEOCODING}reverse`, {
+      params: {
+        lat: coords.latitude,
+        lon: coords.longitude,
+        apiKey: OPENWEATHERMA_API,
       }
     }
     )

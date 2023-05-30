@@ -6,6 +6,7 @@ import { Store } from '@ngrx/store';
 import { selectAllCity } from 'src/app/store/selectors/selectors';
 import { filter, startWith, Subscription, debounceTime, distinctUntilChanged } from 'rxjs';
 import { Router } from '@angular/router';
+import { GeocodingApiService } from 'src/app/core/services/geocoding-api.service';
 
 @Component({
   selector: 'app-search-city',
@@ -23,7 +24,8 @@ export class SearchCityComponent implements OnInit, OnDestroy {
     private fb: FormBuilder,
     private geohelperApiService: GeohelperApiService,
     private router: Router,
-    private store: Store<IAppStore>
+    private store: Store<IAppStore>,
+    private geocodingApiService: GeocodingApiService
   ) {
     this.createForm();
   }
@@ -52,7 +54,7 @@ export class SearchCityComponent implements OnInit, OnDestroy {
       this.cityForm.markAllAsTouched()
       return;
     }
-    
+
     this.router.navigate(['/info'], {
       queryParams: {
         'city': this.cityForm.value.location,
@@ -64,8 +66,23 @@ export class SearchCityComponent implements OnInit, OnDestroy {
     return this.cityForm.get('location');
   }
 
+  clickLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(this.setPosition.bind(this), this.erorrLocation);
+    }
+  }
+
+  setPosition(position: GeolocationPosition) {
+    this.geocodingApiService.getCity(position.coords).subscribe(
+      resp => resp.map(city => this.cityForm.get('location')?.setValue(city.name))
+    );
+  }
+
+  erorrLocation() {
+    alert('Please enable geo location');
+  }
+
   ngOnDestroy() {
     this.subscription$.unsubscribe();
   }
-
 }

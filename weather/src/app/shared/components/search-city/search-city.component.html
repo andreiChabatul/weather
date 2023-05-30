@@ -12,7 +12,7 @@
         <span class="error-text" *ngIf="_location?.errors?.required">{{ t('error') }}</span>
     </div>
     <div class="control-search">
-        <app-add-location></app-add-location>
+        <app-add-location (click)="clickLocation()"></app-add-location>
         <app-control-history [type]="type"></app-control-history>
         <button *ngIf="type" class="button-search" [ngClass]="{'button-search_active': _location?.value.length > 1}">
             {{ t('buttonMain')}}
