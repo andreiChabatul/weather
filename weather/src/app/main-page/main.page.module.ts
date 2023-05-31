@@ -7,6 +7,7 @@ import { SharedModule } from '../shared/shared.module';
 import { PhoneMainComponent } from './components/phone-main/phone-main.component';
 import { ItemInfoSliderComponent } from './components/item-info-slider/item-info-slider.component';
 import { ItemInfoAddComponent } from './components/item-info-add/item-info-add.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
     declarations: [
@@ -16,7 +17,7 @@ import { ItemInfoAddComponent } from './components/item-info-add/item-info-add.c
         ItemInfoSliderComponent,
         ItemInfoAddComponent
     ],
-    imports: [MaterialModule, TranslocoRootModule, SharedModule],
+    imports: [MaterialModule, TranslocoRootModule, SharedModule, CommonModule],
     providers: [
 
     ],

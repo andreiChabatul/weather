@@ -16,6 +16,7 @@ export class WeatherIcoDirective implements OnInit {
   @Input() weatherCode: number;
 
   ngOnInit(): void {
+    console.log(this.weatherCode, 'fdf')
     let type: weatherIcoType = 'default';
     switch (true) {
       case this.weatherCode === 800:

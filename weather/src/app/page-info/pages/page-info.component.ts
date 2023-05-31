@@ -46,8 +46,6 @@ export class PageInfoComponent implements OnInit, OnDestroy {
       this.loading = false;
       this.weatherCity = value;
     });
-
-
   }
 
   ngOnDestroy(): void {

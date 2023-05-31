@@ -41,8 +41,8 @@
 
 .item-info-text {
     text-align: center;
-    @include title-Xmedium;
-    background: linear-gradient(180deg, $color-font-blue-dark 40%, rgba(233, 241, 242, 0.2) 65%);
+    @include title-medium28;
+    background: linear-gradient(180deg, $color-font-blue-dark 40%, rgba(233, 241, 242, 0.2) 75%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
