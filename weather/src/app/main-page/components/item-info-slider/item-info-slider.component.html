@@ -1,6 +1,8 @@
 <div class="item-info-container">
     <p class="title-item-info">{{cityName}}</p>
-    <p class="item-info-text">{{((weatherInfo$ | async)?.main?.temp) | tempPipe | async }}</p>
-    <img class="weather-ico" appWeatherIco [weatherCode]="500"
-        src="./../../../../assets/icoWeather/defaultIco.gif" alt="weatherType">
+    <div *ngIf="weatherCity">
+        <p class="item-info-text">{{weatherCity.main.temp | tempPipe | async }}</p>
+        <img class="item-info-img" appWeatherIco [weatherCode]="weatherCity.weather[0].id"
+            src="./../../../../assets/icoWeather/defaultIco.gif" alt="weatherType">
+    </div>
 </div>

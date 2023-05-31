@@ -24,7 +24,7 @@
 
 .title-item-info {
     color: $color-font-blue-dark;
-    @include font-default;
+    @include title-medium;
     text-align: center;
     font-weight: 700;
     background: linear-gradient(90deg, #FFFFFF 54%, rgba(255, 216, 118, .7) 100%);
