@@ -1,5 +1,6 @@
 <div class="item-info-container">
-    <p class="title-item-info">Moscow</p>
-    <p class="item-info-text">28°C</p>
-    <img class="item-info-img" src="./../../../../assets/icoWeatherSmall/sun.png" alt="icon-item">
+    <p class="title-item-info">{{cityName}}</p>
+    <p class="item-info-text">{{((weatherInfo$ | async)?.main?.temp) | tempPipe | async }}</p>
+    <img class="weather-ico" appWeatherIco [weatherCode]="500"
+        src="./../../../../assets/icoWeather/defaultIco.gif" alt="weatherType">
 </div>
