@@ -12,7 +12,5 @@ export class PhoneMainComponent {
 
   constructor(private store: Store<IAppStore>) { }
 
-  openPopUp() {
-    this.store.dispatch(new OpenPopUp({ popUpType: 'search' }));
-  }
+
 }

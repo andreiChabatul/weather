@@ -6,11 +6,6 @@
             <app-search-city [type]="false"></app-search-city>
         </div>
 
-        <div *ngIf="type === 'search'">
-            <p class="popUp-title-text">{{ t('titleSearch')}}</p>
-            <app-search-city [type]="true"></app-search-city>
-        </div>
-
         <div *ngIf="type === 'setting'">
             <p class="popUp-title-text">{{ t('titleSetting')}}</p>
             <app-change-language></app-change-language>
