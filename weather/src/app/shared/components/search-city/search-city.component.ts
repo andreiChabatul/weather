@@ -7,6 +7,7 @@ import { selectAllCity } from 'src/app/store/selectors/selectors';
 import { filter, startWith, Subscription, debounceTime, distinctUntilChanged } from 'rxjs';
 import { Router } from '@angular/router';
 import { GeocodingApiService } from 'src/app/core/services/geocoding-api.service';
+import { AddFavorite } from 'src/app/store/actions/actions';
 
 @Component({
   selector: 'app-search-city',
@@ -66,7 +67,11 @@ export class SearchCityComponent implements OnInit, OnDestroy {
     return this.cityForm.get('location');
   }
 
-  clickLocation() {
+  clickFavoriteAdd(): void {
+    this.store.dispatch(new AddFavorite(this.cityForm.value.location));
+  }
+
+  clickLocation(): void {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(this.setPosition.bind(this), this.erorrLocation);
     }

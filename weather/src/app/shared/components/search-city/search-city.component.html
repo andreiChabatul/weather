@@ -13,7 +13,7 @@
     </div>
     <div class="control-search">
         <app-add-location (click)="clickLocation()"></app-add-location>
-        <app-control-history [type]="type"></app-control-history>
+        <app-control-history (click)="clickFavoriteAdd()" [type]="type"></app-control-history>
         <button *ngIf="type" class="button-search" [ngClass]="{'button-search_active': _location?.value.length > 1}">
             {{ t('buttonMain')}}
         </button>

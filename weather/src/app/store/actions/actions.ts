@@ -10,6 +10,7 @@ export enum EAppActionTypes {
     OpenPopUp = '[OPEN POPUP] OpenPopUp',
     ClosePopUp = '[Close POPUP] ClosePopUp',
     AddItemForecast = '[ADD ITEM FORECAST] AddItemForecast',
+    AddFavorite = '[ADD CITY FAVORITE] AddFavorite',
 }
 
 
@@ -37,6 +38,11 @@ export class OpenPopUp implements Action {
     constructor(public payload: IOpenPopUp) { }
 }
 
+export class AddFavorite implements Action {
+    readonly type = EAppActionTypes.AddFavorite;
+    constructor(public payload: string) { }
+}
+
 export class ClosePopUp implements Action {
     readonly type = EAppActionTypes.ClosePopUp;
 }
@@ -46,4 +52,4 @@ export class AddItemForecast implements Action {
     constructor(public payload: IOpenweathermapForecastFive) { }
 }
 
-export type ActionUnion = CleanSearchCity | AddSearchCity | ChangeLanguage | OpenPopUp | ClosePopUp | ChangeUnits | AddItemForecast;
+export type ActionUnion = CleanSearchCity | AddSearchCity | ChangeLanguage | OpenPopUp | ClosePopUp | ChangeUnits | AddItemForecast | AddFavorite;

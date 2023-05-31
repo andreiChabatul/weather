@@ -2,7 +2,7 @@
 @import "./../../../../scss/color-styles";
 
 .item-info-container {
-    position: relative;
+    position: absolute;
     background: #FFFFFF;
     width: 100px;
     height: 130px;
@@ -11,13 +11,12 @@
     cursor: pointer;
     transition: .4s;
     opacity: .9;
-    transform: translateY(-25px);
-    border: 1px solid $grey-text;
+    border-top: 1px solid $grey-text;
     
     &:hover {
-        transform: translateY(-50px);
+        transform: rotate(-20deg) !important;
         opacity: 1;
-        z-index: 11111;
+        z-index: 1111;
         border: 1px solid $grey-text;
     }
 }
@@ -37,7 +36,6 @@
     bottom: 0;
     right: 15px;
 }
-
 
 .item-info-text {
     text-align: center;

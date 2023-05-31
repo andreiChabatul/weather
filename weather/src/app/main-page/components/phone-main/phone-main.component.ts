@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { OpenPopUp } from 'src/app/store/actions/actions';
 import { IAppStore } from 'src/app/store/models/stateModel';
 
 @Component({
@@ -11,6 +10,5 @@ import { IAppStore } from 'src/app/store/models/stateModel';
 export class PhoneMainComponent {
 
   constructor(private store: Store<IAppStore>) { }
-
 
 }

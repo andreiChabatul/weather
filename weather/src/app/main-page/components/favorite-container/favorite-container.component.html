@@ -1,0 +1,2 @@
+<app-item-info-add *ngIf="(favoriteCity$ | async)?.length === 0"></app-item-info-add>
+<app-item-info-slider *ngFor="let item of favoriteCity$ | async" [item]="item"></app-item-info-slider>

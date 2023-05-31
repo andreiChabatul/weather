@@ -31,6 +31,12 @@ export const Reducers = (
                 forecastWeather: action.payload,
             };
         }
+        case EAppActionTypes.AddFavorite: {
+            return {
+                ...state,
+                favoriteCity: [...new Set([...state.favoriteCity, action.payload])].slice(-5),
+            };
+        }
         case EAppActionTypes.ChangeUnits: {
             return {
                 ...state,

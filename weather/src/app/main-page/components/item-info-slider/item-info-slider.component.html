@@ -1,5 +1,5 @@
-<div class="item-info-container">
-    <p class="title-item-info">{{cityName}}</p>
+<div class="item-info-container" [style.transform]="item.style">
+    <p class="title-item-info">{{item.city}}</p>
     <div *ngIf="weatherCity">
         <p class="item-info-text">{{weatherCity.main.temp | tempPipe | async }}</p>
         <img class="item-info-img" appWeatherIco [weatherCode]="weatherCity.weather[0].id"

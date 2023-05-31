@@ -7,6 +7,7 @@ export interface IState {
     units: unitsType,
     popUp: IPopUp,
     forecastWeather: IOpenweathermapForecastFive,
+    favoriteCity: string[],
 }
 
 export interface IAppStore {
