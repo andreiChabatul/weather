@@ -17,7 +17,8 @@
     "main": {
         "mainTitle": "Convenient weather",
         "mainTitleTwo": "forecast in your device",
-        "desc": "Find out what can be waiting for you on the street with a few taps"
+        "desc": "Find out what can be waiting for you on the street with a few taps",
+        "addFavorite": "Click to add city to favorites"
     },
     "popUp": {
         "titleSearch": "Add to favorites",

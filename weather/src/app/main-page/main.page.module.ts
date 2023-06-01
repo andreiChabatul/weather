@@ -6,9 +6,9 @@ import { MainInfoComponent } from './components/main-info/main-info.component';
 import { SharedModule } from '../shared/shared.module';
 import { PhoneMainComponent } from './components/phone-main/phone-main.component';
 import { ItemInfoSliderComponent } from './components/item-info-slider/item-info-slider.component';
-import { ItemInfoAddComponent } from './components/item-info-add/item-info-add.component';
 import { CommonModule } from '@angular/common';
 import { FavoriteContainerComponent } from './components/favorite-container/favorite-container.component';
+import { PhoneMainInfoComponent } from './components/phone-main-info/phone-main-info.component';
 
 @NgModule({
     declarations: [
@@ -16,8 +16,8 @@ import { FavoriteContainerComponent } from './components/favorite-container/favo
         MainInfoComponent,
         PhoneMainComponent,
         ItemInfoSliderComponent,
-        ItemInfoAddComponent,
-        FavoriteContainerComponent
+        FavoriteContainerComponent,
+        PhoneMainInfoComponent
     ],
     imports: [MaterialModule, TranslocoRootModule, SharedModule, CommonModule],
     providers: [

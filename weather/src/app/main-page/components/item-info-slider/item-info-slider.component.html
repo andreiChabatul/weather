@@ -1,4 +1,4 @@
-<div class="item-info-container" [style.transform]="item.style">
+<div class="item-info-container" [style.transform]="item.style" (click)="clickSliderItem()">
     <p class="title-item-info">{{item.city}}</p>
     <div *ngIf="weatherCity">
         <p class="item-info-text">{{weatherCity.main.temp | tempPipe | async }}</p>

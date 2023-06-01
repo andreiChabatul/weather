@@ -1,4 +1,4 @@
-import { Directive, ElementRef, OnInit, Input } from '@angular/core';
+import { Directive, ElementRef, OnChanges, Input } from '@angular/core';
 
 export type weatherIcoType =
   'drizzle' | 'clear' | 'default' |
@@ -9,13 +9,13 @@ export type weatherIcoType =
 @Directive({
   selector: '[appWeatherIco]'
 })
-export class WeatherIcoDirective implements OnInit {
+export class WeatherIcoDirective implements OnChanges {
 
   constructor(private el: ElementRef) { }
 
   @Input() weatherCode: number;
 
-  ngOnInit(): void {
+  ngOnChanges(): void {
     let type: weatherIcoType = 'default';
     switch (true) {
       case this.weatherCode === 800:

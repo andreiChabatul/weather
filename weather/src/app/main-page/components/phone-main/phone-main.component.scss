@@ -8,14 +8,6 @@
     position: absolute;
 }
 
-.phone-container {
-    @include flex-c_s;
-    flex-direction: column;
-    bottom: 0;
-    width: 210px;
-    height: 370px;
-}
-
 .item-info {
     position: absolute;
     top: 25px;
@@ -23,71 +15,28 @@
     transform: rotate(20deg);
 }
 
-.phone-container_title {
-    height: 30px;
-    width: 100%;
-}
-
-.phone-container_date {
-    height: 25px;
-    width: 100%;
-}
-
-.phone-container_info {
-    width: 85%;
-    height: 145px;
-    background: linear-gradient(90deg, rgba(2, 201, 251, 1) 0%, rgba(1, 150, 243, 1) 50%, rgba(1, 92, 234, 1) 100%);
-    border-radius: 15px;
-    padding: 10px;
-}
-
-.phone-container_forecast {
-    width: 100%;
-    height: 150px;
-}
-
-
-.phone-info_footer-text {
-    @include title-XXXsmall;
-    color: $color-white;
-}
-
-.phone-info_footer {
-    @include flex-c_s;
-
-}
-
-.phone-info-temp {
-    @include title-Xmedium;
-    color: $color-white;
-}
-
-.phone-info-weather {
+.add-city-phone {
+    margin-top: 130px;
+    width: 200px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
-.phone-info-img {
-    width: 85px;
-}
-
-.phone-container_title {
-    @include flex-c_s;
-    padding: 0 15px;
-}
-
-.phone-title-text {
-    @include font-default;
-}
-
-.phone-title-text_ico {
+.city-phone_add {
     cursor: pointer;
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 64px;
     color: $color-font-blue-dark;
-    transition: .3s;
+    transition: .4s;
 
     &:hover {
         transform: scale(1.1);
         color: $button-hover;
     }
+}
+
+.city-phone_add-text {
+    text-align: center;
+    @include title-medium;
 }

@@ -11,6 +11,8 @@ export enum EAppActionTypes {
     ClosePopUp = '[Close POPUP] ClosePopUp',
     AddItemForecast = '[ADD ITEM FORECAST] AddItemForecast',
     AddFavorite = '[ADD CITY FAVORITE] AddFavorite',
+    SelectFavorite = '[SELECT CITY FAVORITE] SelectFavorite',
+    DeleteFavorite = '[DELETE CITY FAVORITE] DeleteFavorite',
 }
 
 
@@ -47,9 +49,29 @@ export class ClosePopUp implements Action {
     readonly type = EAppActionTypes.ClosePopUp;
 }
 
+export class SelectFavorite implements Action {
+    readonly type = EAppActionTypes.SelectFavorite;
+    constructor(public payload: string) { }
+}
+
+export class DeleteFavorite implements Action {
+    readonly type = EAppActionTypes.DeleteFavorite;
+    constructor(public payload: string) { }
+}
+
 export class AddItemForecast implements Action {
     readonly type = EAppActionTypes.AddItemForecast;
     constructor(public payload: IOpenweathermapForecastFive) { }
 }
 
-export type ActionUnion = CleanSearchCity | AddSearchCity | ChangeLanguage | OpenPopUp | ClosePopUp | ChangeUnits | AddItemForecast | AddFavorite;
+export type ActionUnion =
+    CleanSearchCity |
+    AddSearchCity |
+    ChangeLanguage |
+    OpenPopUp |
+    ClosePopUp |
+    ChangeUnits |
+    AddItemForecast |
+    AddFavorite |
+    SelectFavorite |
+    DeleteFavorite;

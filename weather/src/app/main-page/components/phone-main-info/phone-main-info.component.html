@@ -1,0 +1,29 @@
+<div class="phone-container">
+    <div class="phone-container_title">
+        <span class="material-symbols-outlined phone-title-text_ico">page_info</span>
+        <span class="phone-title-text">{{cityName}}</span>
+        <span class="material-symbols-outlined phone-title-text_ico" (click)="deleteCity()">delete</span>
+    </div>
+    <div *ngIf="weatherInfo; else loadingBlock">
+        <div class="phone-container_date"></div>
+        <div class="phone-container_info">
+            <div class="phone-info-weather">
+                <div>
+                    <p class="phone-info-temp">{{weatherInfo.main.temp | tempPipe | async}}</p>
+                    <p class="phone-info-desc">{{weatherInfo.weather[0].description | titlecase}}</p>
+                </div>
+                <img class="phone-info-img" appWeatherIco [weatherCode]="weatherInfo.weather[0].id"
+                    src="./../../../../assets/icoWeather/defaultIco.gif" alt="weatherType">
+            </div>
+            <div class="phone-info_footer">
+                <p class="phone-info_footer-text">3v\x <br> Wind</p>
+                <p class="phone-info_footer-text">3v\x <br>Humidity</p>
+                <p class="phone-info_footer-text">3v\x <br>Feeling</p>
+            </div>
+        </div>
+    </div>
+    <ng-template #loadingBlock>
+        <mat-spinner class="spinner-info"></mat-spinner>
+    </ng-template>
+    <div class="phone-container_forecast"></div>
+</div>

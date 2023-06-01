@@ -53,6 +53,24 @@ export const Reducers = (
                 },
             };
         }
+        case EAppActionTypes.SelectFavorite: {
+            const index = state.favoriteCity.indexOf(action.payload);
+            const resultArr = [...state.favoriteCity];
+            resultArr.splice(index, 1);
+            return {
+                ...state,
+                favoriteCity: [...resultArr, action.payload]
+            };
+        }
+        case EAppActionTypes.DeleteFavorite: {
+            const index = state.favoriteCity.indexOf(action.payload);
+            const resultArr = [...state.favoriteCity];
+            resultArr.splice(index, 1);
+            return {
+                ...state,
+                favoriteCity: [...resultArr]
+            };
+        }
         case EAppActionTypes.ClosePopUp: {
             return {
                 ...state,
