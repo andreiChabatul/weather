@@ -1,5 +1,6 @@
 import { stateApp } from "..";
 import { ActionUnion, EAppActionTypes } from "../actions/actions";
+import { ICoordinate } from "../models/openweathermap";
 import { IState } from "../models/stateModel";
 
 export const Reducers = (
@@ -32,9 +33,13 @@ export const Reducers = (
             };
         }
         case EAppActionTypes.AddFavorite: {
+            const result: ICoordinate[] = [...state.favoriteCity];
+            if (result.find(coor => coor.name === action.payload.name) === undefined || result.length === 0) {
+                result.push(action.payload);
+            }
             return {
                 ...state,
-                favoriteCity: [...new Set([...state.favoriteCity, action.payload])].slice(-5),
+                favoriteCity: result.slice(-5),
             };
         }
         case EAppActionTypes.ChangeUnits: {
@@ -63,12 +68,9 @@ export const Reducers = (
             };
         }
         case EAppActionTypes.DeleteFavorite: {
-            const index = state.favoriteCity.indexOf(action.payload);
-            const resultArr = [...state.favoriteCity];
-            resultArr.splice(index, 1);
             return {
                 ...state,
-                favoriteCity: [...resultArr]
+                favoriteCity: state.favoriteCity.filter(coor => coor.lat !== action.payload.lat),
             };
         }
         case EAppActionTypes.ClosePopUp: {

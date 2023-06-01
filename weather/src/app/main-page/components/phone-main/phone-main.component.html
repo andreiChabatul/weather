@@ -1,5 +1,5 @@
 <div class="phone-main-container" *transloco="let t; read: 'main'">
-    <app-phone-main-info *ngIf="this.cityName; else elseBlock" [cityName]="cityName"></app-phone-main-info>
+    <app-phone-main-info *ngIf="this.coor; else elseBlock" [coor]="coor"></app-phone-main-info>
     <ng-template #elseBlock>
         <div class="add-city-phone" (click)=" openPopUp()">
             <p class="material-symbols-outlined city-phone_add"> add_circle </p>

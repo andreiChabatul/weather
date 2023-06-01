@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { map, Observable } from 'rxjs';
+import { ICoordinate } from 'src/app/store/models/openweathermap';
 import { IAppStore } from 'src/app/store/models/stateModel';
 import { selectFavorite } from 'src/app/store/selectors/selectors';
 
 
 export interface IFavoriteCity {
-  city: string;
+  coor: ICoordinate;
   style: string;
 }
 
@@ -23,7 +24,7 @@ export class FavoriteContainerComponent implements OnInit {
 
   ngOnInit(): void {
     this.favoriteCity$ = this.store.select(selectFavorite).pipe(
-      map(value => value.map((city, index) => { return { city, style: `translateY(${index * 25}px)` } }))
+      map(value => value.map((coor, index) => { return { coor, style: `translateY(${index * 25}px)` } }))
     )
   }
 }

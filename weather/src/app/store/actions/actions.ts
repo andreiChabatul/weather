@@ -1,6 +1,6 @@
 import { Action } from "@ngrx/store";
 import { IOpenPopUp, languageType, unitsType } from "../models/settingModel";
-import { IOpenweathermapForecastFive } from "../models/openweathermap";
+import { ICoordinate, IOpenweathermapForecastFive } from "../models/openweathermap";
 
 export enum EAppActionTypes {
     AddSearchCity = '[SEARCH CITY ADD] AddSearchCity',
@@ -42,7 +42,7 @@ export class OpenPopUp implements Action {
 
 export class AddFavorite implements Action {
     readonly type = EAppActionTypes.AddFavorite;
-    constructor(public payload: string) { }
+    constructor(public payload: ICoordinate) { }
 }
 
 export class ClosePopUp implements Action {
@@ -51,12 +51,12 @@ export class ClosePopUp implements Action {
 
 export class SelectFavorite implements Action {
     readonly type = EAppActionTypes.SelectFavorite;
-    constructor(public payload: string) { }
+    constructor(public payload: ICoordinate) { }
 }
 
 export class DeleteFavorite implements Action {
     readonly type = EAppActionTypes.DeleteFavorite;
-    constructor(public payload: string) { }
+    constructor(public payload: ICoordinate) { }
 }
 
 export class AddItemForecast implements Action {

@@ -13,7 +13,7 @@ export const stateApp: IState = {
         type: 'setting'
     },
     forecastWeather: {} as IOpenweathermapForecastFive,
-    favoriteCity: ['Минск'],
+    favoriteCity: [],
 }
 
 export const initalState: IAppStore = {

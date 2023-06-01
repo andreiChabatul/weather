@@ -1,4 +1,4 @@
-import { IOpenweathermapForecastFive } from "./openweathermap";
+import { ICoordinate, IOpenweathermapForecastFive } from "./openweathermap";
 import { IPopUp, languageType, unitsType } from "./settingModel";
 
 export interface IState {
@@ -7,7 +7,7 @@ export interface IState {
     units: unitsType,
     popUp: IPopUp,
     forecastWeather: IOpenweathermapForecastFive,
-    favoriteCity: string[],
+    favoriteCity: ICoordinate[],
 }
 
 export interface IAppStore {

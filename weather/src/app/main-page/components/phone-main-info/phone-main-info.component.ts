@@ -3,7 +3,7 @@ import { Store } from '@ngrx/store';
 import { DeleteFavorite } from 'src/app/store/actions/actions';
 import { IAppStore } from 'src/app/store/models/stateModel';
 import { Observable, Subscription, map, mergeMap, switchMap } from 'rxjs';
-import { IOpenweathermap } from 'src/app/store/models/openweathermap';
+import { ICoordinate, IOpenweathermap } from 'src/app/store/models/openweathermap';
 import { GeocodingApiService } from 'src/app/core/services/geocoding-api.service';
 import { OpenweathermapApiService } from 'src/app/core/services/openweathermap-api.service';
 import { IOpenweathermapForecastFive } from 'src/app/store/models/openweathermap';
@@ -15,30 +15,23 @@ import { IOpenweathermapForecastFive } from 'src/app/store/models/openweathermap
 })
 export class PhoneMainInfoComponent implements OnChanges, OnDestroy {
 
-  @Input() cityName: string;
+  @Input() coor: ICoordinate;
   weatherInfo$: Subscription;
+  weatherInfoForecast$: Subscription;
   weatherInfo: IOpenweathermap;
   weatherInfoForecast: IOpenweathermapForecastFive;
 
   constructor(
     private store: Store<IAppStore>,
-    private geocodingApiService: GeocodingApiService,
     private openweathermapApiService: OpenweathermapApiService) { }
 
   ngOnChanges(): void {
-    this.weatherInfo$ = this.geocodingApiService.getCoordinate(this.cityName).pipe(
-      mergeMap(coor => {
-        if (coor[0]) {
-          this.openweathermapApiService.getWeather<IOpenweathermapForecastFive>(coor[0], 'forecast'
-          ).subscribe(value => this.weatherInfoForecast = value);
-          return this.openweathermapApiService.getWeather<IOpenweathermap>(coor[0], 'weather');
-        } else { return [] }
-      })
-    ).subscribe(info => this.weatherInfo = info)
+    this.weatherInfo$ = this.openweathermapApiService.getWeather<IOpenweathermap>(this.coor, 'weather'
+    ).subscribe(info => this.weatherInfo = info);
   }
 
   deleteCity(): void {
-    this.store.dispatch(new DeleteFavorite(this.cityName));
+    this.store.dispatch(new DeleteFavorite(this.coor));
   }
 
   ngOnDestroy(): void {

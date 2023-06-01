@@ -12,7 +12,7 @@
     transition: .4s;
     opacity: .9;
     border-top: 1px solid $grey-text;
-    
+
     &:hover {
         transform: rotate(-20deg) !important;
         opacity: 1;
@@ -43,4 +43,8 @@
     background: linear-gradient(180deg, $color-font-blue-dark 40%, rgba(233, 241, 242, 0.2) 75%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.spinner-info_item-slider {
+    width: 85px !important;
 }

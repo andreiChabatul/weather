@@ -1,10 +1,10 @@
 <div class="phone-container">
-    <div class="phone-container_title">
-        <span class="material-symbols-outlined phone-title-text_ico">page_info</span>
-        <span class="phone-title-text">{{cityName}}</span>
-        <span class="material-symbols-outlined phone-title-text_ico" (click)="deleteCity()">delete</span>
-    </div>
     <div *ngIf="weatherInfo; else loadingBlock">
+        <div class="phone-container_title">
+            <span class="material-symbols-outlined phone-title-text_ico">page_info</span>
+            <span class="phone-title-text">{{weatherInfo.name}}</span>
+            <span class="material-symbols-outlined phone-title-text_ico" (click)="deleteCity()">delete</span>
+        </div>
         <div class="phone-container_date"></div>
         <div class="phone-container_info">
             <div class="phone-info-weather">

@@ -23,7 +23,6 @@ export class GeocodingApiService {
   }
 
   getCity(coords: GeolocationCoordinates): Observable<IApiGeocoding[]> {
-    console.log('f')
     return this.http.get<IApiGeocoding[]>(
       `${URL_GEOCODING}reverse`, {
       params: {
