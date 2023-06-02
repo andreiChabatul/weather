@@ -1,11 +1,17 @@
 <div class="phone-container">
-    <div *ngIf="weatherInfo; else loadingBlock">
+    <div *ngIf="weatherInfo; else loadingBlock" class="phone-container_general">
         <div class="phone-container_title">
-            <span class="material-symbols-outlined phone-title-text_ico">page_info</span>
+            <span class="material-symbols-outlined phone-title-text_ico" (click)=" moreInfo()">page_info</span>
             <span class="phone-title-text">{{weatherInfo.name}}</span>
             <span class="material-symbols-outlined phone-title-text_ico" (click)="deleteCity()">delete</span>
         </div>
-        <div class="phone-container_date"></div>
+        <div class="phone-container_date">
+            <div class="phone-container_date__visible">
+                <span class="phone-date-item" *ngFor="let item of weatherInfoDate">
+                    {{item.dt | dayWeek | async}}
+                </span>
+            </div>
+        </div>
         <div class="phone-container_info">
             <div class="phone-info-weather">
                 <div>
@@ -21,9 +27,9 @@
                 <p class="phone-info_footer-text">3v\x <br>Feeling</p>
             </div>
         </div>
+        <div class="phone-container_forecast"></div>
     </div>
     <ng-template #loadingBlock>
         <mat-spinner class="spinner-info"></mat-spinner>
     </ng-template>
-    <div class="phone-container_forecast"></div>
 </div>

@@ -4,7 +4,7 @@
         src="./../../../../assets/icoWeather/defaultIco.gif" alt="weatherType">
 
     <p class="genetal-temp-text">{{info.main.temp | tempPipe | async}}</p>
-    <p class="general-day-text">{{day | dayWeek | async}},
+    <p class="general-day-text">{{info.dt | dayWeek | async}},
         <span class="general-time-text">{{time}}</span>
     </p>
 

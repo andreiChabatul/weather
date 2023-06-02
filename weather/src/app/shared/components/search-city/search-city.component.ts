@@ -20,7 +20,6 @@ export class SearchCityComponent implements OnInit, OnDestroy {
   cityForm: FormGroup;
   searchCity$ = this.store.select(selectAllCity);
   subscription$: Subscription;
-  subscriptionTwo$: Subscription;
 
   constructor(
     private fb: FormBuilder,
@@ -69,7 +68,7 @@ export class SearchCityComponent implements OnInit, OnDestroy {
   }
 
   clickFavoriteAdd(): void {
-    this.subscriptionTwo$ = this.geocodingApiService.getCoordinate(this.cityForm.value.location
+    this.geocodingApiService.getCoordinate(this.cityForm.value.location
     ).subscribe(coor => coor.length ? this.store.dispatch(new AddFavorite(coor[0])) : '');
   }
 
@@ -91,6 +90,6 @@ export class SearchCityComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.subscription$.unsubscribe();
-    this.subscriptionTwo$.unsubscribe();
+
   }
 }

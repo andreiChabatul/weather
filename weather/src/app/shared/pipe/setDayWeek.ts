@@ -16,14 +16,14 @@ export class DayWeek implements PipeTransform {
     constructor(private store: Store<IAppStore>) { }
 
     transform(value: number): Observable<string> {
-
+        const day = new Date(value * 1000).getDay();
         return this.lang$.pipe(
             map(lang => {
                 switch (lang) {
                     case 'en':
-                        return this.engDay[value];
+                        return this.engDay[day];
                     case 'ru':
-                        return this.rusDay[value];
+                        return this.rusDay[day];
                     default:
                         return '';
                 }

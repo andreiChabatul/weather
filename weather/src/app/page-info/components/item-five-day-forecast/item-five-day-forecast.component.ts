@@ -9,17 +9,13 @@ import { IAppStore } from 'src/app/store/models/stateModel';
   templateUrl: './item-five-day-forecast.component.html',
   styleUrls: ['./item-five-day-forecast.component.scss']
 })
-export class ItemFiveDayForecastComponent implements OnInit {
+export class ItemFiveDayForecastComponent {
 
   @Input() item: IItemForecast;
   @Input() index: number;
   day: number;
 
   constructor(private store: Store<IAppStore>) { }
-
-  ngOnInit(): void {
-    this.day = new Date(this.item.dt * 1000).getDay();
-  }
 
   openPopUp(): void {
     this.store.dispatch(new OpenPopUp({ popUpType: 'infoWeather', item: this.index }));
