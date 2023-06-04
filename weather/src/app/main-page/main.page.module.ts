@@ -9,6 +9,7 @@ import { ItemInfoSliderComponent } from './components/item-info-slider/item-info
 import { CommonModule } from '@angular/common';
 import { FavoriteContainerComponent } from './components/favorite-container/favorite-container.component';
 import { PhoneMainInfoComponent } from './components/phone-main-info/phone-main-info.component';
+import { PhoneGeneralInfoComponent } from './components/phone-general-info/phone-general-info.component';
 
 @NgModule({
     declarations: [
@@ -17,7 +18,8 @@ import { PhoneMainInfoComponent } from './components/phone-main-info/phone-main-
         PhoneMainComponent,
         ItemInfoSliderComponent,
         FavoriteContainerComponent,
-        PhoneMainInfoComponent
+        PhoneMainInfoComponent,
+        PhoneGeneralInfoComponent
     ],
     imports: [MaterialModule, TranslocoRootModule, SharedModule, CommonModule],
     providers: [

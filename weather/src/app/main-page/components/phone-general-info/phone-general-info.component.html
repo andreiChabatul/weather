@@ -1,0 +1,15 @@
+<div class="phone-container_info">
+    <div class="phone-info-weather">
+        <div>
+            <p class="phone-info-temp">{{item.main.temp | tempPipe | async}}</p>
+            <p class="phone-info-desc">{{item.weather[0].description | titlecase}}</p>
+        </div>
+        <img class="phone-info-img" appWeatherIco [weatherCode]="item.weather[0].id"
+            src="./../../../../assets/icoWeather/defaultIco.gif" alt="weatherType">
+    </div>
+    <div class="phone-info_footer">
+        <p class="phone-info_footer-text">3v\x <br> Wind</p>
+        <p class="phone-info_footer-text">3v\x <br>Humidity</p>
+        <p class="phone-info_footer-text">3v\x <br>Feeling</p>
+    </div>
+</div>

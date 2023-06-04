@@ -1,0 +1,41 @@
+@import "./../../../../scss/typography-styles";
+@import "./../../../../scss/default-styles";
+@import "./../../../../scss/color-styles";
+
+.phone-container_info {
+    width: 180px;
+    height: 135px;
+    background: linear-gradient(90deg, rgba(2, 201, 251, 1) 0%, rgba(1, 150, 243, 1) 50%, rgba(1, 92, 234, 1) 100%);
+    border-radius: 15px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.phone-info-weather {
+    display: flex;
+}
+
+.phone-info-temp {
+    @include title-medium28;
+    color: $color-white;
+    margin: 10px 0;
+}
+
+.phone-info-img {
+    width: 85px;
+}
+
+.phone-info-desc {
+    @include title-Xsmall;
+    color: $color-white;
+}
+
+.phone-info_footer-text {
+    @include title-XXXsmall;
+    color: $color-white;
+}
+
+.phone-info_footer {
+    @include flex-c_s;
+}
+

@@ -22,6 +22,9 @@ export class PhoneMainInfoComponent implements OnChanges, OnDestroy {
   weatherInfo: IOpenweathermap;
   weatherInfoDate: IItemForecast[];
   weatherInfoForecast: IOpenweathermapForecastFive;
+  activeIndex: number = 0;
+  transformVisible = `transform: translateX(${-this.activeIndex * 20}px)`;
+
 
   constructor(
     private store: Store<IAppStore>,
@@ -33,7 +36,6 @@ export class PhoneMainInfoComponent implements OnChanges, OnDestroy {
     ).subscribe(info => this.weatherInfo = info);
     this.weatherInfoForecast$ = this.openweathermapApiService.getWeather<IOpenweathermapForecastFive>(this.coor, 'forecast'
     ).subscribe(info => {
-      console.log(info);
       this.weatherInfoDate = info.list.filter((value, index) => index % 8 === 0);
       this.weatherInfoForecast = info
     });
@@ -41,6 +43,11 @@ export class PhoneMainInfoComponent implements OnChanges, OnDestroy {
 
   deleteCity(): void {
     this.store.dispatch(new DeleteFavorite(this.coor));
+  }
+
+  clickDate(index: number): void {
+    this.activeIndex = index;
+    this.transformVisible = `transform: translateX(${-this.activeIndex * 30}px)`;
   }
 
   moreInfo(): void {

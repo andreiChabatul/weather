@@ -23,49 +23,6 @@
     @include title-medium;
 }
 
-.phone-container_info {
-    width: 180px;
-    height: 135px;
-    background: linear-gradient(90deg, rgba(2, 201, 251, 1) 0%, rgba(1, 150, 243, 1) 50%, rgba(1, 92, 234, 1) 100%);
-    border-radius: 15px;
-    padding: 10px;
-    margin: 0 auto;
-}
-
-.phone-info-temp {
-    @include title-medium28;
-    color: $color-white;
-    margin: 10px 0;
-}
-
-.phone-info-weather {
-    display: flex;
-}
-
-.phone-info-img {
-    width: 85px;
-}
-
-.phone-info-desc {
-    @include title-Xsmall;
-    color: $color-white;
-}
-
-.phone-info_footer-text {
-    @include title-XXXsmall;
-    color: $color-white;
-}
-
-.phone-info_footer {
-    @include flex-c_s;
-}
-
-.phone-container_forecast {
-    background: darkkhaki;
-    width: 100%;
-    height: 150px;
-}
-
 .phone-title-text_ico {
     cursor: pointer;
     font-size: 16px;
@@ -79,7 +36,11 @@
     }
 }
 
-
+.phone-container_forecast {
+    background: darkkhaki;
+    width: 100%;
+    height: 150px;
+}
 
 .phone-container_date {
     height: 20px;
@@ -91,6 +52,7 @@
     display: flex;
     gap: 7px;
     align-items: center;
+    transition: .3s;
 }
 
 .phone-date-item {
