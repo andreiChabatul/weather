@@ -6,5 +6,5 @@
     <img class="item-forecast-img" src="./../../../../assets/icoWeather/defaultIco.gif" appWeatherIco
         [weatherCode]="item.weather[0].id" alt="weatherIco">
     <p class="item-forecast-day">{{item.main.temp_max | tempPipe | async}}</p>
-    <div class="material-symbols-outlined item-more-info" (click)="openPopUp()">page_info</div>
+    <div *ngIf="isOpen" class="material-symbols-outlined item-more-info" (click)="openPopUp()">page_info</div>
 </div>

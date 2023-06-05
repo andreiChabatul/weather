@@ -13,7 +13,7 @@ export class ItemFiveDayForecastComponent {
 
   @Input() item: IItemForecast;
   @Input() index: number;
-  day: number;
+  @Input() isOpen: boolean;
 
   constructor(private store: Store<IAppStore>) { }
 

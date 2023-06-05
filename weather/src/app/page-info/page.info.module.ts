@@ -12,7 +12,6 @@ import { UvIndexComponent } from './components/uv-index/uv-index.component';
 import { VisibilityComponent } from './components/visibility/visibility.component';
 import { PressureComponent } from './components/pressure/pressure.component';
 import { FiveDayForecastComponent } from './components/five-day-forecast/five-day-forecast.component';
-import { ItemFiveDayForecastComponent } from './components/item-five-day-forecast/item-five-day-forecast.component';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
@@ -26,7 +25,6 @@ import { SharedModule } from '../shared/shared.module';
         VisibilityComponent,
         PressureComponent,
         FiveDayForecastComponent,
-        ItemFiveDayForecastComponent,
     ],
     imports: [MaterialModule, TranslocoRootModule, CommonModule, SharedModule],
     providers: [

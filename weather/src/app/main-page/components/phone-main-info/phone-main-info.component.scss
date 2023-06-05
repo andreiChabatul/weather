@@ -36,19 +36,13 @@
     }
 }
 
-.phone-container_forecast {
-    background: darkkhaki;
-    width: 100%;
-    height: 150px;
-}
-
 .phone-container_date {
     height: 20px;
     width: 170px;
     overflow: hidden;
 }
 
-.phone-container_date__visible{
+.phone-container_date__visible {
     display: flex;
     gap: 7px;
     align-items: center;
@@ -76,4 +70,32 @@
     background: #E6F3FD;
     border: 1px solid $button-hover;
     color: $button-hover;
+}
+
+.phone-container_forecast {
+    width: 200px;
+    padding: 15px;
+}
+
+.phone-forecast_items-container {
+    display: flex;
+    overflow-x: auto;
+    height: 85px;
+    margin-bottom: 15px;
+}
+
+.phone-forecast_title {
+    @include title-medium;
+}
+
+.phone-forecast-item {
+    height: 75px;
+    width: 65px;
+    border-radius: 15px;
+    background: $color-white;
+}
+
+.test_one {
+    width: 60px;
+    transform: scale(0.6);
 }

@@ -37,7 +37,7 @@ export class PhoneMainInfoComponent implements OnChanges, OnDestroy {
     this.weatherInfoForecast$ = this.openweathermapApiService.getWeather<IOpenweathermapForecastFive>(this.coor, 'forecast'
     ).subscribe(info => {
       this.weatherInfoDate = info.list.filter((value, index) => index % 8 === 0);
-      this.weatherInfoForecast = info
+      this.weatherInfoForecast = info;
     });
   }
 

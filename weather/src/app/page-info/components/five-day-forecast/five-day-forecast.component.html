@@ -1,4 +1,4 @@
 <div class="fiveDay-container">
     <app-item-five-day-forecast *ngFor="let item of (itemArray | async)?.list; index as i" [item]="item"
-        [index]="i"></app-item-five-day-forecast>
+        [index]="i" [isOpen]="true"></app-item-five-day-forecast>
 </div>

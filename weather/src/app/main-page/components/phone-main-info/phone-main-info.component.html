@@ -14,7 +14,15 @@
             </div>
         </div>
         <app-phone-general-info [item]="weatherInfoDate[activeIndex]"></app-phone-general-info>
-        <div class="phone-container_forecast"></div>
+        <div class="phone-container_forecast">
+            <p class="phone-forecast_title">Hourly Forecast</p>
+            <div class="phone-forecast_items-container">
+                <div class="test_one" *ngFor="let item of weatherInfoForecast.list; index as i">
+                    <app-item-five-day-forecast *ngIf="i >= (activeIndex*8) && i <= ((activeIndex*8)+8)" [item]="item"
+                        [isOpen]="false"></app-item-five-day-forecast>
+                </div>
+            </div>
+        </div>
     </div>
     <ng-template #loadingBlock>
         <mat-spinner class="spinner-info"></mat-spinner>
