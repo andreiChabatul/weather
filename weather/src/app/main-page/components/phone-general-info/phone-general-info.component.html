@@ -1,4 +1,4 @@
-<div class="phone-container_info">
+<div class="phone-container_info" *transloco="let t; read: 'main'">
     <div class="phone-info-weather">
         <div>
             <p class="phone-info-temp">{{item.main.temp | tempPipe | async}}</p>
@@ -10,15 +10,15 @@
     <ul class="phone-info_footer">
         <li class="phone-info_footer-text">
             <span class="phone-info_footer-text__value">{{item.wind.speed | windPipe | async}}</span>
-            Wind
+            {{ t('windTitle') }}
         </li>
         <li class="phone-info_footer-text">
             <span class="phone-info_footer-text__value">{{item.main.humidity}}%</span>
-            Humidity
+            {{ t('humidityTitle') }}
         </li>
         <li class="phone-info_footer-text">
             <span class="phone-info_footer-text__value">{{item.main.feels_like| tempPipe | async}}</span>
-            Feeling
+            {{ t('feelingTitle') }}
         </li>
     </ul>
 </div>

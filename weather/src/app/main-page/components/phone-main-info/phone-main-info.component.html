@@ -1,4 +1,4 @@
-<div class="phone-container">
+<div class="phone-container" *transloco="let t; read: 'main'">
     <div *ngIf="weatherInfo && weatherInfoDate; else loadingBlock" class="phone-container_general">
         <div class="phone-container_title">
             <span class="material-symbols-outlined phone-title-text_ico" (click)=" moreInfo()">page_info</span>
@@ -15,7 +15,7 @@
         </div>
         <app-phone-general-info [item]="weatherInfoDate[activeIndex]"></app-phone-general-info>
         <div class="phone-container_forecast">
-            <p class="phone-forecast_title">Hourly Forecast</p>
+            <p class="phone-forecast_title">{{ t('forecastTitle') }}</p>
             <div class="phone-forecast_items-container">
                 <div class="test_one" *ngFor="let item of weatherInfoForecast.list; index as i">
                     <app-item-five-day-forecast *ngIf="i >= (activeIndex*8) && i <= ((activeIndex*8)+8)" [item]="item"
