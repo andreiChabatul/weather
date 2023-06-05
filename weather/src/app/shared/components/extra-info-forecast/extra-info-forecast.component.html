@@ -19,7 +19,7 @@
                 <span class="extra-info-desc_value">{{forecastInfo.list[index].main.humidity}}%</span>
             </p>
             <p class="extra-info-desc">Wind:
-                <span class="extra-info-desc_value">{{forecastInfo.list[index].wind.speed}} м\с</span>
+                <span class="extra-info-desc_value">{{forecastInfo.list[index].wind.speed | windPipe | async}}</span>
             </p>
             <p class="extra-info-desc">Sunrise:
                 <span class="extra-info-desc_value">{{forecastInfo.city.sunrise | timeFormat | async}}</span>

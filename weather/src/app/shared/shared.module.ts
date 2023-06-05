@@ -24,6 +24,7 @@ import { HumidityColorDirective } from './directives/humidity-color.directive';
 import { WeatherIcoDirective } from './directives/weather-ico.directive';
 import { RainPipe } from './pipe/rainPipe';
 import { ItemFiveDayForecastComponent } from './components/item-five-day-forecast/item-five-day-forecast.component';
+import { WindPipe } from './pipe/windPipe';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { ItemFiveDayForecastComponent } from './components/item-five-day-forecas
         HumidityColorDirective,
         WeatherIcoDirective,
         RainPipe,
-        ItemFiveDayForecastComponent
+        ItemFiveDayForecastComponent,
+        WindPipe
     ],
     imports: [
         MaterialModule,
@@ -73,7 +75,9 @@ import { ItemFiveDayForecastComponent } from './components/item-five-day-forecas
         HumidityColorDirective,
         WeatherIcoDirective,
         RainPipe,
-        ItemFiveDayForecastComponent
+        ItemFiveDayForecastComponent,
+        WindPipe
+  
     ]
 })
 export class SharedModule { }

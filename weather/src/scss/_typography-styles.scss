@@ -45,7 +45,7 @@
 @mixin title-XXXsmall {
     @include font-default;
     font-size: 10px;
-    line-height: 5px;
+    line-height: 15px;
 }
 
 @mixin title-medium18 {

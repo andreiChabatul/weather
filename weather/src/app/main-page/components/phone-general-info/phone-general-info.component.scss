@@ -13,6 +13,7 @@
 
 .phone-info-weather {
     display: flex;
+    margin-bottom: 15px;
 }
 
 .phone-info-temp {
@@ -33,9 +34,19 @@
 .phone-info_footer-text {
     @include title-XXXsmall;
     color: $color-white;
+    text-align: center;
+    border-right: 1px dashed $color-white;
+
+    &:last-child {
+        border: none;
+    }
+}
+
+.phone-info_footer-text__value {
+    font-weight: 900;
 }
 
 .phone-info_footer {
-    @include flex-c_s;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
-

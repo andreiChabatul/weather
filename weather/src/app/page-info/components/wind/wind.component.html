@@ -3,9 +3,9 @@
 
     <div class="compas-container">
         <div [style]='rotate' class="compas-array"></div>
-        <p class="compas-direction-text">{{value.speed}}<br>м\с</p>
+        <div class="compas-direction-text">{{value.speed | windPipe | async}}</div>
     </div>
 
-    <p class="text-gust">{{ t('windGust')}}{{value.gust}}м\с</p>
+    <p class="text-gust">{{ t('windGust')}}{{value.gust | windPipe | async}}</p>
 
 </div>

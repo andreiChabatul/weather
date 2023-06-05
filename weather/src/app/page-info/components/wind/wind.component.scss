@@ -26,10 +26,10 @@
 
 .compas-direction-text {
     @include title-Xsmall;
-    @include flex-c_c;
     font-weight: 500;
     border: 2px solid $color-font-blue-dark;
     border-radius: 50%;
+    padding: 10px;
     width: 47px;
     height: 47px;
     background: #d6d6dd;
