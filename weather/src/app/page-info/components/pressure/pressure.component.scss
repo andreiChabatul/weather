@@ -1,0 +1,8 @@
+@import "./../../../../scss/color-styles";
+@import "./../../../../scss/typography-styles";
+@import "./../../../../scss/default-styles";
+
+.pressure-text {
+    @include title-medium28;
+    font-weight: 500;
+}

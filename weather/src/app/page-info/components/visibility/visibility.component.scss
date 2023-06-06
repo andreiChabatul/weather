@@ -3,10 +3,6 @@
 @import "./../../../../scss/default-styles";
 
 .visibility-text {
-    @include title-Xmedium;
+    @include title-medium28;
     font-weight: 500;
-}
-
-.visibility-info {
-    @include title-Xsmall;
 }

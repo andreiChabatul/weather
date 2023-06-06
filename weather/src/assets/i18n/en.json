@@ -45,6 +45,7 @@
         "indexUVTitle": "UV index",
         "visibilityTitle": "Visibility",
         "fiveTitle": "Five day forecast",
-        "todayTitle": "Today's Highlights"
+        "todayTitle": "Today's Highlights",
+        "pressureTitle": "Atmosphere pressure"
     }
 }

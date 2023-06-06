@@ -45,6 +45,7 @@
         "indexUVTitle" : "УФ ндекс",
         "visibilityTitle": "Видимость",
         "fiveTitle": "Прогноз на пять дней",
-        "todayTitle": "Прогноз на сегодня"
+        "todayTitle": "Прогноз на сегодня",
+        "pressureTitle": "Атмосферное давление"
     }
 }

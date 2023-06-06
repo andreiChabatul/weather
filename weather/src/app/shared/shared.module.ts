@@ -25,6 +25,7 @@ import { WeatherIcoDirective } from './directives/weather-ico.directive';
 import { RainPipe } from './pipe/rainPipe';
 import { ItemFiveDayForecastComponent } from './components/item-five-day-forecast/item-five-day-forecast.component';
 import { WindPipe } from './pipe/windPipe';
+import { PressurePipe } from './pipe/pressurePipe';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { WindPipe } from './pipe/windPipe';
         WeatherIcoDirective,
         RainPipe,
         ItemFiveDayForecastComponent,
-        WindPipe
+        WindPipe,
+        PressurePipe
     ],
     imports: [
         MaterialModule,
@@ -76,7 +78,8 @@ import { WindPipe } from './pipe/windPipe';
         WeatherIcoDirective,
         RainPipe,
         ItemFiveDayForecastComponent,
-        WindPipe
+        WindPipe,
+        PressurePipe
   
     ]
 })

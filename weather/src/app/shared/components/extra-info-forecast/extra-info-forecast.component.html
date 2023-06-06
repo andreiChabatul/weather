@@ -27,7 +27,10 @@
             <p class="extra-info-desc">Sunset:
                 <span class="extra-info-desc_value">{{forecastInfo.city.sunset | timeFormat | async}}</span>
             </p>
-            <p class="extra-info-desc">Pressure: </p>
+            <p class="extra-info-desc">Pressure:
+                <span class="extra-info-desc_value">{{forecastInfo.list[index].main.grnd_level | pressurePipe |
+                    async}}</span>
+            </p>
             <p class="extra-info-desc">Precipitation:
                 <span class="extra-info-desc_value">{{forecastInfo.list[index].rain | rainPipe | async}}</span>
             </p>

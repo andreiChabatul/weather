@@ -1,3 +1,5 @@
 <div class="infoPage-item-container" *transloco="let t; read: 'pageInfo'">
-    <p class="infoPage-item-title">{{ t('sunriseTitle')}}</p>
+    <p class="infoPage-item-title">{{ t('pressureTitle')}}</p>
+    <p class="pressure-text">{{value | pressurePipe | async}}</p>
+    <p></p>
 </div>
