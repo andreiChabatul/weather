@@ -1,22 +1,30 @@
 import { Directive, ElementRef, OnChanges, Input } from '@angular/core';
 
-export type weatherIcoType =
-  'drizzle' | 'clear' | 'default' |
-  'clouds20' | 'clouds40' | 'clouds60' |
-  'clouds80' | 'rain' | 'rainFreezing' |
-  'rainHeavy' | 'thunderstorm' | 'snow' | 'atmosphere';
+export type WeatherIcoType =
+  | 'drizzle'
+  | 'clear'
+  | 'default'
+  | 'clouds20'
+  | 'clouds40'
+  | 'clouds60'
+  | 'clouds80'
+  | 'rain'
+  | 'rainFreezing'
+  | 'rainHeavy'
+  | 'thunderstorm'
+  | 'snow'
+  | 'atmosphere';
 
 @Directive({
-  selector: '[appWeatherIco]'
+  selector: '[appWeatherIco]',
 })
 export class WeatherIcoDirective implements OnChanges {
-
-  constructor(private el: ElementRef) { }
+  constructor(private el: ElementRef) {}
 
   @Input() weatherCode: number;
 
   ngOnChanges(): void {
-    let type: weatherIcoType = 'default';
+    let type: WeatherIcoType = 'default';
     switch (true) {
       case this.weatherCode === 800:
         type = 'clear';
@@ -33,29 +41,28 @@ export class WeatherIcoDirective implements OnChanges {
       case this.weatherCode === 804:
         type = 'clouds80';
         break;
-      case (this.weatherCode > 499 && this.weatherCode < 505):
+      case this.weatherCode > 499 && this.weatherCode < 505:
         type = 'rain';
         break;
-      case (this.weatherCode === 511):
+      case this.weatherCode === 511:
         type = 'rainFreezing';
         break;
-      case (this.weatherCode > 519 && this.weatherCode < 532):
+      case this.weatherCode > 519 && this.weatherCode < 532:
         type = 'rainHeavy';
         break;
-      case (Math.floor(this.weatherCode / 100) === 2):
+      case Math.floor(this.weatherCode / 100) === 2:
         type = 'thunderstorm';
         break;
-      case (Math.floor(this.weatherCode / 100) === 3):
+      case Math.floor(this.weatherCode / 100) === 3:
         type = 'drizzle';
         break;
-      case (Math.floor(this.weatherCode / 100) === 6):
+      case Math.floor(this.weatherCode / 100) === 6:
         type = 'snow';
         break;
-      case (Math.floor(this.weatherCode / 100) === 7):
+      case Math.floor(this.weatherCode / 100) === 7:
         type = 'atmosphere';
         break;
-    };
+    }
     this.el.nativeElement.src = `./../../assets/icoWeather/${type}.png`;
   }
-
 }

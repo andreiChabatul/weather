@@ -10,16 +10,17 @@ const routes: Routes = [
   },
   {
     path: 'info',
-    loadChildren: () => import('./page-info/page.info.module').then((m) => m.PageInfoModule),
+    loadChildren: () =>
+      import('./page-info/page.info.module').then((m) => m.PageInfoModule),
   },
   {
     path: '**',
-    component: Page404Component
-  }
+    component: Page404Component,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

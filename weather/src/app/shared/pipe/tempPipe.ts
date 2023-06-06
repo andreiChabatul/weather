@@ -5,27 +5,25 @@ import { selectUnits } from '../../store/selectors/selectors';
 import { Observable, map } from 'rxjs';
 
 @Pipe({
-    name: 'tempPipe'
+  name: 'tempPipe',
 })
 export class TempPipe implements PipeTransform {
+  units$ = this.store.select(selectUnits);
 
-    units$ = this.store.select(selectUnits);
+  constructor(private store: Store<IAppStore>) {}
 
-    constructor(private store: Store<IAppStore>) { }
-
-    transform(value: number): Observable<string> {
-
-        return this.units$.pipe(
-            map(unit => {
-                switch (unit) {
-                    case 'metric':
-                        return `${value.toFixed(1)}℃`;
-                    case 'imperial':
-                        return `${value.toFixed(1)}℉`;
-                    default:
-                        return '';
-                }
-            }
-            ))
-    }
+  transform(value: number): Observable<string> {
+    return this.units$.pipe(
+      map((unit) => {
+        switch (unit) {
+          case 'metric':
+            return `${value.toFixed(1)}℃`;
+          case 'imperial':
+            return `${value.toFixed(1)}℉`;
+          default:
+            return '';
+        }
+      })
+    );
+  }
 }

@@ -6,8 +6,20 @@ import { MatOptionModule } from '@angular/material/core';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
-    declarations: [],
-    imports: [MatAutocompleteModule, MatSelectModule, MatInputModule, MatOptionModule, MatProgressSpinnerModule],
-    exports: [MatAutocompleteModule, MatSelectModule, MatInputModule, MatOptionModule, MatProgressSpinnerModule],
+  declarations: [],
+  imports: [
+    MatAutocompleteModule,
+    MatSelectModule,
+    MatInputModule,
+    MatOptionModule,
+    MatProgressSpinnerModule,
+  ],
+  exports: [
+    MatAutocompleteModule,
+    MatSelectModule,
+    MatInputModule,
+    MatOptionModule,
+    MatProgressSpinnerModule,
+  ],
 })
-export class MaterialModule { }
+export class MaterialModule {}

@@ -1,10 +1,22 @@
-import { Component, OnInit, OnDestroy, ViewEncapsulation, Input } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  OnDestroy,
+  ViewEncapsulation,
+  Input,
+} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { GeohelperApiService } from '../../../core/services/geohelper-api.service';
 import { IAppStore } from 'src/app/store/models/stateModel';
 import { Store } from '@ngrx/store';
 import { selectAllCity } from 'src/app/store/selectors/selectors';
-import { filter, startWith, Subscription, debounceTime, distinctUntilChanged } from 'rxjs';
+import {
+  filter,
+  startWith,
+  Subscription,
+  debounceTime,
+  distinctUntilChanged,
+} from 'rxjs';
 import { Router } from '@angular/router';
 import { GeocodingApiService } from 'src/app/core/services/geocoding-api.service';
 import { AddFavorite } from 'src/app/store/actions/actions';
@@ -17,8 +29,11 @@ import { AddFavorite } from 'src/app/store/actions/actions';
 })
 export class SearchCityComponent implements OnInit, OnDestroy {
   @Input() type: boolean;
+
   cityForm: FormGroup;
+
   searchCity$ = this.store.select(selectAllCity);
+
   subscription$: Subscription;
 
   constructor(
@@ -33,15 +48,15 @@ export class SearchCityComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     const input$ = this.cityForm.valueChanges.pipe(
-      filter(value => value.location.length > 1),
+      filter((value) => value.location.length > 1),
       startWith(''),
       debounceTime(700),
-      distinctUntilChanged(),
-    )
+      distinctUntilChanged()
+    );
 
-    this.subscription$ = input$.subscribe(
-      value => value.location ? this.geohelperApiService.getAllCity(value.location) : ''
-    )
+    this.subscription$ = input$.subscribe((value) =>
+      value.location ? this.geohelperApiService.getAllCity(value.location) : ''
+    );
   }
 
   private createForm() {
@@ -52,15 +67,15 @@ export class SearchCityComponent implements OnInit, OnDestroy {
 
   onSubmit() {
     if (this.cityForm.invalid) {
-      this.cityForm.markAllAsTouched()
+      this.cityForm.markAllAsTouched();
       return;
     }
 
     this.router.navigate(['/info'], {
       queryParams: {
-        'city': this.cityForm.value.location,
-      }
-    })
+        city: this.cityForm.value.location,
+      },
+    });
   }
 
   get _location() {
@@ -68,20 +83,28 @@ export class SearchCityComponent implements OnInit, OnDestroy {
   }
 
   clickFavoriteAdd(): void {
-    this.geocodingApiService.getCoordinate(this.cityForm.value.location
-    ).subscribe(coor => coor.length ? this.store.dispatch(new AddFavorite(coor[0])) : '');
+    this.geocodingApiService
+      .getCoordinate(this.cityForm.value.location)
+      .subscribe((coor) =>
+        coor.length ? this.store.dispatch(new AddFavorite(coor[0])) : ''
+      );
   }
 
   clickLocation(): void {
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(this.setPosition.bind(this), this.erorrLocation);
+      navigator.geolocation.getCurrentPosition(
+        this.setPosition.bind(this),
+        this.erorrLocation
+      );
     }
   }
 
   setPosition(position: GeolocationPosition) {
-    this.geocodingApiService.getCity(position.coords).subscribe(
-      resp => resp.map(city => this.cityForm.get('location')?.setValue(city.name))
-    );
+    this.geocodingApiService
+      .getCity(position.coords)
+      .subscribe((resp) =>
+        resp.map((city) => this.cityForm.get('location')?.setValue(city.name))
+      );
   }
 
   erorrLocation() {
@@ -90,6 +113,5 @@ export class SearchCityComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.subscription$.unsubscribe();
-
   }
 }

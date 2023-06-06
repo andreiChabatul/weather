@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
 import { appReducers } from './store';
 import { LangChangeEffects } from './store/effects/langEffect';
@@ -15,9 +15,7 @@ import { Page404Module } from './page404/page.404.module';
 import { SharedModule } from './shared/shared.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -32,6 +30,6 @@ import { SharedModule } from './shared/shared.module';
     EffectsModule.forRoot([LangChangeEffects]),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

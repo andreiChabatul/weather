@@ -8,7 +8,7 @@ describe('HumidityComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [HumidityComponent]
+      declarations: [HumidityComponent],
     });
     fixture = TestBed.createComponent(HumidityComponent);
     component = fixture.componentInstance;

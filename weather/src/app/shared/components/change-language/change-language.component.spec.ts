@@ -8,7 +8,7 @@ describe('ChangeLanguageComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ChangeLanguageComponent]
+      declarations: [ChangeLanguageComponent],
     });
     fixture = TestBed.createComponent(ChangeLanguageComponent);
     component = fixture.componentInstance;

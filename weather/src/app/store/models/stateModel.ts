@@ -1,15 +1,15 @@
-import { ICoordinate, IOpenweathermapForecastFive } from "./openweathermap";
-import { IPopUp, languageType, unitsType } from "./settingModel";
+import { ICoordinate, IOpenweathermapForecastFive } from './openweathermap';
+import { IPopUp, LanguageType, UnitsType } from './settingModel';
 
 export interface IState {
-    searchCity: string[],
-    language: languageType,
-    units: unitsType,
-    popUp: IPopUp,
-    forecastWeather: IOpenweathermapForecastFive,
-    favoriteCity: ICoordinate[],
+  searchCity: string[];
+  language: LanguageType;
+  units: UnitsType;
+  popUp: IPopUp;
+  forecastWeather: IOpenweathermapForecastFive;
+  favoriteCity: ICoordinate[];
 }
 
 export interface IAppStore {
-    state: IState;
+  state: IState;
 }

@@ -8,7 +8,7 @@ describe('ControlHistoryComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ControlHistoryComponent]
+      declarations: [ControlHistoryComponent],
     });
     fixture = TestBed.createComponent(ControlHistoryComponent);
     component = fixture.componentInstance;

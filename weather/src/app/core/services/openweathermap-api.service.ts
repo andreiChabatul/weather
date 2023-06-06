@@ -7,33 +7,35 @@ import { Store } from '@ngrx/store';
 import { IAppStore } from 'src/app/store/models/stateModel';
 import { selectLanguage, selectUnits } from 'src/app/store/selectors/selectors';
 
-type typeReguest = 'weather' | 'forecast';
+type TypeReguest = 'weather' | 'forecast';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class OpenweathermapApiService {
   units$ = this.store.select(selectUnits);
+
   lang$ = this.store.select(selectLanguage);
 
-  constructor(private http: HttpClient, private store: Store<IAppStore>) { }
+  constructor(private http: HttpClient, private store: Store<IAppStore>) {}
 
-  getWeather<T>(coor: ICoordinate, reguest: typeReguest): Observable<T> {
-
+  getWeather<T>(coor: ICoordinate, reguest: TypeReguest): Observable<T> {
     return this.lang$.pipe(
-      mergeMap(lang => this.units$.pipe(
-        mergeMap(units => this.http.get<T>(
-          URL_OPENWEATHERMAP + reguest, {
-          params: {
-            lat: coor.lat,
-            lon: coor.lon,
-            units,
-            lang,
-            appid: OPENWEATHERMA_API
-          }
-        }
-        ))
-      )),
-    )
+      mergeMap((lang) =>
+        this.units$.pipe(
+          mergeMap((units) =>
+            this.http.get<T>(URL_OPENWEATHERMAP + reguest, {
+              params: {
+                lat: coor.lat,
+                lon: coor.lon,
+                units,
+                lang,
+                appid: OPENWEATHERMA_API,
+              },
+            })
+          )
+        )
+      )
+    );
   }
 }

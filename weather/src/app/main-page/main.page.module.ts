@@ -12,22 +12,17 @@ import { PhoneMainInfoComponent } from './components/phone-main-info/phone-main-
 import { PhoneGeneralInfoComponent } from './components/phone-general-info/phone-general-info.component';
 
 @NgModule({
-    declarations: [
-        MainPageComponent,
-        MainInfoComponent,
-        PhoneMainComponent,
-        ItemInfoSliderComponent,
-        FavoriteContainerComponent,
-        PhoneMainInfoComponent,
-        PhoneGeneralInfoComponent
-    ],
-    imports: [MaterialModule, TranslocoRootModule, SharedModule, CommonModule],
-    providers: [
-
-    ],
-    exports: [
-        MainPageComponent
-
-    ]
+  declarations: [
+    MainPageComponent,
+    MainInfoComponent,
+    PhoneMainComponent,
+    ItemInfoSliderComponent,
+    FavoriteContainerComponent,
+    PhoneMainInfoComponent,
+    PhoneGeneralInfoComponent,
+  ],
+  imports: [MaterialModule, TranslocoRootModule, SharedModule, CommonModule],
+  providers: [],
+  exports: [MainPageComponent],
 })
-export class MainPageModule { }
+export class MainPageModule {}

@@ -8,7 +8,7 @@ describe('VisibilityComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [VisibilityComponent]
+      declarations: [VisibilityComponent],
     });
     fixture = TestBed.createComponent(VisibilityComponent);
     component = fixture.componentInstance;

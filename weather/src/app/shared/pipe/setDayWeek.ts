@@ -5,30 +5,46 @@ import { selectLanguage } from '../../store/selectors/selectors';
 import { Observable, map } from 'rxjs';
 
 @Pipe({
-    name: 'dayWeek'
+  name: 'dayWeek',
 })
 export class DayWeek implements PipeTransform {
+  lang$ = this.store.select(selectLanguage);
 
-    lang$ = this.store.select(selectLanguage);
-    engDay: string[] = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    rusDay: string[] = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+  engDay: string[] = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+  ];
 
-    constructor(private store: Store<IAppStore>) { }
+  rusDay: string[] = [
+    'Воскресенье',
+    'Понедельник',
+    'Вторник',
+    'Среда',
+    'Четверг',
+    'Пятница',
+    'Суббота',
+  ];
 
-    transform(value: number): Observable<string> {
-        const day = new Date(value * 1000).getDay();
-        return this.lang$.pipe(
-            map(lang => {
-                switch (lang) {
-                    case 'en':
-                        return this.engDay[day];
-                    case 'ru':
-                        return this.rusDay[day];
-                    default:
-                        return '';
-                }
-            }
-            ))
-    }
+  constructor(private store: Store<IAppStore>) {}
 
+  transform(value: number): Observable<string> {
+    const day = new Date(value * 1000).getDay();
+    return this.lang$.pipe(
+      map((lang) => {
+        switch (lang) {
+          case 'en':
+            return this.engDay[day];
+          case 'ru':
+            return this.rusDay[day];
+          default:
+            return '';
+        }
+      })
+    );
+  }
 }

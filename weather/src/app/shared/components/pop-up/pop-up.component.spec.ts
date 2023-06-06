@@ -8,7 +8,7 @@ describe('PopUpAddHistoryComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PopUpComponent]
+      declarations: [PopUpComponent],
     });
     fixture = TestBed.createComponent(PopUpComponent);
     component = fixture.componentInstance;

@@ -8,7 +8,7 @@ describe('ExtraInfoForecastComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ExtraInfoForecastComponent]
+      declarations: [ExtraInfoForecastComponent],
     });
     fixture = TestBed.createComponent(ExtraInfoForecastComponent);
     component = fixture.componentInstance;

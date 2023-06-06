@@ -1,7 +1,9 @@
 <div class="lang-container" *transloco="let t; read: 'lang'">
     <p class="lang-container_text">{{ t('title') }}</p>
     <div class="lang-container_select">
-        <img *ngFor="let item of lang" class="lang-item" src={{item.img}} (click)="selectLanguage(item.value)"
-            alt={{item.value}}lang [ngClass]="{'lang-item__active': (selectedLang$ | async) === item.value}">
+        <button *ngFor="let item of lang" (click)="selectLanguage(item.value)">
+            <img class="lang-item" src={{item.img}} alt={{item.value}}lang
+                [ngClass]="{'lang-item__active': (selectedLang$ | async) === item.value}">
+        </button>
     </div>
 </div>

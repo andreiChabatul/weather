@@ -5,15 +5,9 @@ import { Page404Component } from './pages/page404.component';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-    declarations: [
-        Page404Component
-    ],
-    imports: [MaterialModule, TranslocoRootModule, SharedModule],
-    providers: [
-
-    ],
-    exports: [
-        Page404Component
-    ]
+  declarations: [Page404Component],
+  imports: [MaterialModule, TranslocoRootModule, SharedModule],
+  providers: [],
+  exports: [Page404Component],
 })
-export class Page404Module { }
+export class Page404Module {}

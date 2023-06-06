@@ -1,29 +1,28 @@
-import { ActionReducerMap } from "@ngrx/store";
-import { IAppStore, IState } from "./models/stateModel";
-import { Reducers } from "./reducers/reducers";
-import { IOpenweathermapForecastFive } from "./models/openweathermap";
+import { ActionReducerMap } from '@ngrx/store';
+import { IAppStore, IState } from './models/stateModel';
+import { Reducers } from './reducers/reducers';
+import { IOpenweathermapForecastFive } from './models/openweathermap';
 
 export const stateApp: IState = {
-    searchCity: [],
-    language: 'en',
-    units: 'metric',
-    popUp:
-    {
-        popUpState: false,
-        type: 'setting'
-    },
-    forecastWeather: {} as IOpenweathermapForecastFive,
-    favoriteCity: [],
-}
+  searchCity: [],
+  language: 'en',
+  units: 'metric',
+  popUp: {
+    popUpState: false,
+    type: 'setting',
+  },
+  forecastWeather: {} as IOpenweathermapForecastFive,
+  favoriteCity: [],
+};
 
 export const initalState: IAppStore = {
-    state: stateApp,
+  state: stateApp,
 };
 
 export function getInitalState(): IAppStore {
-    return initalState;
+  return initalState;
 }
 
 export const appReducers: ActionReducerMap<IAppStore, any> = {
-    state: Reducers,
+  state: Reducers,
 };

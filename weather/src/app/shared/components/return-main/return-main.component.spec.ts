@@ -8,7 +8,7 @@ describe('ReturnMainComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ReturnMainComponent]
+      declarations: [ReturnMainComponent],
     });
     fixture = TestBed.createComponent(ReturnMainComponent);
     component = fixture.componentInstance;

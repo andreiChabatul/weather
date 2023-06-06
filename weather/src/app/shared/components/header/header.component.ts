@@ -6,14 +6,12 @@ import { IAppStore } from 'src/app/store/models/stateModel';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-
-  constructor(private store: Store<IAppStore>) { }
+  constructor(private store: Store<IAppStore>) {}
 
   openPopUp() {
     this.store.dispatch(new OpenPopUp({ popUpType: 'setting' }));
   }
-
 }

@@ -8,7 +8,7 @@ describe('ItemFiveDayForecastComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ItemFiveDayForecastComponent]
+      declarations: [ItemFiveDayForecastComponent],
     });
     fixture = TestBed.createComponent(ItemFiveDayForecastComponent);
     component = fixture.componentInstance;

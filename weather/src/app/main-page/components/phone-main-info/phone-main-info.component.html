@@ -1,16 +1,16 @@
 <div class="phone-container" *transloco="let t; read: 'main'">
     <div *ngIf="weatherInfo && weatherInfoDate; else loadingBlock" class="phone-container_general">
         <div class="phone-container_title">
-            <span class="material-symbols-outlined phone-title-text_ico" (click)=" moreInfo()">page_info</span>
+            <button class="material-symbols-outlined phone-title-text_ico" (click)=" moreInfo()">page_info</button>
             <span class="phone-title-text">{{weatherInfo.name}}</span>
-            <span class="material-symbols-outlined phone-title-text_ico" (click)="deleteCity()">delete</span>
+            <button class="material-symbols-outlined phone-title-text_ico" (click)="deleteCity()">delete</button>
         </div>
         <div class="phone-container_date">
             <div class="phone-container_date__visible" [style]='transformVisible'>
-                <span class="phone-date-item" *ngFor="let item of weatherInfoDate; index as i" (click)="clickDate(i)"
+                <button class="phone-date-item" *ngFor="let item of weatherInfoDate; index as i" (click)="clickDate(i)"
                     [ngClass]="{'phone-date-item_active': i===activeIndex}">
                     {{item.dt | dayWeek | async}}
-                </span>
+                </button>
             </div>
         </div>
         <app-phone-general-info [item]="weatherInfoDate[activeIndex]"></app-phone-general-info>

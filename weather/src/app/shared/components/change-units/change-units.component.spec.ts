@@ -8,7 +8,7 @@ describe('ChangeUnitsComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ChangeUnitsComponent]
+      declarations: [ChangeUnitsComponent],
     });
     fixture = TestBed.createComponent(ChangeUnitsComponent);
     component = fixture.componentInstance;

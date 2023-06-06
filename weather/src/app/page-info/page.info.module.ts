@@ -15,23 +15,19 @@ import { FiveDayForecastComponent } from './components/five-day-forecast/five-da
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-    declarations: [
-        PageInfoComponent,
-        SunriseComponent,
-        HumidityComponent,
-        InfoGeneralComponent,
-        WindComponent,
-        UvIndexComponent,
-        VisibilityComponent,
-        PressureComponent,
-        FiveDayForecastComponent,
-    ],
-    imports: [MaterialModule, TranslocoRootModule, CommonModule, SharedModule],
-    providers: [
-
-    ],
-    exports: [
-        PageInfoRoutingModule
-    ]
+  declarations: [
+    PageInfoComponent,
+    SunriseComponent,
+    HumidityComponent,
+    InfoGeneralComponent,
+    WindComponent,
+    UvIndexComponent,
+    VisibilityComponent,
+    PressureComponent,
+    FiveDayForecastComponent,
+  ],
+  imports: [MaterialModule, TranslocoRootModule, CommonModule, SharedModule],
+  providers: [],
+  exports: [PageInfoRoutingModule],
 })
-export class PageInfoModule { }
+export class PageInfoModule {}

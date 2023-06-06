@@ -8,7 +8,7 @@ describe('Page404Component', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [Page404Component]
+      declarations: [Page404Component],
     });
     fixture = TestBed.createComponent(Page404Component);
     component = fixture.componentInstance;

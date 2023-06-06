@@ -5,31 +5,33 @@ import { selectLanguage, selectUnits } from '../../store/selectors/selectors';
 import { Observable, map, mergeMap } from 'rxjs';
 
 @Pipe({
-    name: 'windPipe'
+  name: 'windPipe',
 })
 export class WindPipe implements PipeTransform {
+  windInfo = {
+    en: {
+      imperial: 'mi/h',
+      metric: 'm/s',
+    },
+    ru: {
+      imperial: 'мил/ч',
+      metric: 'м/с',
+    },
+  };
 
-    windInfo = {
-        en: {
-            imperial: 'mi/h',
-            metric: 'm/s'
-        },
-        ru: {
-            imperial: 'мил/ч',
-            metric: 'м/с'
-        }
-    }
+  units$ = this.store.select(selectUnits);
 
-    units$ = this.store.select(selectUnits);
-    lang$ = this.store.select(selectLanguage);
+  lang$ = this.store.select(selectLanguage);
 
-    constructor(private store: Store<IAppStore>) { }
+  constructor(private store: Store<IAppStore>) {}
 
-    transform(value: number): Observable<string> {
-        return this.lang$.pipe(
-            mergeMap(lang => this.units$.pipe(
-                map(units => `${value} ${this.windInfo[lang][units]}`)
-            ))
+  transform(value: number): Observable<string> {
+    return this.lang$.pipe(
+      mergeMap((lang) =>
+        this.units$.pipe(
+          map((units) => `${value} ${this.windInfo[lang][units]}`)
         )
-    }
+      )
+    );
+  }
 }
