@@ -3,8 +3,7 @@
 @import "./../../../../scss/color-styles";
 
 .phone-main-container {
-    border: 1px solid red;
-    height: 530px;
+    height: 550px;
     position: relative;
     width: 420px;
     background: url(./../../../../assets/mainPhone.png);
@@ -14,11 +13,10 @@
     padding-top: 25px;
 }
 
-
 .item-info {
     position: absolute;
     top: 25px;
-    right: 0px;
+    right: 40px;
     transform: rotate(20deg);
 }
 
@@ -49,16 +47,6 @@
     @include title-medium;
 }
 
-
-// @media screen and (max-width: 1300px) {
-//     .phone-main-container {
-//         right: 192px;
-//     }
-
-//     .item-info {
-//         right: -90px;
-//     }
-// }
 
 // @media screen and (max-width: 850px) {
 //     .phone-main-container {

@@ -1,13 +1,13 @@
 @import "./../../../../scss/typography-styles";
 @import "./../../../../scss/color-styles";
+@import "./../../../../scss/default-styles";
 
 .item-info-container {
     position: absolute;
     background: #FFFFFF;
-    width: 100px;
-    height: 130px;
+    width: 85px;
+    height: 110px;
     border-radius: 10px;
-    padding: 5px;
     cursor: pointer;
     transition: .4s;
     opacity: .9;
@@ -21,32 +21,31 @@
     }
 }
 
+.item-info-active {
+    padding: 5px;
+    @include flex-c_s;
+    flex-direction: column;
+}
+
 .title-item-info {
     color: $color-font-blue-dark;
     @include title-medium;
-    text-align: center;
     font-weight: 700;
     background: linear-gradient(90deg, #FFFFFF 54%, rgba(255, 216, 118, .7) 100%);
     border-radius: 5px;
-    margin-bottom: 20px;
 }
 
 .item-info-img {
-    width: 70px;
-    position: absolute;
-    bottom: 0;
-    right: 15px;
+    width: 55px;
 }
 
 .item-info-text {
-    text-align: center;
     @include title-medium28;
     background: linear-gradient(180deg, $color-font-blue-dark 40%, rgba(233, 241, 242, 0.2) 75%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 40px;
 }
 
 .spinner-info_item-slider {
-    width: 85px !important;
+    width: 65px !important;
 }
