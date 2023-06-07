@@ -61,3 +61,12 @@
         border-bottom-color: $color-primary-blue;
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .search-container {
+        .mat-mdc-text-field-wrapper {
+            width: 200px;
+        }
+
+    }
+}

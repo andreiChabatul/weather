@@ -3,20 +3,28 @@
 @import "./../../../../scss/color-styles";
 
 .phone-main-container {
-    top: 90px;
-    right: 282px;
-    position: absolute;
+    border: 1px solid red;
+    height: 530px;
+    position: relative;
+    width: 420px;
+    background: url(./../../../../assets/mainPhone.png);
+    background-size: 110%;
+    background-repeat: no-repeat;
+    padding-left: 50px;
+    padding-top: 25px;
 }
+
 
 .item-info {
     position: absolute;
     top: 25px;
-    right: -170px;
+    right: 0px;
     transform: rotate(20deg);
 }
 
 .add-city-phone {
-    margin-top: 130px;
+    position: relative;
+    top: 130px;
     width: 200px;
     display: flex;
     flex-direction: column;
@@ -40,3 +48,32 @@
     text-align: center;
     @include title-medium;
 }
+
+
+// @media screen and (max-width: 1300px) {
+//     .phone-main-container {
+//         right: 192px;
+//     }
+
+//     .item-info {
+//         right: -90px;
+//     }
+// }
+
+// @media screen and (max-width: 850px) {
+//     .phone-main-container {
+//         right: 105px;
+//     }
+
+//     .item-info {
+//         right: -40px;
+//         transform: rotate(20deg) scale(.6);
+//     }
+// }
+
+// @media screen and (max-width: 750px) {
+//     .phone-main-container {
+//         bottom: -20px;
+//         transform: scale(.7);
+//     }
+// }

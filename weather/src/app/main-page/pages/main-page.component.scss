@@ -1,18 +1,8 @@
 @import "./../../../scss/color-styles";
 
-.slider-container {
-    overflow: hidden;
-    top: 70px;
-    right: 90px;
-    height: 560px;
-    position: absolute;
-
-}
 
 
-.img-main {
-    width: 450px;
-}
+
 
 .main-decoration {
     position: absolute;
@@ -22,9 +12,9 @@
 
 .main-decoration_two {
     position: absolute;
-    width: 150px;
+    width: 130px;
     top: 60px;
-    right: 45%;
+    right: 40%;
 }
 
 .main-decoration_three {
@@ -32,4 +22,69 @@
     width: 80px;
     right: 25px;
     transform: rotate(-22deg);
+}
+
+@media screen and (max-width: 1450px) {
+    .main-decoration_two {
+        right: 45%;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+
+    .main-decoration_two {
+        width: 110px;
+        right: 40%;
+    }
+
+    .slider-container {
+        right: 0;
+    }
+
+    .main-decoration {
+        right: 40%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+
+    .main-decoration_two {
+        display: none;
+    }
+
+    .slider-container {
+        right: 0;
+    }
+
+    .main-decoration {
+        display: none;
+    }
+
+    .main-decoration_three {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 850px) {
+
+    .img-main {
+        position: relative;
+        right: -90px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+    .slider-container {
+        transform: scale(.7);
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .main-info-container {
+        position: absolute;
+        top: 70px;
+    }
+
 }

@@ -1,4 +1,5 @@
 <div class="phone-main-container" *transloco="let t; read: 'main'">
+    <!-- <img class="img-main" src="./../../../../assets/mainPhone.png" alt="main-phone"> -->
     <app-phone-main-info *ngIf="this.coor; else elseBlock" [coor]="coor"></app-phone-main-info>
     <ng-template #elseBlock>
         <button class="add-city-phone" (click)=" openPopUp()">
@@ -10,3 +11,4 @@
         <app-favorite-container></app-favorite-container>
     </div>
 </div>
+

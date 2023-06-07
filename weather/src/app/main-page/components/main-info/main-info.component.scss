@@ -26,3 +26,32 @@
     color: $grey-text;
     margin-bottom: 5%;
 }
+
+
+@media screen and (max-width: 1000px) {
+    .main-title-text {
+        @include title-Xmedium;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .seacrh-city-main {
+        position: absolute;
+        bottom: 50px;
+        transform: scale(.8);
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .main-info-container {
+        width: 100%;
+        padding-left: 30px;
+    }
+
+    .seacrh-city-main {
+        position: absolute;
+        bottom: -450px;
+        transform: scale(.8);
+    }
+}

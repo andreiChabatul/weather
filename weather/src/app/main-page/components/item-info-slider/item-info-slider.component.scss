@@ -28,6 +28,7 @@
     font-weight: 700;
     background: linear-gradient(90deg, #FFFFFF 54%, rgba(255, 216, 118, .7) 100%);
     border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 .item-info-img {
@@ -43,6 +44,7 @@
     background: linear-gradient(180deg, $color-font-blue-dark 40%, rgba(233, 241, 242, 0.2) 75%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin-bottom: 40px;
 }
 
 .spinner-info_item-slider {
