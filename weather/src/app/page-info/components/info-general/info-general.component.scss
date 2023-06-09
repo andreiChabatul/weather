@@ -45,3 +45,18 @@
     @include title-medium18;
     margin-bottom: 7px;
 }
+
+
+@media screen and (max-width: 950px) {
+    .weather-ico {
+        position: absolute;
+        right: 15px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .weather-ico {
+        position: relative;
+        right: auto;
+    }
+}

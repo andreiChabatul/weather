@@ -10,3 +10,39 @@
         width: 850px;
     }
 }
+
+@media (max-width: 1300px) {
+    .fiveDay-container {
+        width: 700px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .fiveDay-container {
+        width: 650px;
+    }
+}
+
+@media (max-width: 700px) {
+    .fiveDay-container {
+        width: 600px;
+    }
+}
+
+@media (max-width: 650px) {
+    .fiveDay-container {
+        width: 500px;
+    }
+}
+
+@media (max-width: 550px) {
+    .fiveDay-container {
+        width: 400px;
+    }
+}
+
+@media (max-width: 450px) {
+    .fiveDay-container {
+        width: 300px;
+    }
+}
