@@ -79,3 +79,21 @@
 
     }
 }
+
+@media screen and (max-width: 500px) {
+    .search-container {
+        .mat-mdc-text-field-wrapper {
+            width: 200px;
+        }
+
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .search-container {
+        .mat-mdc-text-field-wrapper {
+            width: 170px;
+        }
+
+    }
+}

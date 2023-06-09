@@ -47,6 +47,13 @@
     @include title-medium;
 }
 
+@media screen and (max-width: 1150px) {
+    .item-info {
+        right: 80px;
+        transform: rotate(20deg) scale(.8);
+    }
+}
+
 
 // @media screen and (max-width: 850px) {
 //     .phone-main-container {
