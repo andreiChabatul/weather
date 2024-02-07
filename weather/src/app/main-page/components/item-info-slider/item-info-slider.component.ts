@@ -1,5 +1,5 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Component, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { OpenweathermapApiService } from 'src/app/core/services/openweathermap-api.service';
 import { IOpenweathermap } from 'src/app/store/models/openweathermap';
 import { IFavoriteCity } from '../favorite-container/favorite-container.component';
@@ -12,31 +12,24 @@ import { SelectFavorite } from 'src/app/store/actions/actions';
   templateUrl: './item-info-slider.component.html',
   styleUrls: ['./item-info-slider.component.scss'],
 })
-export class ItemInfoSliderComponent implements OnInit, OnDestroy {
+export class ItemInfoSliderComponent implements OnInit {
   @Input() item: IFavoriteCity;
 
-  private querySubscription: Subscription;
 
-  weatherCity: IOpenweathermap;
+  weatherCity$: Observable<IOpenweathermap>;
 
   constructor(
     private openweathermapApiService: OpenweathermapApiService,
     private store: Store<IAppStore>
-  ) {}
+  ) { }
 
   ngOnInit(): void {
-    this.querySubscription = this.openweathermapApiService
+    this.weatherCity$ = this.openweathermapApiService
       .getWeather<IOpenweathermap>(this.item.coor, 'weather')
-      .subscribe((value) => {
-        this.weatherCity = value;
-      });
   }
 
   clickSliderItem(): void {
     this.store.dispatch(new SelectFavorite(this.item.coor));
   }
 
-  ngOnDestroy(): void {
-    this.querySubscription.unsubscribe();
-  }
 }

@@ -1,11 +1,13 @@
-<button class="item-info-container" [style.transform]="item.style" (click)="clickSliderItem()">
-    <div *ngIf="weatherCity; else loadingBlock" class="item-info-active">
-        <p class="title-item-info">{{weatherCity.name}}</p>
-        <p class="item-info-text">{{weatherCity.main.temp | tempPipe | async }}</p>
-        <img class="item-info-img" appWeatherIco [weatherCode]="weatherCity.weather[0].id"
-            src="./../../../../assets/icoWeather/defaultIco.gif" alt="weatherType">
-    </div>
-    <ng-template #loadingBlock>
-        <mat-spinner class="spinner-info spinner-info_item-slider"></mat-spinner>
-    </ng-template>
-</button>
+<div *ngIf="(weatherCity$ | async) as weatherCity">
+    <button class="item-info-container" [style.transform]="item.style" (click)="clickSliderItem()">
+        <div *ngIf="weatherCity; else loadingBlock" class="item-info-active">
+            <p class="title-item-info">{{weatherCity.name}}</p>
+            <p class="item-info-text">{{weatherCity.main.temp | tempPipe | async }}</p>
+            <img class="item-info-img" appWeatherIco [weatherCode]="weatherCity.weather[0].id"
+                src="assets/icoWeather/defaultIco.gif" alt="weatherType">
+        </div>
+        <ng-template #loadingBlock>
+            <mat-spinner class="spinner-info spinner-info_item-slider"></mat-spinner>
+        </ng-template>
+    </button>
+</div>
