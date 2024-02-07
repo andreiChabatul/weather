@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+
+  frontend:
+    container_name: frontend-monopoly
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - '90:90'
+
+
