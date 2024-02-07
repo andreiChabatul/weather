@@ -1,7 +1,7 @@
 <div class="info-general-container">
 
     <img class="weather-ico" appWeatherIco [weatherCode]="info.weather[0].id"
-        src="./../../../../assets/icoWeather/defaultIco.gif" alt="weatherType">
+        src="assets/icoWeather/defaultIco.gif" alt="weatherType">
 
     <p class="genetal-temp-text">{{info.main.temp | tempPipe | async}}</p>
     <p class="general-day-text">{{info.dt | dayWeek | async}},
